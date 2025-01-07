@@ -1,0 +1,3 @@
+[submodule "lib/simulation-engine"]
+	path = lib/simulation-engine
+	url = https://github.com/Madsiser/SimNG.git
