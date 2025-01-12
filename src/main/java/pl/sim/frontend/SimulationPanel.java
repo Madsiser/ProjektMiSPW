@@ -49,6 +49,21 @@ public class SimulationPanel extends JPanel {
             // Rysuj nazwę grupy
             g.drawString(group.getName(), x - 10, y - 10);
 
+            // Rysowanie zasięgu strzału grupy
+            int maxShotRange = group.getUnits().stream()
+                    .mapToInt(SimUnit::getShotRange)
+                    .max()
+                    .orElse(0);
+            if (maxShotRange > 0) {
+                g.setColor(new Color(255, 0, 0, 20));
+                int rangeDiameter = maxShotRange * 2 * 20;
+                g.fillOval((int) pos.getX() * 20 - rangeDiameter / 2,
+                        (int) pos.getY() * 20 - rangeDiameter / 2,
+                        rangeDiameter,
+                        rangeDiameter);
+            }
+
+
             // Ustaw kolor dla widocznych grup
             if (group.getVisibleGroups().isEmpty()) {
                 g.setColor(Color.GREEN);
