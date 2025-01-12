@@ -109,7 +109,7 @@ public class RandomForce extends SimGroup {
             SimVector2i direction = route.poll();
             if (direction != null) {
                 System.out.println(getName() + " porusza się w kierunku celu");
-                this.position.add(direction); // Aktualizuj pozycję.
+                this.position.add(direction);
             }
         }
     }
