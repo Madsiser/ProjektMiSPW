@@ -2,11 +2,13 @@ package pl.sim.backend;
 
 import pl.simNG.*;
 
+import java.util.LinkedList;
 import java.util.Random;
 
 public class RandomForce extends SimGroup {
 
     Random random = new Random();
+    private LinkedList<SimVector2i> originalRoute = null;
 
     public RandomForce(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
@@ -38,14 +40,31 @@ public class RandomForce extends SimGroup {
     }
 
     @Override
-    public void move(){
+    public void move() {
+            if (!visibleGroups.isEmpty()) {
+                SimGroup target = visibleGroups.get(0);
+                if (isInShootingRange(target)) {
+                    System.out.println(getName() + " strzela");
+                    shot();
+                } else {
+                    moveToTarget(target.getPosition());
+                }
+            } else {
+                if (originalRoute != null) {
+                    System.out.println(getName() + " przywraca pierwotną trasę");
+                    this.route = originalRoute;
+                    originalRoute = null;
+                }
 
-        SimVector2i direction = route.poll();
-        if (direction != null){
-            this.position.add(direction);
-            addTask(this::move,(random.nextInt()%5)+5);
-        }
-//        System.out.println(this.position);
+                if (!route.isEmpty()) {
+                    SimVector2i direction = route.poll();
+                    if (direction != null) {
+                        System.out.println(getName() + " kontynuuje ruch po trasie");
+                        this.position.add(direction);
+                    }
+                }
+            }
+        addTask(this::move, 1);
     }
 
     @Override
@@ -60,13 +79,38 @@ public class RandomForce extends SimGroup {
 
     public void shot(){
         if(!visibleGroups.isEmpty()){
-            SimGroup group = visibleGroups.get(0);
+            SimGroup target = visibleGroups.get(0);
             for(SimUnit unit: units){
-                if (unit.inShotRange(group.getPosition())){
-                    group.apply_damage(this, new TankShell());
+                if (unit.inShotRange(target.getPosition())){
+                    target.apply_damage(this, new TankShell());
+                    System.out.println(getName() + " strzela do grupy: " + target.getName());
                 }
             }
         }
     }
 
+    private boolean isInShootingRange(SimGroup target) {
+        return this.position.distanceTo(target.getPosition()) <= units.stream()
+                .mapToInt(SimUnit::getShotRange)
+                .max()
+                .orElse(0);
+    }
+
+    private void moveToTarget(SimPosition targetPosition) {
+        if (originalRoute == null) {
+            System.out.println(getName() + " zapisuje pierwotną trasę");
+            originalRoute = new LinkedList<>(route);
+        }
+
+        System.out.println(getName() + " oblicza trasę do celu");
+        this.route = calculateRouteTo(targetPosition);
+
+        if (!route.isEmpty()) {
+            SimVector2i direction = route.poll();
+            if (direction != null) {
+                System.out.println(getName() + " porusza się w kierunku celu");
+                this.position.add(direction); // Aktualizuj pozycję.
+            }
+        }
+    }
 }
