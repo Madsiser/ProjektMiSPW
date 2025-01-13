@@ -8,7 +8,7 @@ import java.util.Random;
 public class RandomForce extends SimGroup {
 
     Random random = new Random();
-    private LinkedList<SimVector2i> originalRoute = null;
+    private SimPosition originalDestination;
 
     public RandomForce(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
@@ -32,6 +32,7 @@ public class RandomForce extends SimGroup {
 
     @Override
     public void init(){
+        originalDestination = new SimPosition(2, 2);
         this.route = calculateRouteTo(new SimPosition(2,2));
         addTask(this::move,1);
         addProcess("shot", this::shot, 5);
@@ -39,30 +40,29 @@ public class RandomForce extends SimGroup {
 
     @Override
     public void move() {
-            if (!visibleGroups.isEmpty()) {
-                SimGroup target = visibleGroups.get(0);
-                if (isInShootingRange(target)) {
-                    shot();
-                } else {
-                    attackTarget(target.getPosition());
-                }
+        if (!visibleGroups.isEmpty()) {
+            SimGroup target = visibleGroups.get(0);
+            if (units.stream().anyMatch(unit -> unit.inShotRange(target.getPosition()))) {
+                shot();
             } else {
-                if (originalRoute != null) {
-                    System.out.println(getName() + " przywraca pierwotną trasę");
-                    this.route = originalRoute;
-                    originalRoute = null;
-                }
-
-                if (!route.isEmpty()) {
-                    SimVector2i direction = route.poll();
-                    if (direction != null) {
-                        System.out.println(getName() + " kontynuuje ruch po trasie");
-                        this.position.add(direction);
-                    }
+                attackTarget(target.getPosition());
+            }
+        } else {
+            if (route.isEmpty() && !(this.position.getX() == originalDestination.getX() && this.position.getY() == originalDestination.getY())) {
+                System.out.println(getName() + " oblicza trasę do pierwotnego celu");
+                this.route = calculateRouteTo(originalDestination);
+            }
+            if (!route.isEmpty()) {
+                SimVector2i direction = route.poll();
+                if (direction != null) {
+                    System.out.println(getName() + " kontynuuje ruch po trasie");
+                    this.position.add(direction);
                 }
             }
+        }
         addTask(this::move, 1);
     }
+
 
     @Override
     public void apply_damage(SimGroup attacker, SimBullet bullet) {
@@ -85,19 +85,7 @@ public class RandomForce extends SimGroup {
         }
     }
 
-    private boolean isInShootingRange(SimGroup target) {
-        return this.position.distanceTo(target.getPosition()) <= units.stream()
-                .mapToInt(SimUnit::getShotRange)
-                .max()
-                .orElse(0);
-    }
-
     private void attackTarget(SimPosition targetPosition) {
-        if (originalRoute == null) {
-            System.out.println(getName() + " zapisuje pierwotną trasę");
-            originalRoute = new LinkedList<>(route);
-        }
-
         System.out.println(getName() + " oblicza trasę do celu");
         this.route = calculateRouteTo(targetPosition);
 
