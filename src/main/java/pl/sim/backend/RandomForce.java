@@ -42,10 +42,9 @@ public class RandomForce extends SimGroup {
             if (!visibleGroups.isEmpty()) {
                 SimGroup target = visibleGroups.get(0);
                 if (isInShootingRange(target)) {
-                    System.out.println(getName() + " strzela");
                     shot();
                 } else {
-                    moveToTarget(target.getPosition());
+                    attackTarget(target.getPosition());
                 }
             } else {
                 if (originalRoute != null) {
@@ -70,7 +69,6 @@ public class RandomForce extends SimGroup {
         if (!units.isEmpty()) {
             SimUnit unit = units.get(0);
             unit.setAmount(unit.getAmount()-1);
-            units.set(0, unit);
             this.cleanDestroyedUnits();
         }
     }
@@ -94,7 +92,7 @@ public class RandomForce extends SimGroup {
                 .orElse(0);
     }
 
-    private void moveToTarget(SimPosition targetPosition) {
+    private void attackTarget(SimPosition targetPosition) {
         if (originalRoute == null) {
             System.out.println(getName() + " zapisuje pierwotną trasę");
             originalRoute = new LinkedList<>(route);
