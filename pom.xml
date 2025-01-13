@@ -16,9 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>pl.sim</groupId> <!-- To jest groupId submodułu -->
-            <artifactId>SimNGjava</artifactId> <!-- To jest artifactId submodułu -->
-            <version>1.0-SNAPSHOT</version> <!-- To jest wersja submodułu -->
+            <groupId>pl.sim</groupId>
+            <artifactId>SimNG</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
