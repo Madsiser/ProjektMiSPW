@@ -19,6 +19,8 @@
             <groupId>pl.sim</groupId>
             <artifactId>SimNG</artifactId>
             <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/SimNG-1.0.jar</systemPath>
         </dependency>
     </dependencies>
 
