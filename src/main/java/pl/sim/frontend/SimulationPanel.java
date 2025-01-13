@@ -80,7 +80,7 @@ public class SimulationPanel extends JPanel {
                 Color mem = g.getColor();
                 g.setColor(Color.BLACK);
                 String unitInfo = unit.getName() + " (" + unit.getAmount() + ")";
-                g.drawString(unitInfo, x - 10, y + rectHeight + 15); // Ustal pozycję tekstu
+                g.drawString(unitInfo, x - 10, y + rectHeight + 15);
                 g.setColor(mem);
             }
         }

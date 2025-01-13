@@ -13,7 +13,6 @@ public class RandomForce extends SimGroup {
     public RandomForce(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
 
-
         SimUnit unit = new Abrams(5);
         this.addUnit(unit);
 
@@ -34,7 +33,6 @@ public class RandomForce extends SimGroup {
     @Override
     public void init(){
         this.route = calculateRouteTo(new SimPosition(2,2));
-
         addTask(this::move,1);
         addProcess("shot", this::shot, 5);
     }
