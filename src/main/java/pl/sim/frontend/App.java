@@ -29,17 +29,17 @@ public class App extends Application {
 
         Random random = new Random(10);
 
-        for (int i = 1; i <= 10; i++) {
-            int x = random.nextInt(100);
-            int y = random.nextInt(100);
-            simulation.addGroup(new BaseGroup("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE));
-        }
-
-        for (int i = 1; i <= 10; i++) {
-            int x = random.nextInt(100);
-            int y = random.nextInt(100);
-            simulation.addGroup(new BaseGroup("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE));
-        }
+//        for (int i = 1; i <= 10; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BaseGroup("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE));
+//        }
+//
+//        for (int i = 1; i <= 10; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BaseGroup("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE));
+//        }
 
         SimulationPanel panel = new SimulationPanel(800, 800, simulation.getGroups());
         Pane root = new Pane(panel);
