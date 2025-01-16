@@ -1,5 +1,9 @@
 package pl.sim.frontend;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import pl.sim.backend.MapGenerator;
 import pl.sim.backend.RandomForce;
 import pl.simNG.SimCore;
@@ -8,25 +12,20 @@ import pl.simNG.SimGroup;
 import pl.simNG.SimPosition;
 import pl.simNG.map.SimMap;
 
-import javax.swing.*;
 import java.util.List;
 import java.util.Random;
 
-public class App {
-    public void run(){
-
+public class App extends Application {
+    @Override
+    public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
-        simulation.setMap(new SimMap(MapGenerator.generate(501,501)));
+        simulation.setMap(new SimMap(MapGenerator.generate(501, 501)));
 
-//        simulation.addGroup(new RandomForce("Alpha Force", new SimPosition(12, 12), SimForceType.BLUFORCE));
-//        simulation.addGroup(new RandomForce("Bravo Force", new SimPosition(15, 15), SimForceType.BLUFORCE));
         simulation.addGroup(new RandomForce("Charlie Force", new SimPosition(20, 20), SimForceType.BLUFORCE));
         simulation.addGroup(new RandomForce("Echo Force", new SimPosition(25, 13), SimForceType.BLUFORCE));
         simulation.addGroup(new RandomForce("Foxtrot Force", new SimPosition(13, 25), SimForceType.REDFORCE));
         simulation.addGroup(new RandomForce("Golf Force", new SimPosition(27, 15), SimForceType.REDFORCE));
         simulation.addGroup(new RandomForce("Hotel Force", new SimPosition(15, 27), SimForceType.REDFORCE));
-//        simulation.addGroup(new RandomForce("India Force", new SimPosition(22, 22), SimForceType.REDFORCE));
-
 
         Random random = new Random(10);
 
@@ -42,29 +41,28 @@ public class App {
             simulation.addGroup(new RandomForce("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE));
         }
 
-        // Tworzenie okna
-        JFrame frame = new JFrame("SimNG");
-        SimulationPanel panel = new SimulationPanel(simulation.getGroups());
-        frame.add(panel);
-        frame.setSize(800, 800);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        SimulationPanel panel = new SimulationPanel(800, 800, simulation.getGroups());
+        Pane root = new Pane(panel);
+
+        Scene scene = new Scene(root, 800, 800);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("SimNG");
+        primaryStage.show();
 
         simulation.startSimulation();
-        int counter = 1000000;
-        while (counter > 0) {
-            counter--;
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+        new Thread(() -> {
+            int counter = 1000000;
+            while (counter > 0) {
+                counter--;
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+                List<SimGroup> allGroups = simulation.getGroups();
+                javafx.application.Platform.runLater(() -> panel.updateGroups(allGroups));
             }
-
-            List<SimGroup> allGroups = simulation.getGroups();
-//            System.out.println("Current allGroups: " + allGroups);
-            panel.updateGroups(allGroups); // Aktualizacja grup w panelu
-        }
-
-        simulation.stopSimulation();
+            simulation.stopSimulation();
+        }).start();
     }
 }
