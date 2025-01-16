@@ -13,7 +13,7 @@ public class RandomForce extends SimGroup {
     public RandomForce(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
 
-        SimUnit unit = new Abrams(5);
+        SimUnit unit = new UnitManager.Abrams(5);
         this.addUnit(unit);
 
 //        List<SimVector2i> directions = new ArrayList<>();
@@ -64,11 +64,10 @@ public class RandomForce extends SimGroup {
     }
 
 
-    @Override
-    public void apply_damage(SimGroup attacker, SimBullet bullet) {
+    public void apply_damage(SimGroup attacker) {
         if (!units.isEmpty()) {
             SimUnit unit = units.get(0);
-            unit.setAmount(unit.getAmount()-1);
+            unit.setInitialUnits(unit.getInitialUnits()-1);
             this.cleanDestroyedUnits();
         }
     }
@@ -78,7 +77,7 @@ public class RandomForce extends SimGroup {
             SimGroup target = visibleGroups.get(0);
             for(SimUnit unit: units){
                 if (unit.inShotRange(target.getPosition())){
-                    target.apply_damage(this, new TankShell());
+                    target.apply_damage(this);
                     System.out.println(getName() + " strzela do grupy: " + target.getName());
                 }
             }
