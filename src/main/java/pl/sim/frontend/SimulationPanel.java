@@ -28,6 +28,9 @@ public class SimulationPanel extends Canvas {
         GraphicsContext gc = getGraphicsContext2D();
         gc.clearRect(0, 0, getWidth(), getHeight());
 
+        gc.setLineWidth(1.5);
+        gc.setGlobalAlpha(1.0);
+
         //Rysowanie grup na mapie
         for (SimGroup group : groups) {
             SimPosition pos = group.getPosition();
@@ -44,10 +47,14 @@ public class SimulationPanel extends Canvas {
             }
 
             //Kwadrat
+//            double x = pos.getX() * 20 - rectWidth / 2.0;
+//            double y = pos.getY() * 20 - rectHeight / 2.0;
+//            gc.fillRect(x, y, rectWidth, rectHeight);
+//            gc.setLineWidth(1.5);
+//            gc.strokeRect(x, y, rectWidth, rectHeight);
             double x = pos.getX() * 20 - rectWidth / 2.0;
             double y = pos.getY() * 20 - rectHeight / 2.0;
             gc.fillRect(x, y, rectWidth, rectHeight);
-            gc.setLineWidth(1.5);
             gc.strokeRect(x, y, rectWidth, rectHeight);
 
             //Nazwa grupy

@@ -26,12 +26,15 @@ public class BaseGroup extends SimGroup {
 
     @Override
     public void move() {
+        int groupSpeed = getSpeed();
+        double stepSize = 0.1 * groupSpeed; // Skala szybkości dla płynności
+
         if (!visibleGroups.isEmpty()) {
             SimGroup target = visibleGroups.get(0);
             if (units.stream().anyMatch(unit -> unit.inShotRange(target.getPosition()))) {
                 shot();
             } else {
-                attackTarget(target.getPosition());
+                attackTarget(target.getPosition(), stepSize);
             }
         } else {
             if (route.isEmpty() && !(this.position.getX() == originalDestination.getX() && this.position.getY() == originalDestination.getY())) {
@@ -41,14 +44,15 @@ public class BaseGroup extends SimGroup {
             if (!route.isEmpty()) {
                 SimVector2i direction = route.poll();
                 if (direction != null) {
+                    SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY()).scale(stepSize);
                     System.out.println(getName() + " kontynuuje ruch po trasie");
-                    this.position.add(direction);
+                    this.position.add(smoothDirection.getDx(), smoothDirection.getDy());
                 }
             }
         }
-        addTask(this::move, 1);
-    }
 
+        addTask(this::move, 1); // Nadal zachowujemy opóźnienie dla płynności
+    }
 
     public void apply_damage(SimGroup attacker) {
         if (!units.isEmpty()) {
@@ -70,7 +74,7 @@ public class BaseGroup extends SimGroup {
         }
     }
 
-    private void attackTarget(SimPosition targetPosition) {
+    private void attackTarget(SimPosition targetPosition, double speed) {
         System.out.println(getName() + " oblicza trasę do celu");
         this.route = calculateRouteTo(targetPosition);
 
