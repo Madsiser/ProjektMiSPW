@@ -2,32 +2,18 @@ package pl.sim.backend;
 
 import pl.simNG.*;
 
-import java.util.LinkedList;
 import java.util.Random;
 
-public class RandomForce extends SimGroup {
+public class BaseGroup extends SimGroup {
 
     Random random = new Random();
     private SimPosition originalDestination;
 
-    public RandomForce(String name, SimPosition position, SimForceType forceType) {
+    public BaseGroup(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
 
         SimUnit unit = new UnitManager.Abrams(5);
         this.addUnit(unit);
-
-//        List<SimVector2i> directions = new ArrayList<>();
-//        directions.add(SimVector2i.UP);
-//        directions.add(SimVector2i.DOWN);
-//        directions.add(SimVector2i.LEFT);
-//        directions.add(SimVector2i.RIGHT);
-
-//        int length = 1000;
-//        for (int i = 0; i < length; i++) {
-//            SimVector2i randomDirection = directions.get(random.nextInt(directions.size()));
-//            this.route.add(randomDirection);
-//        }
-
     }
 
     @Override
