@@ -59,13 +59,20 @@ public class SimulationPanel extends Canvas {
             double groupNameWidth = textNode.getBoundsInLocal().getWidth();
             gc.fillText(groupName, x + rectWidth / 2.0 - groupNameWidth / 2.0, y - 5);
 
-            //Liczba jednostek w grupie
+            //Jednostki w grupie
             List<SimUnit> units = group.getUnits();
             gc.setFont(javafx.scene.text.Font.font("Arial", 12));
             gc.setFill(Color.BLACK);
             for (int i = 0; i < units.size(); i++) {
                 SimUnit unit = units.get(i);
-                String unitInfo = unit.getName() + " (" + unit.getShotRange() + ")";
+                String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
+                        unit.getName(),
+                        unit.getActiveUnits(),
+                        unit.getInitialUnits(),
+                        unit.getCurrentAmmunition(),
+                        unit.getInitialAmmunition()
+                );
+
                 Text unitTextNode = new Text(unitInfo);
                 unitTextNode.setFont(gc.getFont());
                 double unitInfoWidth = unitTextNode.getBoundsInLocal().getWidth();

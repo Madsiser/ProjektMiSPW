@@ -67,7 +67,7 @@ public class RandomForce extends SimGroup {
     public void apply_damage(SimGroup attacker) {
         if (!units.isEmpty()) {
             SimUnit unit = units.get(0);
-            unit.setInitialUnits(unit.getInitialUnits()-1);
+            unit.setActiveUnits(unit.getActiveUnits()-1);
             this.cleanDestroyedUnits();
         }
     }
