@@ -8,14 +8,13 @@ import java.util.Random;
 
 public class BaseGroup extends SimGroup {
 
-    Random random = new Random();
     private SimPosition originalDestination;
     private SimPosition lastAttackerPosition = null;
 
     public BaseGroup(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
 
-        SimUnit unit = new UnitManager.Abrams(5);
+        SimUnit unit = new UnitManager.Abrams(50);
         this.addUnit(unit);
     }
 
@@ -41,26 +40,30 @@ public class BaseGroup extends SimGroup {
         if (!visibleGroups.isEmpty()) {
             SimGroup target = visibleGroups.get(0);
             if (units.stream().anyMatch(unit -> unit.inShotRange(target.getPosition()))) {
+                Logger.log(this, "Przeciwnik w zasięgu strzału, oddawanie strzału. Cel: " + target.getName() +
+                        " na pozycji " + target.getPosition(), parent.getSimulationTime());
                 shot();
             } else {
                 //Ruch w kierunku widocznego przeciwnika
-                System.out.println(getName() + " porusza się w kierunku widocznego przeciwnika.");
+                Logger.log(this, "Ruch w kierunku widocznego przeciwnika. Cel: " + target.getName() +
+                        " na pozycji " + target.getPosition(), parent.getSimulationTime());
                 attackTarget(target.getPosition(), stepSize);
             }
         }
         //Jeżeli został zaatakowany i brak widocznych przeciwników
         else if (lastAttackerPosition != null) {
-            System.out.println(getName() + " porusza się w stronę ostatniego atakującego.");
+            Logger.log(this, "Ruch w stronę ostatniego atakującego. Pozycja: " + lastAttackerPosition, parent.getSimulationTime());
             attackTarget(lastAttackerPosition, stepSize);
             lastAttackerPosition = null;
         }
         //Brak amunicji, powrót do pierwotnego celu
         else if (units.stream().allMatch(unit -> unit.getCurrentAmmunition() == 0)) {
-            System.out.println(getName() + " powraca do pierwotnej trasy z powodu braku amunicji.");
+            Logger.log(this, "Powrót do pierwotnej trasy z powodu braku amunicji.", parent.getSimulationTime());
             moveToOriginalDestination(stepSize);
         }
         //Domyślne poruszanie się po zadanej trasie
         else {
+            Logger.log(this, "Kontynuowanie ruchu po pierwotnej trasie.", parent.getSimulationTime());
             moveToOriginalDestination(stepSize);
         }
         addTask(this::move, 1);
@@ -69,7 +72,7 @@ public class BaseGroup extends SimGroup {
     //Ruch po domyślnie zadanej trasie
     private void moveToOriginalDestination(double stepSize) {
         if (route.isEmpty() && !position.equals(originalDestination)) {
-            System.out.println(getName() + " oblicza trasę do pierwotnego celu.");
+            Logger.log(this, "Oblicza trasę do pierwotnego celu. Pozycja celu: " + originalDestination, parent.getSimulationTime());
             route = calculateRouteTo(originalDestination);
         }
         if (!route.isEmpty()) {
@@ -77,7 +80,7 @@ public class BaseGroup extends SimGroup {
             if (direction != null) {
                 SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY()).scale(stepSize);
                 position.add(smoothDirection.getDx(), smoothDirection.getDy());
-                System.out.println(getName() + " kontynuuje ruch po trasie.");
+                Logger.log(this, "Kontynuuje ruch po trasie. Następny krok: " + position, parent.getSimulationTime());
             }
         }
     }
@@ -85,7 +88,7 @@ public class BaseGroup extends SimGroup {
     //Ruch w kierunku przeciwnika
     private void attackTarget(SimPosition targetPosition, double speed) {
         if (route.isEmpty() || !targetPosition.equals(route.getLast())) {
-            System.out.println(getName() + " oblicza trasę do celu.");
+            Logger.log(this, "Oblicza trasę do celu. Cel: " + targetPosition, parent.getSimulationTime());
             route = calculateRouteTo(targetPosition);
         }
 
@@ -94,7 +97,7 @@ public class BaseGroup extends SimGroup {
             if (direction != null) {
                 SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY()).scale(speed);
                 position.add(smoothDirection.getDx(), smoothDirection.getDy());
-                System.out.println(getName() + " porusza się w kierunku celu.");
+                Logger.log(this, "Porusza się w kierunku celu. Pozycja: " + position, parent.getSimulationTime());
             }
         }
     }
@@ -106,10 +109,20 @@ public class BaseGroup extends SimGroup {
     public void apply_damage(SimGroup attacker) {
         if (!units.isEmpty()) {
             SimUnit unit = units.get(0);
-            unit.setActiveUnits(unit.getActiveUnits()-1);
+            unit.setActiveUnits(unit.getActiveUnits() - 1);
+            Logger.log(this, "Jednostka " + unit.getName() + " została uszkodzona. Pozostało aktywnych: " +
+                    unit.getActiveUnits() + "/" + unit.getInitialUnits(), parent.getSimulationTime());
+
             this.cleanDestroyedUnits();
-            lastAttackerPosition = attacker.getPosition();
-            System.out.println(getName() + " został zaatakowany przez " + attacker.getName() + " na pozycji " + lastAttackerPosition);
+
+            //Jeśli grupa została rozbita
+            if (isDestroyed()) {
+                Logger.log(this, "Grupa została rozbita przez " + attacker.getName() + "!", parent.getSimulationTime());
+            } else {
+                lastAttackerPosition = attacker.getPosition();
+                Logger.log(this, "Została zaatakowana przez " + attacker.getName() +
+                        " na pozycji " + lastAttackerPosition, parent.getSimulationTime());
+            }
         }
     }
 
@@ -141,7 +154,6 @@ public class BaseGroup extends SimGroup {
                         for (Map.Entry<String, Integer> entry : targetCounts.entrySet()) {
                             cumulativeProbability += (double) entry.getValue() / totalUnits;
                             if (rand <= cumulativeProbability) {
-                                // Wybór celu na podstawie proporcji
                                 SimGroup target = visibleGroups.stream()
                                         .filter(g -> g.getUnits().stream()
                                                 .anyMatch(u -> u.getType().equalsIgnoreCase(entry.getKey())))
@@ -154,18 +166,18 @@ public class BaseGroup extends SimGroup {
 
                                     if (random.nextDouble() <= hitProbability) {
                                         target.apply_damage(this);
-                                        System.out.println(getName() + " trafia w " + entry.getKey());
+                                        Logger.log(this, "Trafia w jednostkę: " + entry.getKey() + ". Pozycja celu: " + target.getPosition(), parent.getSimulationTime());
+                                    } else {
+                                        Logger.log(this, "Nie trafia w jednostkę: " + entry.getKey() + ". Pozycja celu: " + target.getPosition(), parent.getSimulationTime());
                                     }
                                 }
                                 break;
                             }
                         }
-                        unit.setCurrentAmmunition(unit.getCurrentAmmunition() - 1); // Zużycie amunicji
+                        unit.setCurrentAmmunition(unit.getCurrentAmmunition() - 1);
                     }
                 }
             }
         }
     }
-
-
 }
