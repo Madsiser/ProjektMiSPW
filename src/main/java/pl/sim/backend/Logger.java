@@ -23,8 +23,6 @@ public class Logger {
                         unit.getShotRange()
                 ));
             }
-        } else {
-            logEntry.append("Grupa nie posiada żadnych jednostek.");
         }
         System.out.println(logEntry);
     }

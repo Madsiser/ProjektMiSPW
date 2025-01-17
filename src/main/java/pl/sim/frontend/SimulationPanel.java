@@ -10,6 +10,8 @@ import pl.simNG.SimPosition;
 import pl.simNG.SimUnit;
 
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 public class SimulationPanel extends Canvas {
     private List<SimGroup> groups;
@@ -37,6 +39,14 @@ public class SimulationPanel extends Canvas {
             int rectWidth = 15;
             int rectHeight = 15;
 
+            Map<String, Integer> totalCurrentAmmoByName = new HashMap<>();
+            Map<String, Integer> totalInitialAmmoByName = new HashMap<>();
+            for (SimUnit unit : group.getUnits()) {
+                String unitName = unit.getName();
+                totalCurrentAmmoByName.put(unitName, totalCurrentAmmoByName.getOrDefault(unitName, 0) + unit.getCurrentAmmunition());
+                totalInitialAmmoByName.put(unitName, totalInitialAmmoByName.getOrDefault(unitName, 0) + unit.getInitialAmmunition());
+            }
+
             //Kolor w zależności od strony
             if (group.getForceType() == SimForceType.REDFORCE) {
                 gc.setFill(Color.RED);
@@ -47,11 +57,6 @@ public class SimulationPanel extends Canvas {
             }
 
             //Kwadrat
-//            double x = pos.getX() * 20 - rectWidth / 2.0;
-//            double y = pos.getY() * 20 - rectHeight / 2.0;
-//            gc.fillRect(x, y, rectWidth, rectHeight);
-//            gc.setLineWidth(1.5);
-//            gc.strokeRect(x, y, rectWidth, rectHeight);
             double x = pos.getX() * 20 - rectWidth / 2.0;
             double y = pos.getY() * 20 - rectHeight / 2.0;
             gc.fillRect(x, y, rectWidth, rectHeight);
@@ -66,24 +71,64 @@ public class SimulationPanel extends Canvas {
             double groupNameWidth = textNode.getBoundsInLocal().getWidth();
             gc.fillText(groupName, x + rectWidth / 2.0 - groupNameWidth / 2.0, y - 5);
 
-            //Jednostki w grupie
-            List<SimUnit> units = group.getUnits();
+//            //Jednostki w grupie
+//            List<SimUnit> units = group.getUnits();
+//            gc.setFont(javafx.scene.text.Font.font("Arial", 12));
+//            gc.setFill(Color.BLACK);
+//            for (int i = 0; i < units.size(); i++) {
+//                SimUnit unit = units.get(i);
+//                String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
+//                        unit.getName(),
+//                        unit.getActiveUnits(),
+//                        unit.getInitialUnits(),
+//                        unit.getActiveUnits() * unit.getCurrentAmmunition(),
+//                        unit.getInitialUnits() * unit.getInitialAmmunition()
+//                );
+//
+//                Text unitTextNode = new Text(unitInfo);
+//                unitTextNode.setFont(gc.getFont());
+//                double unitInfoWidth = unitTextNode.getBoundsInLocal().getWidth();
+//                gc.fillText(unitInfo, x + rectWidth / 2.0 - unitInfoWidth / 2.0, y + rectHeight + 12 * (i + 1));
+//            }
+
+            //Wyświetlanie podsumowania amunicji dla grupy jednostek
             gc.setFont(javafx.scene.text.Font.font("Arial", 12));
             gc.setFill(Color.BLACK);
-            for (int i = 0; i < units.size(); i++) {
-                SimUnit unit = units.get(i);
-                String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
-                        unit.getName(),
-                        unit.getActiveUnits(),
-                        unit.getInitialUnits(),
-                        unit.getCurrentAmmunition(),
-                        unit.getInitialAmmunition()
-                );
 
+            int lineOffset = 1;
+            for (String unitName : totalCurrentAmmoByName.keySet()) {
+                //Liczenie aktywnej i początkowej ilości amunicji
+                int totalCurrentAmmo = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(u -> u.getActiveUnits() * u.getCurrentAmmunition())
+                        .sum();
+
+                int totalInitialAmmo = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(u -> u.getInitialUnits() * u.getInitialAmmunition())
+                        .sum();
+
+                //Liczenie aktywnych i początkowych jednostek
+                int activeUnits = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(SimUnit::getActiveUnits)
+                        .sum();
+
+                int initialUnits = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(SimUnit::getInitialUnits)
+                        .sum();
+
+                //Tworzenie tekstu z podsumowaniem
+                String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
+                        unitName, activeUnits, initialUnits, totalCurrentAmmo, totalInitialAmmo);
+
+                //Rysowanie tekstu
                 Text unitTextNode = new Text(unitInfo);
                 unitTextNode.setFont(gc.getFont());
                 double unitInfoWidth = unitTextNode.getBoundsInLocal().getWidth();
-                gc.fillText(unitInfo, x + rectWidth / 2.0 - unitInfoWidth / 2.0, y + rectHeight + 12 * (i + 1));
+                gc.fillText(unitInfo, x + rectWidth / 2.0 - unitInfoWidth / 2.0, y + rectHeight + 12 * lineOffset);
+                lineOffset++;
             }
 
             //Zasięg strzału grupy
