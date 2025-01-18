@@ -11,6 +11,7 @@ public class BaseGroup extends SimGroup {
     Random random = new Random();
     private SimPosition originalDestination;
     private SimPosition lastAttackerPosition = null;
+    private int totalInitialUnits;
 
     public BaseGroup(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
@@ -19,6 +20,8 @@ public class BaseGroup extends SimGroup {
         SimUnit unit2 = new UnitManager.BWP(5);
         this.addUnit(unit);
         this.addUnit(unit2);
+
+        totalInitialUnits = units.stream().mapToInt(SimUnit::getInitialUnits).sum();
     }
 
     //Inicjalizacja ruchu oraz strzału
@@ -145,9 +148,14 @@ public class BaseGroup extends SimGroup {
                     targetUnit.getActiveUnits() + "/" + targetUnit.getInitialUnits() +
                     ". Stracono amunicję: " + lostAmmunition, parent.getSimulationTime());
 
+            int totalActiveUnits = units.stream().mapToInt(SimUnit::getActiveUnits).sum();
+
+            Logger.log(this, "applyDamage: Początkowe jednostki: " + totalInitialUnits + ", Aktywne: " + totalActiveUnits, parent.getSimulationTime());
+
             this.cleanDestroyedUnits();
 
-            if (isDestroyed()) {
+            if ((double) totalActiveUnits / totalInitialUnits < 0.30) {
+                destroyGroup();
                 Logger.log(this, "Grupa " + this.getName() + " została rozbita przez " + attacker.getName() + "!", parent.getSimulationTime());
             } else {
                 lastAttackerPosition = attacker.getPosition();
@@ -156,6 +164,14 @@ public class BaseGroup extends SimGroup {
             }
         }
     }
+
+    public void destroyGroup() {
+        Logger.log(this, "Grupa " + this.getName() + " została całkowicie usunięta.", parent.getSimulationTime());
+        units.clear();
+        visibleGroups.clear();
+        route.clear();
+    }
+
 
     //=============================================
     //Sekcja odpowiedzialna za zadawanie obrażeń
