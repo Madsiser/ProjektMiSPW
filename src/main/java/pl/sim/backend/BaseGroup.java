@@ -9,18 +9,16 @@ import java.util.Random;
 public class BaseGroup extends SimGroup {
 
     Random random = new Random();
-    private SimPosition originalDestination;
+    protected SimPosition originalDestination;
     private SimPosition lastAttackerPosition = null;
-    private int totalInitialUnits;
+    protected int totalInitialUnits;
 
     public BaseGroup(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
-
-        SimUnit unit = new UnitManager.Abrams(5);
-        SimUnit unit2 = new UnitManager.BWP(5);
-        this.addUnit(unit);
-        this.addUnit(unit2);
-
+//        SimUnit unit1 = new UnitManager.Abrams(10);
+//        SimUnit unit2 = new UnitManager.BWP(10);
+//        this.addUnit(unit1);
+//        this.addUnit(unit2);
         totalInitialUnits = units.stream().mapToInt(SimUnit::getInitialUnits).sum();
     }
 
@@ -32,10 +30,13 @@ public class BaseGroup extends SimGroup {
         addTask(this::move,1);
         for (SimUnit unit : units) {
             double fireIntensity = unit.getFireIntensity();
+
             if (fireIntensity > 0) {
-                int maxInterval = 3;
+                int maxInterval = 10;
                 int minInterval = 1;
-                int nextShotInterval = (int) Math.ceil(maxInterval - (fireIntensity / 10.0) * (maxInterval - minInterval));
+
+                int nextShotInterval = Math.max(minInterval, (int) Math.ceil(maxInterval - (fireIntensity * (maxInterval - minInterval) / 10.0)));
+
                 addTask(() -> unitShot(unit), nextShotInterval);
                 Logger.log(this, "Konfiguracja dla jednostki " + unit.getName() +
                         ": fireIntensity = " + fireIntensity + ", pierwszy strzał za: " + nextShotInterval, parent.getSimulationTime());
@@ -68,7 +69,6 @@ public class BaseGroup extends SimGroup {
             SimGroup target = visibleGroups.get(0);
             double distanceToTarget = position.distanceTo(target.getPosition());
             if (distanceToTarget > minShotRange) {
-                // Zbliżanie się do celu
                 Logger.log(this, "Zbliżanie się do celu, odległość: " + distanceToTarget +
                         ", minimalny zasięg: " + minShotRange, parent.getSimulationTime());
                 attackTarget(target.getPosition(), stepSize);
@@ -172,18 +172,13 @@ public class BaseGroup extends SimGroup {
         route.clear();
     }
 
-
     //=============================================
     //Sekcja odpowiedzialna za zadawanie obrażeń
     //============================================
 
     //Główna funkcja odpowiedzialna za strzelanie jednostek
-    private void unitShot(SimUnit unit) {
-        if (unit.getCurrentAmmunition() > 0) {
-            if (visibleGroups.isEmpty()) {
-                Logger.log(this, "Jednostka " + unit.getName() + " nie strzela, ponieważ brak widocznych przeciwników.", parent.getSimulationTime());
-                return;
-            }
+    protected void unitShot(SimUnit unit) {
+        if (unit.getCurrentAmmunition() > 0 && !visibleGroups.isEmpty()) {
             Logger.log(this, "Grupa " + this.getName() + " rozpoczyna ostrzał. Jednostka: " +
                     unit.getName() + ", Obecna amunicja: " + unit.getCurrentAmmunition(), parent.getSimulationTime());
 
@@ -228,7 +223,7 @@ public class BaseGroup extends SimGroup {
                         .orElse(null);
             }
 
-            if (selectedGroup != null && selectedUnit != null) {
+            if (selectedGroup != null) {
                 double distance = position.distanceTo(selectedGroup.getPosition());
                 double hitProbability = unit.calculateHitProbability(selectedUnit.getType(), distance);
 
@@ -241,7 +236,7 @@ public class BaseGroup extends SimGroup {
                     Logger.log(this, "Jednostka " + unit.getName() + " trafia w cel: " +
                             selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
 
-                    double destructionProbability = unit.calculateDestructionProbability(selectedUnit.getType());
+                    double destructionProbability = unit.calculateDestructionProbability(unit, selectedUnit.getType());
 
                     //Jednostka niszczy cel
                     if (random.nextDouble() <= destructionProbability) {
@@ -266,7 +261,7 @@ public class BaseGroup extends SimGroup {
 
         double fireIntensity = unit.getFireIntensity();
         if (fireIntensity > 0 && unit.getCurrentAmmunition() > 0) {
-            int maxInterval = 3;
+            int maxInterval = 10;
             int minInterval = 1;
             int nextShotInterval = (int) Math.ceil(maxInterval - (fireIntensity / 10.0) * (maxInterval - minInterval));
             addTask(() -> unitShot(unit), nextShotInterval);
