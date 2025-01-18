@@ -16,7 +16,7 @@ public class BaseGroup extends SimGroup {
         super(name, position, forceType);
 
         SimUnit unit = new UnitManager.Abrams(5);
-        SimUnit unit2 = new UnitManager.BWP(25);
+        SimUnit unit2 = new UnitManager.BWP(5);
         this.addUnit(unit);
         this.addUnit(unit2);
     }
@@ -83,9 +83,13 @@ public class BaseGroup extends SimGroup {
             moveToOriginalDestination(stepSize);
         }
         //Domyślne poruszanie się po zadanej trasie
-        else if (!isCloseToDestination(position, originalDestination, 0.1)){
+        else if (!isCloseToDestination(position, originalDestination, 0.5)){
             Logger.log(this, "Kontynuowanie ruchu po pierwotnej trasie.", parent.getSimulationTime());
             moveToOriginalDestination(stepSize);
+            if(isCloseToDestination(position, originalDestination, 0.5)){
+                Logger.log(this, "Dotarł w pobliże celu. Pozycja celu: " + originalDestination +
+                        ", aktualna pozycja: " + position, parent.getSimulationTime());
+            }
         }
         addTask(this::move, 1);
     }
@@ -241,7 +245,6 @@ public class BaseGroup extends SimGroup {
                             selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
                 }
             }
-
             unit.setCurrentAmmunition(unit.getCurrentAmmunition() - 1);
         }
 

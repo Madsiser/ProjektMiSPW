@@ -21,11 +21,11 @@ public class App extends Application {
         SimCore simulation = new SimCore();
         simulation.setMap(new SimMap(MapGenerator.generate(501, 501)));
 
-//        simulation.addGroup(new BaseGroup("Charlie Force", new SimPosition(20.0, 20.0), SimForceType.BLUFORCE));
-//        simulation.addGroup(new BaseGroup("Echo Force", new SimPosition(25.0, 13.0), SimForceType.BLUFORCE));
-//        simulation.addGroup(new BaseGroup("Foxtrot Force", new SimPosition(13.0, 25.0), SimForceType.REDFORCE));
-//        simulation.addGroup(new BaseGroup("Golf Force", new SimPosition(27.0, 15.0), SimForceType.REDFORCE));
-        simulation.addGroup(new BaseGroup("Hotel Force", new SimPosition(4.0, 4.0), SimForceType.REDFORCE));
+        simulation.addGroup(new BaseGroup("Charlie Force", new SimPosition(20.0, 20.0), SimForceType.BLUFORCE));
+        simulation.addGroup(new BaseGroup("Echo Force", new SimPosition(25.0, 13.0), SimForceType.BLUFORCE));
+        simulation.addGroup(new BaseGroup("Foxtrot Force", new SimPosition(13.0, 25.0), SimForceType.REDFORCE));
+        simulation.addGroup(new BaseGroup("Golf Force", new SimPosition(27.0, 15.0), SimForceType.REDFORCE));
+        simulation.addGroup(new BaseGroup("Hotel Force", new SimPosition(24.0, 24.0), SimForceType.REDFORCE));
 
         Random random = new Random(10);
 
