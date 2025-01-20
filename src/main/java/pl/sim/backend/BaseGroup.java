@@ -200,65 +200,72 @@ public class BaseGroup extends SimGroup {
                 return;
             }
 
-            double cumulativeProbability = 0.0;
-            SimUnit selectedUnit = null;
-            SimGroup selectedGroup = null;
+            //Losowanie ile danych jednostek będzie strzelać
+            int shots = random.nextInt(unit.getActiveUnits()) + 1;
+            Logger.log(this, "Jednostki " + unit.getName() + " wykonują " + shots + " strzałów.", parent.getSimulationTime());
 
-            //Losowanie celu według wagi
-            for (Map.Entry<SimUnit, Integer> entry : targetWeights.entrySet()) {
-                SimUnit potentialTarget = entry.getKey();
-                cumulativeProbability += (double) entry.getValue() / totalWeight;
-                if (random.nextDouble() <= cumulativeProbability) {
-                    selectedUnit = potentialTarget;
-                    break;
-                }
-            }
+            for (int i = 0; i < shots; i++) {
+                double cumulativeProbability = 0.0;
+                SimUnit selectedUnit = null;
+                SimGroup selectedGroup = null;
 
-            //Znalezienie grupy odpowiadającej wybranemu celowi
-            if (selectedUnit != null) {
-                SimUnit finalSelectedUnit = selectedUnit;
-                selectedGroup = visibleGroups.stream()
-                        .filter(group -> group.getUnits().contains(finalSelectedUnit))
-                        .findFirst()
-                        .orElse(null);
-            }
-
-            if (selectedGroup != null) {
-                double distance = position.distanceTo(selectedGroup.getPosition());
-                double hitProbability = unit.calculateHitProbability(selectedUnit.getType(), distance);
-
-                Logger.log(this, "Jednostka " + unit.getName() + " celuje w: " + selectedUnit.getName() + " [" +
-                        selectedGroup.getName() + "]. Odległość: " + distance + ", Prawdopodobieństwo trafienia: " +
-                        hitProbability, parent.getSimulationTime());
-
-                //Jednostka trafia w cel
-                if (random.nextDouble() <= hitProbability) {
-                    Logger.log(this, "Jednostka " + unit.getName() + " trafia w cel: " +
-                            selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
-
-                    double destructionProbability = unit.calculateDestructionProbability(unit, selectedUnit.getType());
-
-                    //Jednostka niszczy cel
-                    if (random.nextDouble() <= destructionProbability) {
-                        Logger.log(this, "Jednostka " + unit.getName() + " zniszczyła cel: " +
-                                selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
-                        selectedGroup.applyDamage(this, selectedUnit);
+                //Losowanie celu według wagi
+                for (Map.Entry<SimUnit, Integer> entry : targetWeights.entrySet()) {
+                    SimUnit potentialTarget = entry.getKey();
+                    cumulativeProbability += (double) entry.getValue() / totalWeight;
+                    if (random.nextDouble() <= cumulativeProbability) {
+                        selectedUnit = potentialTarget;
+                        break;
                     }
-                    //Jednostka nie niszczy celu
+                }
+
+                //Znalezienie grupy odpowiadającej wybranemu celowi
+                if (selectedUnit != null) {
+                    SimUnit finalSelectedUnit = selectedUnit;
+                    selectedGroup = visibleGroups.stream()
+                            .filter(group -> group.getUnits().contains(finalSelectedUnit))
+                            .findFirst()
+                            .orElse(null);
+                }
+
+                if (selectedGroup != null) {
+                    double distance = position.distanceTo(selectedGroup.getPosition());
+                    double hitProbability = unit.calculateHitProbability(selectedUnit.getType(), distance);
+
+                    Logger.log(this, "Jednostka " + unit.getName() + " celuje w: " + selectedUnit.getName() + " [" +
+                            selectedGroup.getName() + "]. Odległość: " + distance + ", Prawdopodobieństwo trafienia: " +
+                            hitProbability, parent.getSimulationTime());
+
+                    //Jednostka trafia w cel
+                    if (random.nextDouble() <= hitProbability) {
+                        Logger.log(this, "Jednostka " + unit.getName() + " trafia w cel: " +
+                                selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
+
+                        double destructionProbability = unit.calculateDestructionProbability(unit, selectedUnit.getType());
+
+                        //Jednostka niszczy cel
+                        if (random.nextDouble() <= destructionProbability) {
+                            Logger.log(this, "Jednostka " + unit.getName() + " zniszczyła cel: " +
+                                    selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
+                            selectedGroup.applyDamage(this, selectedUnit);
+                        }
+                        //Jednostka nie niszczy celu
+                        else {
+                            Logger.log(this, "Jednostka " + unit.getName() + " trafiła, ale nie zniszczyła celu: " +
+                                    selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
+                        }
+                    }
+                    //Jednostka nie trafia w cel
                     else {
-                        Logger.log(this, "Jednostka " + unit.getName() + " trafiła, ale nie zniszczyła celu: " +
+                        Logger.log(this, "Jednostka " + unit.getName() + " nie trafia w cel: " +
                                 selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
                     }
                 }
-                //Jednostka nie trafia w cel
-                else {
-                    Logger.log(this, "Jednostka " + unit.getName() + " nie trafia w cel: " +
-                            selectedUnit.getName() + " [" + selectedGroup.getName() + "]", parent.getSimulationTime());
-                }
+                unit.setCurrentAmmunition(unit.getCurrentAmmunition() - 1);
             }
-            unit.setCurrentAmmunition(unit.getCurrentAmmunition() - 1);
         }
 
+        //Obliczanie intensywności strzałów
         double fireIntensity = unit.getFireIntensity();
         if (fireIntensity > 0 && unit.getCurrentAmmunition() > 0) {
             int maxInterval = 10;
