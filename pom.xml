@@ -20,7 +20,7 @@
             <artifactId>SimNG</artifactId>
             <version>1.1</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/SimNG-1.1.jar</systemPath>
+            <systemPath>${project.basedir}/lib/SimNG/SimNG-1.1.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -40,7 +40,15 @@
             <version>21.0.1</version>
             <classifier>win</classifier>
         </dependency>
+        <dependency>
+            <groupId>com.gluonhq</groupId>
+            <artifactId>maps</artifactId>
+            <version>2.0.0-ea+7-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/Gluon/maps-2.0.0-ea+7-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
