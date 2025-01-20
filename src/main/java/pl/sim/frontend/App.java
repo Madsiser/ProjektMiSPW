@@ -1,5 +1,6 @@
 package pl.sim.frontend;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -56,19 +57,20 @@ public class App extends Application {
         primaryStage.show();
 
         simulation.startSimulation();
-        new Thread(() -> {
-            int counter = 1000000;
-            while (counter > 0) {
-                counter--;
-                try {
-                    Thread.sleep(1);
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                }
+        AnimationTimer timer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
                 List<SimGroup> allGroups = simulation.getGroups();
-                javafx.application.Platform.runLater(() -> panel.updateGroups(allGroups));
+                panel.updateGroups(allGroups);
             }
+        };
+        timer.start();
+        primaryStage.setOnCloseRequest(event -> {
             simulation.stopSimulation();
-        }).start();
+            System.exit(0);
+        });
+    }
+    public static void main(String[] args) {
+        launch(args);
     }
 }
