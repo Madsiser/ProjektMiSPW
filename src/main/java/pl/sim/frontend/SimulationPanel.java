@@ -100,12 +100,12 @@ public class SimulationPanel extends Canvas {
                 //Liczenie aktywnej i początkowej ilości amunicji
                 int totalCurrentAmmo = group.getUnits().stream()
                         .filter(u -> u.getName().equals(unitName))
-                        .mapToInt(u -> u.getActiveUnits() * u.getCurrentAmmunition())
+                        .mapToInt(SimUnit::getTotalCurrentAmmunition)
                         .sum();
 
                 int totalInitialAmmo = group.getUnits().stream()
                         .filter(u -> u.getName().equals(unitName))
-                        .mapToInt(u -> u.getInitialUnits() * u.getInitialAmmunition())
+                        .mapToInt(SimUnit::getTotalInitialAmmunition)
                         .sum();
 
                 //Liczenie aktywnych i początkowych jednostek

@@ -18,8 +18,8 @@ public class Logger {
                         unit.getName(),
                         unit.getActiveUnits(),
                         unit.getInitialUnits(),
-                        unit.getCurrentAmmunition(),
-                        unit.getInitialAmmunition(),
+                        unit.getTotalCurrentAmmunition(),
+                        unit.getInitialAmmunition()*unit.getInitialUnits(),
                         unit.getShotRange()
                 ));
             }

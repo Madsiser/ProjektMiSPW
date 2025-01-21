@@ -24,10 +24,10 @@ public class App extends Application {
         simulation.setMap(new SimMap(MapGenerator.generate(501, 501)));
 
         simulation.addGroup(new BattalionManager.TankBattalion("Tank Battalion 1", new SimPosition(24, 21), SimForceType.BLUFORCE, 10));
-        simulation.addGroup(new BattalionManager.MechanizedBattalion("Mechanized Battalion 1", new SimPosition(22, 13), SimForceType.BLUFORCE, 20));
-        simulation.addGroup(new BattalionManager.InfantryBattalion("Infantry Battalion 1", new SimPosition(13, 22), SimForceType.REDFORCE, 50));
+        simulation.addGroup(new BattalionManager.MechanizedBattalion("Mechanized Battalion 1", new SimPosition(22, 13), SimForceType.BLUFORCE, 10));
+        simulation.addGroup(new BattalionManager.InfantryBattalion("Blue Infantry Battalion 1", new SimPosition(10, 19), SimForceType.BLUFORCE, 50));
+        simulation.addGroup(new BattalionManager.InfantryBattalion("Red Infantry Battalion 2", new SimPosition(13, 22), SimForceType.REDFORCE, 50));
         simulation.addGroup(new BattalionManager.ArtilleryBattalion("Artillery Battalion 1", new SimPosition(27, 28), SimForceType.REDFORCE, 10));
-        simulation.addGroup(new BattalionManager.ArtilleryBattalion("Artillery Battalion 1", new SimPosition(5, 5), SimForceType.REDFORCE, 10));
 //        simulation.addGroup(new BaseGroup("Charlie Force", new SimPosition(26.0, 26.0), SimForceType.BLUFORCE));
 //        simulation.addGroup(new BaseGroup("Echo Force", new SimPosition(25.0, 13.0), SimForceType.BLUFORCE));
 //        simulation.addGroup(new BaseGroup("Foxtrot Force", new SimPosition(13.0, 25.0), SimForceType.REDFORCE));

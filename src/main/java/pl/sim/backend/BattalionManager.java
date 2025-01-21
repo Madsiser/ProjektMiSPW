@@ -10,6 +10,8 @@ public class BattalionManager {
             super(name, position, forceType);
             SimUnit unit1 = new UnitManager.Abrams(initialUnits);
             this.addUnit(unit1);
+            SimUnit unit2 = new UnitManager.BWP(initialUnits);
+            this.addUnit(unit2);
             totalInitialUnits = units.stream().mapToInt(SimUnit::getInitialUnits).sum();
         }
 
@@ -42,6 +44,8 @@ public class BattalionManager {
             super(name, position, forceType);
             SimUnit unit1 = new UnitManager.Soldier(initialUnits);
             this.addUnit(unit1);
+            SimUnit unit2 = new UnitManager.BWP(initialUnits);
+            this.addUnit(unit2);
             totalInitialUnits = units.stream().mapToInt(SimUnit::getInitialUnits).sum();
         }
 
@@ -57,6 +61,8 @@ public class BattalionManager {
             super(name, position, forceType);
             SimUnit unit1 = new UnitManager.Krab(initialUnits);
             this.addUnit(unit1);
+            SimUnit unit2 = new UnitManager.BWP(initialUnits);
+            this.addUnit(unit2);
             totalInitialUnits = units.stream().mapToInt(SimUnit::getInitialUnits).sum();
         }
 
