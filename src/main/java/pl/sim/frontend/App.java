@@ -23,11 +23,13 @@ public class App extends Application {
         SimCore simulation = new SimCore();
         simulation.setMap(new SimMap(MapGenerator.generate(501, 501)));
 
-        simulation.addGroup(new BattalionManager.TankBattalion("Tank Battalion 1", new SimPosition(24, 21), SimForceType.BLUFORCE, 10));
+        simulation.addGroup(new BattalionManager.TankBattalion("Tank Battalion 1", new SimPosition(20, 20), SimForceType.BLUFORCE, 10));
         simulation.addGroup(new BattalionManager.MechanizedBattalion("Mechanized Battalion 1", new SimPosition(22, 13), SimForceType.BLUFORCE, 10));
         simulation.addGroup(new BattalionManager.InfantryBattalion("Blue Infantry Battalion 1", new SimPosition(10, 19), SimForceType.BLUFORCE, 50));
         simulation.addGroup(new BattalionManager.InfantryBattalion("Red Infantry Battalion 2", new SimPosition(13, 22), SimForceType.REDFORCE, 50));
         simulation.addGroup(new BattalionManager.ArtilleryBattalion("Artillery Battalion 1", new SimPosition(27, 28), SimForceType.REDFORCE, 10));
+        simulation.addGroup(new BattalionManager.ArtilleryBattalion("Enemy Battalion", new SimPosition(5, 5), SimForceType.REDFORCE, 10));
+        simulation.addGroup(new BattalionManager.ArtilleryBattalion("Enemy Battalion", new SimPosition(10, 10), SimForceType.REDFORCE, 10));
 //        simulation.addGroup(new BaseGroup("Charlie Force", new SimPosition(26.0, 26.0), SimForceType.BLUFORCE));
 //        simulation.addGroup(new BaseGroup("Echo Force", new SimPosition(25.0, 13.0), SimForceType.BLUFORCE));
 //        simulation.addGroup(new BaseGroup("Foxtrot Force", new SimPosition(13.0, 25.0), SimForceType.REDFORCE));
@@ -36,16 +38,47 @@ public class App extends Application {
 
         Random random = new Random(10);
 
-//        for (int i = 1; i <= 10; i++) {
+//        for (int i = 1; i <= 3; i++) {
 //            int x = random.nextInt(100);
 //            int y = random.nextInt(100);
-//            simulation.addGroup(new BaseGroup("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE));
+//            simulation.addGroup(new BattalionManager.ArtilleryBattalion("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE, 10));
+//        }
+//        for (int i = 1; i <= 3; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BattalionManager.InfantryBattalion("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE, 10));
+//        }
+//        for (int i = 1; i <= 3; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BattalionManager.TankBattalion("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE, 10));
+//        }
+//        for (int i = 1; i <= 3; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BattalionManager.MechanizedBattalion("Ally " + i, new SimPosition(x, y), SimForceType.BLUFORCE,10));
 //        }
 //
-//        for (int i = 1; i <= 10; i++) {
+//
+//        for (int i = 1; i <= 3; i++) {
 //            int x = random.nextInt(100);
 //            int y = random.nextInt(100);
-//            simulation.addGroup(new BaseGroup("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE));
+//            simulation.addGroup(new BattalionManager.InfantryBattalion("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE, 10));
+//        }
+//        for (int i = 1; i <= 3; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BattalionManager.InfantryBattalion("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE, 10));
+//        }
+//        for (int i = 1; i <= 3; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BattalionManager.MechanizedBattalion("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE, 10));
+//        }
+//        for (int i = 1; i <= 3; i++) {
+//            int x = random.nextInt(100);
+//            int y = random.nextInt(100);
+//            simulation.addGroup(new BattalionManager.ArtilleryBattalion("Enemy " + i, new SimPosition(x, y), SimForceType.REDFORCE, 10));
 //        }
 
         SimulationPanel panel = new SimulationPanel(800, 800, simulation.getGroups());
