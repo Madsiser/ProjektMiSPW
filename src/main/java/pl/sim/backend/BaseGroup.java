@@ -15,10 +15,6 @@ public class BaseGroup extends SimGroup {
 
     public BaseGroup(String name, SimPosition position, SimForceType forceType) {
         super(name, position, forceType);
-//        SimUnit unit1 = new UnitManager.Abrams(10);
-//        SimUnit unit2 = new UnitManager.BWP(10);
-//        this.addUnit(unit1);
-//        this.addUnit(unit2);
         totalInitialUnits = units.stream().mapToInt(SimUnit::getInitialUnits).sum();
     }
 
@@ -117,7 +113,7 @@ public class BaseGroup extends SimGroup {
 
     //Ruch w kierunku przeciwnika
     private void attackTarget(SimPosition targetPosition, double speed) {
-        if (route.isEmpty() || !targetPosition.equals(route.getLast())) {
+        if (route.isEmpty() || !targetPosition.equals(new SimPosition(route.getLast().getX(), route.getLast().getY()))) {
             Logger.log(this, "Oblicza trasę do celu. Cel: " + targetPosition, parent.getSimulationTime());
             route = calculateRouteTo(targetPosition);
         }
@@ -275,7 +271,7 @@ public class BaseGroup extends SimGroup {
                     java.util.List<Integer> availableIndexes = new java.util.ArrayList<>();
                     for (int i = 0; i < unit.getInitialUnits(); i++) {
                         if (i < unit.getActiveUnits()) {
-                            if (((SimUnit) unit).hasAmmo(i)) {
+                            if (unit.hasAmmo(i)) {
                                 availableIndexes.add(i);
                             }
                         }
@@ -289,7 +285,7 @@ public class BaseGroup extends SimGroup {
 
                     for (int s = 0; s < finalShots; s++) {
                         int subunitIndex = availableIndexes.get(s);
-                        ((SimUnit) unit).useOneAmmo(subunitIndex);
+                        unit.useOneAmmo(subunitIndex);
 
                         double hitProbability = unit.calculateHitProbability(selectedUnit.getType(), distance);
                         if (random.nextDouble() <= hitProbability) {
