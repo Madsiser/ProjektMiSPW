@@ -26,12 +26,13 @@ public class GluonApp extends Application {
         MapPoint warsaw = new MapPoint(52.2297, 21.0122);
         mapView.setZoom(10);
         mapView.setCenter(warsaw);
-        mapView.setPrefSize(10,10);
+        mapView.setPrefSize(800,600);
 
 
 
         StackPane root = new StackPane(mapView);
         Scene scene = new Scene(root, 800, 600);
+
 
         primaryStage.setTitle("Mapa z Gluon Maps");
         primaryStage.setScene(scene);
