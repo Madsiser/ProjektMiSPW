@@ -1,11 +1,14 @@
 package pl.sim.frontend;
 
+import com.gluonhq.maps.MapPoint;
+import com.gluonhq.maps.MapView;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -63,6 +66,12 @@ public class App extends Application {
 
         Button addButton = new Button("Add Group");
         Button startButton = new Button("Start Simulation");
+
+        MapView mapView = new MapView();
+        MapPoint warsaw = new MapPoint(52.2297, 21.0122);
+        mapView.setZoom(10);
+        mapView.setCenter(warsaw);
+        mapView.setPrefSize(1400,800);
 
         // Obsługa przycisku "Add Group"
         addButton.setOnAction(event -> {
@@ -171,7 +180,8 @@ public class App extends Application {
 
         // Układ aplikacji
         HBox root = new HBox();
-        root.getChildren().addAll(panel, verticalSeparator, controlPanel);
+        root.getChildren().addAll(mapView, verticalSeparator, controlPanel);
+
 
         // Scena i okno główne
         Scene scene = new Scene(root, 1600, 800);
