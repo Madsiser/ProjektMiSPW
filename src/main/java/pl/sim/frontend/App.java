@@ -26,11 +26,13 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
-        int[][] terrainMap = MapGenerator.generate(50, 50);
+        int height =50;
+        int width =20;
+        int[][] terrainMap = MapGenerator.generate(width, height);
         simulation.setMap(new SimMap(terrainMap));
 
         // Panel symulacji z mapą terenu
-        SimulationPanel panel = new SimulationPanel(50 * 20, 50 * 20, simulation.getGroups(), terrainMap);
+        SimulationPanel panel = new SimulationPanel(width*20 , height*20, simulation.getGroups(), terrainMap);
 
         // Panel kontrolny
         VBox controlPanel = new VBox();

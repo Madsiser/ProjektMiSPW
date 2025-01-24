@@ -10,9 +10,10 @@ import pl.simNG.SimGroup;
 import pl.simNG.SimPosition;
 import pl.simNG.SimUnit;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
 
 public class SimulationPanel extends Canvas {
     private List<SimGroup> groups;
@@ -34,7 +35,9 @@ public class SimulationPanel extends Canvas {
         GraphicsContext gc = getGraphicsContext2D();
         gc.clearRect(0, 0, getWidth(), getHeight());
 
-        double gridSize = 20; // Rozmiar jednego kafelka siatki
+        // Dynamiczny rozmiar kafelka na podstawie rozmiaru mapy
+        double gridWidth = getWidth() / terrainMap.length;
+        double gridHeight = getHeight() / terrainMap[0].length;
 
         if (terrainMap != null) {
             for (int i = 0; i < terrainMap.length; i++) {
@@ -42,13 +45,13 @@ public class SimulationPanel extends Canvas {
                     // Ustaw kolor dla każdego pola na podstawie jego wartości
                     Color terrainColor = getTerrainColor(terrainMap[i][j]);
                     gc.setFill(terrainColor);
-                    gc.fillRect(j * gridSize, i * gridSize, gridSize, gridSize); // Współrzędne (j, i)
+                    gc.fillRect(i * gridWidth, j * gridHeight, gridWidth, gridHeight);
 
                     // Rysowanie wartości logicznej z terrainMap jako tekst
-                    gc.setFill(Color.BLACK); // Tekst w kolorze czarnym
-                    gc.setFont(javafx.scene.text.Font.font("Arial", 10)); // Ustaw font
+                    gc.setFill(Color.BLACK);
+                    gc.setFont(javafx.scene.text.Font.font("Arial", 10));
                     String terrainValue = String.valueOf(terrainMap[i][j]);
-                    gc.fillText(terrainValue, j * gridSize + gridSize / 4.0, i * gridSize + gridSize / 1.5);
+                    gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
                 }
             }
         }
@@ -58,12 +61,11 @@ public class SimulationPanel extends Canvas {
         gc.setStroke(Color.LIGHTGRAY);
         gc.setLineWidth(0.5);
 
-        for (double x = 0; x < getWidth(); x += gridSize) {
-            gc.strokeLine(x, 0, x, getHeight());
+        for (int i = 0; i <= terrainMap.length; i++) {
+            gc.strokeLine(i * gridWidth, 0, i * gridWidth, getHeight());
         }
-
-        for (double y = 0; y < getHeight(); y += gridSize) {
-            gc.strokeLine(0, y, getWidth(), y);
+        for (int j = 0; j <= terrainMap[0].length; j++) {
+            gc.strokeLine(0, j * gridHeight, getWidth(), j * gridHeight);
         }
 
         // Rysowanie grup na mapie
@@ -72,8 +74,8 @@ public class SimulationPanel extends Canvas {
 
         for (SimGroup group : groups) {
             SimPosition pos = group.getPosition();
-            int rectWidth = 15;
-            int rectHeight = 15;
+            int rectWidth = (int) (gridWidth * 0.8);
+            int rectHeight = (int) (gridHeight * 0.8);
 
             Map<String, Integer> totalCurrentAmmoByName = new HashMap<>();
             Map<String, Integer> totalInitialAmmoByName = new HashMap<>();
@@ -92,11 +94,11 @@ public class SimulationPanel extends Canvas {
                 gc.setStroke(Color.DARKBLUE);
             }
 
-            // Kwadrat
-            double x = pos.getX() * gridSize; // Współrzędna X kafelka
-            double y = pos.getY() * gridSize; // Współrzędna Y kafelka
-            gc.fillRect(x, y, rectWidth, rectHeight); // Prostokąt jednostki
-            gc.strokeRect(x, y, rectWidth, rectHeight); // Obrys jednostki
+            // Kwadrat reprezentujący grupę
+            double x = pos.getX() * gridWidth;
+            double y = pos.getY() * gridHeight;
+            gc.fillRect(x, y, rectWidth, rectHeight);
+            gc.strokeRect(x, y, rectWidth, rectHeight);
 
             // Nazwa grupy
             gc.setFill(Color.BLACK);
@@ -113,67 +115,12 @@ public class SimulationPanel extends Canvas {
 
             int lineOffset = 1;
             for (String unitName : totalCurrentAmmoByName.keySet()) {
-                // Liczenie aktywnej i początkowej ilości amunicji
-                int totalCurrentAmmo = group.getUnits().stream()
-                        .filter(u -> u.getName().equals(unitName))
-                        .mapToInt(SimUnit::getTotalCurrentAmmunition)
-                        .sum();
-
-                int totalInitialAmmo = group.getUnits().stream()
-                        .filter(u -> u.getName().equals(unitName))
-                        .mapToInt(SimUnit::getTotalInitialAmmunition)
-                        .sum();
-
-                // Liczenie aktywnych i początkowych jednostek
-                int activeUnits = group.getUnits().stream()
-                        .filter(u -> u.getName().equals(unitName))
-                        .mapToInt(SimUnit::getActiveUnits)
-                        .sum();
-
-                int initialUnits = group.getUnits().stream()
-                        .filter(u -> u.getName().equals(unitName))
-                        .mapToInt(SimUnit::getInitialUnits)
-                        .sum();
-
-                // Tworzenie tekstu z podsumowaniem
-                String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
-                        unitName, activeUnits, initialUnits, totalCurrentAmmo, totalInitialAmmo);
-
-                // Rysowanie tekstu
-                Text unitTextNode = new Text(unitInfo);
-                unitTextNode.setFont(gc.getFont());
-                double unitInfoWidth = unitTextNode.getBoundsInLocal().getWidth();
-                gc.fillText(unitInfo, x + rectWidth / 2.0 - unitInfoWidth / 2.0, y + rectHeight + 12 * lineOffset);
+                String unitInfo = String.format("%s Ammo: [%d/%d]",
+                        unitName,
+                        totalCurrentAmmoByName.get(unitName),
+                        totalInitialAmmoByName.get(unitName));
+                gc.fillText(unitInfo, x + rectWidth / 2.0, y + rectHeight + 12 * lineOffset);
                 lineOffset++;
-            }
-
-            // Zasięg strzału grupy
-            int maxShotRange = group.getUnits().stream()
-                    .mapToInt(SimUnit::getShotRange)
-                    .max()
-                    .orElse(0);
-            if (maxShotRange > 0) {
-                gc.setFill(new Color(1, 0, 0, 0.15));
-                double rangeDiameter = maxShotRange * 2 * gridSize;
-                gc.fillOval(pos.getX() * gridSize - rangeDiameter / 2,
-                        pos.getY() * gridSize - rangeDiameter / 2,
-                        rangeDiameter,
-                        rangeDiameter);
-            }
-
-            // Zasięg widoczności grupy
-            int visibilityRange = group.getUnits().stream()
-                    .mapToInt(SimUnit::getViewRange)
-                    .max()
-                    .orElse(0);
-            if (visibilityRange > 0) {
-                gc.setStroke(new Color(0, 1, 0, 0.25));
-                gc.setLineWidth(1.5);
-                double visibilityDiameter = visibilityRange * 2 * gridSize;
-                gc.strokeOval(pos.getX() * gridSize - visibilityDiameter / 2,
-                        pos.getY() * gridSize - visibilityDiameter / 2,
-                        visibilityDiameter,
-                        visibilityDiameter);
             }
         }
     }
@@ -184,7 +131,7 @@ public class SimulationPanel extends Canvas {
         } else if (terrainValue == MapGenerator.MOUNTAIN_TERRAIN) {
             return Color.RED; // Góry
         } else if (terrainValue == MapGenerator.HILL_TERRAIN) {
-            return Color.YELLOW; // Pagórki
+            return Color.ORANGE; // Pagórki
         } else if (terrainValue == MapGenerator.RIVER_TERRAIN) {
             return Color.BLUE; // Rzeka
         } else if (terrainValue == MapGenerator.EASIEST_TERRAIN) {

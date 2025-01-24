@@ -35,33 +35,39 @@ public class MapGenerator {
 //
 //        return grid;
 //    }
-public static int[][] generate(int x, int y) {
-    int[][] grid = new int[x][y];
+   public static int[][] generate(int width, int height) {
+        int[][] grid = new int[width][height];
 
- //    Środek mapy (pionowa linia)
-    int centerY = y / 2;
-    for (int i = 0; i < x; i++) {
-        for (int j = 0; j < y; j++) {
-            // Jeśli kolumna to środek mapy, ustaw nieprzejezdny teren
-            if (j == centerY) {
-                // Na samym dole w pionowej linii dodaj przejezdne pole
-                if (i == x - 1) {
-                    grid[i][j] = EASIEST_TERRAIN; // Przejście
+        // Wyznacz środek mapy (kolumna środka)
+        int centerX = width / 2;
+
+        // Generowanie mapy
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                if (i == centerX) {
+                    // Nieprzejezdna linia, oprócz jednego pola na końcu
+                    if (j == height - 1) {
+                        grid[i][j] = EASIEST_TERRAIN; // Przejazd na końcu
+                    } else {
+                        grid[i][j] = IMPASSABLE_TERRAIN; // Nieprzejezdny teren
+                    }
                 } else {
-                    grid[i][j] = IMPASSABLE_TERRAIN; // Nieprzejezdna pionowa linia
+                    grid[i][j] = EASIEST_TERRAIN; // Domyślnie przejezdny teren
                 }
-            } else {
-                // Pozostały teren jako łatwy do przejazdu
-                grid[i][j] = EASIEST_TERRAIN;
             }
         }
-    }
-    for (int i = 0; i < grid.length; i++) {
-        System.out.println(Arrays.toString(grid[i]));
-    }
-    return grid;
 
+        // Logowanie wygenerowanej mapy
+       System.out.println("Generated map:");
+       for (int i = 0; i < height; i++) {
+           for (int j = 0; j < width; j++) {
+               System.out.print(grid[j][i] + " "); // Zamiast grid[i][j], użyj grid[j][i]
+           }
+           System.out.println();
+       }
 
+        return grid;
+    }
 
 }
 
@@ -103,7 +109,7 @@ public static int[][] generate(int x, int y) {
 
 
 
-}
+
 
 
 //    public static int[][] generate(int x, int y) {
