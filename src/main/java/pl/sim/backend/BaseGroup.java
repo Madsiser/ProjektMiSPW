@@ -54,7 +54,7 @@ public class BaseGroup extends SimGroup {
     @Override
     public void move() {
         int groupSpeed = getSpeed();
-        double stepSize = 0.2 * groupSpeed;
+        double stepSize = 0.1 * groupSpeed;
 
         int minShotRange = units.stream()
                 .mapToInt(SimUnit::getShotRange)
@@ -179,7 +179,12 @@ public class BaseGroup extends SimGroup {
     //Sekcja odpowiedzialna za zadawanie obrażeń
     //============================================
 
-    //Główna funkcja odpowiedzialna za strzelanie jednostek
+    //
+
+    /**
+     * Główna funkcja odpowiedzialna za strzelanie jednostek.
+     * @param unit
+     */
     protected void unitShot(SimUnit unit) {
         //Wykonuje się tylko jeśli mamy amunicję i jednostkę przeciwnika, która jest widoczna
         if (unit.getTotalCurrentAmmunition() > 0 && !visibleGroups.isEmpty()) {
