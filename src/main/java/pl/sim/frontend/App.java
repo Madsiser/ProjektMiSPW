@@ -182,7 +182,7 @@ public class App extends Application {
 
         // Układ aplikacji
         HBox root = new HBox();
-        root.getChildren().addAll(mapView, verticalSeparator, controlPanel); //usunąłem tutaj panel gdyz trzeba go zrobic na nowo
+        root.getChildren().addAll(mapView, verticalSeparator, controlPanel); /// Deleted panel
 
 
         // Scena i okno główne
