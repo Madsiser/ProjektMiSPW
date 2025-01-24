@@ -67,11 +67,13 @@ public class App extends Application {
         Button addButton = new Button("Add Group");
         Button startButton = new Button("Start Simulation");
 
+        /// Gluon   ====
         MapView mapView = new MapView();
         MapPoint warsaw = new MapPoint(52.2297, 21.0122);
         mapView.setZoom(10);
         mapView.setCenter(warsaw);
         mapView.setPrefSize(1400,800);
+        /// ============
 
         // Obsługa przycisku "Add Group"
         addButton.setOnAction(event -> {
@@ -180,7 +182,7 @@ public class App extends Application {
 
         // Układ aplikacji
         HBox root = new HBox();
-        root.getChildren().addAll(mapView, verticalSeparator, controlPanel);
+        root.getChildren().addAll(mapView, verticalSeparator, controlPanel); //usunąłem tutaj panel gdyz trzeba go zrobic na nowo
 
 
         // Scena i okno główne
