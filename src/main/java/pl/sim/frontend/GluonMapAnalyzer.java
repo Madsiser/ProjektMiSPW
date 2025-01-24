@@ -51,7 +51,7 @@ public class GluonMapAnalyzer {
                     int blue = rgb & 0xFF;
 
                     // Map the RGB color to a terrain difficulty value
-                    System.out.println("RGB: (" + red + ", " + green + ", " + blue + ")");
+                  //  System.out.println("RGB: (" + red + ", " + green + ", " + blue + ")");
                     terrainMap[x][y] = getTerrainDifficulty(red, green, blue);
                 }
             }

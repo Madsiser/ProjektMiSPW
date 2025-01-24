@@ -50,10 +50,10 @@ public class SimulationPanel extends Canvas {
                 for (int j = 0; j < terrainMap[i].length; j++) {
 
                     // Rysowanie wartości logicznej z terrainMap jako tekst
-                    gc.setFill(Color.BLACK);
-                    gc.setFont(javafx.scene.text.Font.font("Arial", 10));
-                    String terrainValue = String.valueOf(terrainMap[i][j]);
-                    gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
+//                    gc.setFill(Color.BLACK);
+//                    gc.setFont(javafx.scene.text.Font.font("Arial", 10));
+//                    String terrainValue = String.valueOf(terrainMap[i][j]);
+//                    gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
                 }
             }
         }
@@ -123,6 +123,35 @@ public class SimulationPanel extends Canvas {
                         totalInitialAmmoByName.get(unitName));
                 gc.fillText(unitInfo, x + rectWidth / 2.0, y + rectHeight + 12 * lineOffset);
                 lineOffset++;
+            }
+
+
+            int maxShotRange = group.getUnits().stream()
+                    .mapToInt(SimUnit::getShotRange)
+                    .max()
+                    .orElse(0);
+            if (maxShotRange > 0) {
+                gc.setFill(new Color(1, 0, 0, 0.15));
+                double rangeDiameter = maxShotRange * 2 * 20;
+                gc.fillOval(pos.getX() * 20 - rangeDiameter / 2,
+                        pos.getY() * 20 - rangeDiameter / 2,
+                        rangeDiameter,
+                        rangeDiameter);
+            }
+
+            //Zasięg widoczności grupy
+            int visibilityRange = group.getUnits().stream()
+                    .mapToInt(SimUnit::getViewRange)
+                    .max()
+                    .orElse(0);
+            if (visibilityRange > 0) {
+                gc.setStroke(new Color(0, 1, 0, 0.25));
+                gc.setLineWidth(1.5);
+                double visibilityDiameter = visibilityRange * 2 * 20;
+                gc.strokeOval(pos.getX() * 20 - visibilityDiameter / 2,
+                        pos.getY() * 20 - visibilityDiameter / 2,
+                        visibilityDiameter,
+                        visibilityDiameter);
             }
         }
     }

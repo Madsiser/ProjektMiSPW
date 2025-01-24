@@ -5,6 +5,7 @@ import com.gluonhq.maps.MapView;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
@@ -43,8 +44,8 @@ public class App extends Application {
         mapView.setCenter(warsaw);
         mapView.setPrefSize(1400, 800);
         /// ============
-        int height = 20;
-        int width = 50;
+       // int height = 20;
+       // int width = 50;
 
         VBox mapContainer = new VBox();
         mapContainer.setSpacing(10);
@@ -52,6 +53,13 @@ public class App extends Application {
         // Button to take a snapshot and transition to the SimulationPanel
         Button captureButton = new Button("Capture Map and Start Simulation");
 
+// Style the button to make it red
+        captureButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px;");
+
+// Center the button using a layout
+        HBox buttonContainer = new HBox(captureButton);
+        buttonContainer.setAlignment(Pos.CENTER); // Center the button horizontally
+        buttonContainer.setPrefHeight(100); // Optional: Adjust height to create space around the button
         mapContainer.getChildren().addAll(mapView, captureButton);
 
         // Scene for the initial MapView
@@ -81,7 +89,7 @@ public class App extends Application {
             simulation.setMap(new SimMap(terrainMap));
 
             // Transition to the SimulationPanel
-            showSnapshot(snapshot);
+            //showSnapshot(snapshot);
             openSimulationPanel(primaryStage, simulation, terrainMap,snapshot);
         });
     }
