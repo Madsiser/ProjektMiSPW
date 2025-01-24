@@ -37,45 +37,38 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
-        /// Gluon   ====
         MapView mapView = new MapView();
         MapPoint warsaw = new MapPoint(30.2297, 21.0122);
         mapView.setZoom(10);
         mapView.setCenter(warsaw);
-        mapView.setPrefSize(1400, 800);
-        /// ============
-       // int height = 20;
-       // int width = 50;
+        mapView.setPrefSize(1500, 800);
 
         VBox mapContainer = new VBox();
         mapContainer.setSpacing(10);
 
-        // Button to take a snapshot and transition to the SimulationPanel
+
         Button captureButton = new Button("Capture Map and Start Simulation");
 
-// Style the button to make it red
         captureButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px;");
 
-// Center the button using a layout
+        //przycisk
         HBox buttonContainer = new HBox(captureButton);
-        buttonContainer.setAlignment(Pos.CENTER); // Center the button horizontally
-        buttonContainer.setPrefHeight(100); // Optional: Adjust height to create space around the button
+        buttonContainer.setAlignment(Pos.CENTER);
+        buttonContainer.setPrefHeight(100);
         mapContainer.getChildren().addAll(mapView, captureButton);
 
-        // Scene for the initial MapView
         Scene mapScene = new Scene(mapContainer, 1400, 800);
 
-        // Primary Stage setup
+
         primaryStage.setScene(mapScene);
         primaryStage.setTitle("Map View - Capture Simulation");
         primaryStage.show();
 
-        // Action for capture button
+
         captureButton.setOnAction(event -> {
-            // Capture a snapshot of the MapView
             WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
 
-            // Optionally, save the image to a file for debugging
+
             try {
                 File outputFile = new File("map_snapshot.png");
                 ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
@@ -83,30 +76,29 @@ public class App extends Application {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            // Analyze the captured map and generate terrain map
+//ilosc kafelkow
             int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, 40, 40);
             simulation.setMap(new SimMap(terrainMap));
 
-            // Transition to the SimulationPanel
+
             //showSnapshot(snapshot);
             openSimulationPanel(primaryStage, simulation, terrainMap,snapshot);
         });
     }
-
+    //funkcja do wyswietlenia Snapshota w osobnym oknie
     public void showSnapshot(WritableImage snapshot) {
         // Utwórz ImageView z snapshot
         ImageView imageView = new ImageView(snapshot);
 
-        // Dopasuj rozmiar ImageView (opcjonalne)
+        // Dopasuj rozmiar ImageView
         imageView.setPreserveRatio(true);
-        imageView.setFitWidth(800); // Zmień szerokość według potrzeb
+        imageView.setFitWidth(600); // Zmień szerokość według potrzeb
 
-        // Stwórz okno z layoutem i dodaj obraz
+
         StackPane root = new StackPane(imageView);
         Scene scene = new Scene(root, 800, 600); // Ustaw rozmiar sceny
 
-        // Nowe okno (Stage)
+        // Nowe okno
         Stage snapshotStage = new Stage();
         snapshotStage.setTitle("Snapshot Preview");
         snapshotStage.setScene(scene);
@@ -120,7 +112,7 @@ public class App extends Application {
         //int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(mapView, 5, 5);
         simulation.setMap(new SimMap(terrainMap));
 
-        // Panel symulacji z mapą terenu
+        // Panel symulacji z mapą terenu *20 czyli jden kefelek 20px
         SimulationPanel panel = new SimulationPanel(terrainMap[0].length * 20, terrainMap.length * 20,
                 simulation.getGroups(), terrainMap,snapshot);
 

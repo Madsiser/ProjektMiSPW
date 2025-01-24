@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class SimulationPanel extends Canvas {
     private List<SimGroup> groups;
-    private int[][] terrainMap; // Mapa terenu
+    private int[][] terrainMap;
     private Image backgroundImage;
 
     public SimulationPanel(double width, double height, List<SimGroup> groups, int[][] terrainMap,Image backgroundImage) {
@@ -50,10 +50,10 @@ public class SimulationPanel extends Canvas {
                 for (int j = 0; j < terrainMap[i].length; j++) {
 
                     // Rysowanie wartości logicznej z terrainMap jako tekst
-//                    gc.setFill(Color.BLACK);
-//                    gc.setFont(javafx.scene.text.Font.font("Arial", 10));
-//                    String terrainValue = String.valueOf(terrainMap[i][j]);
-//                    gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
+                    gc.setFill(Color.BLACK);
+                    gc.setFont(javafx.scene.text.Font.font("Arial", 10));
+                    String terrainValue = String.valueOf(terrainMap[i][j]);
+                    gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
                 }
             }
         }
