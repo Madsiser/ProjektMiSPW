@@ -2,6 +2,7 @@ package pl.sim.frontend;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import pl.sim.backend.MapGenerator;
@@ -18,11 +19,13 @@ import java.util.Map;
 public class SimulationPanel extends Canvas {
     private List<SimGroup> groups;
     private int[][] terrainMap; // Mapa terenu
+    private Image backgroundImage;
 
-    public SimulationPanel(double width, double height, List<SimGroup> groups, int[][] terrainMap) {
+    public SimulationPanel(double width, double height, List<SimGroup> groups, int[][] terrainMap,Image backgroundImage) {
         super(width, height);
         this.groups = groups;
         this.terrainMap = terrainMap;
+        this.backgroundImage = backgroundImage;
         drawComponents();
     }
 
@@ -38,14 +41,13 @@ public class SimulationPanel extends Canvas {
         // Dynamiczny rozmiar kafelka na podstawie rozmiaru mapy
         double gridWidth = getWidth() / terrainMap.length;
         double gridHeight = getHeight() / terrainMap[0].length;
+        if (backgroundImage != null) {
+            gc.drawImage(backgroundImage, 0, 0, getWidth(), getHeight());
+        }
 
         if (terrainMap != null) {
             for (int i = 0; i < terrainMap.length; i++) {
                 for (int j = 0; j < terrainMap[i].length; j++) {
-                    // Ustaw kolor dla każdego pola na podstawie jego wartości
-                    Color terrainColor = getTerrainColor(terrainMap[i][j]);
-                    gc.setFill(terrainColor);
-                    gc.fillRect(i * gridWidth, j * gridHeight, gridWidth, gridHeight);
 
                     // Rysowanie wartości logicznej z terrainMap jako tekst
                     gc.setFill(Color.BLACK);
@@ -125,19 +127,5 @@ public class SimulationPanel extends Canvas {
         }
     }
 
-    private Color getTerrainColor(int terrainValue) {
-        if (terrainValue == MapGenerator.IMPASSABLE_TERRAIN) {
-            return Color.YELLOW; // Nieprzejezdny teren
-        } else if (terrainValue == MapGenerator.MOUNTAIN_TERRAIN) {
-            return Color.RED; // Góry
-        } else if (terrainValue == MapGenerator.HILL_TERRAIN) {
-            return Color.ORANGE; // Pagórki
-        } else if (terrainValue == MapGenerator.RIVER_TERRAIN) {
-            return Color.BLUE; // Rzeka
-        } else if (terrainValue == MapGenerator.EASIEST_TERRAIN) {
-            return Color.LIGHTGREEN; // Niziny (łatwy teren)
-        } else {
-            return Color.WHITE; // Domyślny kolor (np. niezidentyfikowany teren)
-        }
-    }
+
 }

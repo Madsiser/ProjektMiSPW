@@ -5,6 +5,7 @@ module ProjektMiSPW {
     requires com.gluonhq.attach.storage;
     requires com.gluonhq.attach.util;
     requires java.desktop;
+    requires javafx.swing;
 
     exports pl.sim.frontend;
 }
