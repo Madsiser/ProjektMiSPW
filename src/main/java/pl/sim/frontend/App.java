@@ -26,8 +26,8 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
-        int height =50;
-        int width =20;
+        int height =20;
+        int width =50;
         int[][] terrainMap = MapGenerator.generate(width, height);
         simulation.setMap(new SimMap(terrainMap));
 
