@@ -1,11 +1,19 @@
 package pl.sim.frontend;
 
+import com.gluonhq.maps.MapPoint;
+import com.gluonhq.maps.MapView;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -17,6 +25,9 @@ import pl.simNG.SimGroup;
 import pl.simNG.SimPosition;
 import pl.simNG.map.SimMap;
 
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class App extends Application {
@@ -26,13 +37,92 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
-        int height =40;
-        int width =70;
-        int[][] terrainMap = MapGenerator.generate1(width, height);
+        /// Gluon   ====
+        MapView mapView = new MapView();
+        MapPoint warsaw = new MapPoint(30.2297, 21.0122);
+        mapView.setZoom(10);
+        mapView.setCenter(warsaw);
+        mapView.setPrefSize(1400, 800);
+        /// ============
+       // int height = 20;
+       // int width = 50;
+
+        VBox mapContainer = new VBox();
+        mapContainer.setSpacing(10);
+
+        // Button to take a snapshot and transition to the SimulationPanel
+        Button captureButton = new Button("Capture Map and Start Simulation");
+
+// Style the button to make it red
+        captureButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px;");
+
+// Center the button using a layout
+        HBox buttonContainer = new HBox(captureButton);
+        buttonContainer.setAlignment(Pos.CENTER); // Center the button horizontally
+        buttonContainer.setPrefHeight(100); // Optional: Adjust height to create space around the button
+        mapContainer.getChildren().addAll(mapView, captureButton);
+
+        // Scene for the initial MapView
+        Scene mapScene = new Scene(mapContainer, 1400, 800);
+
+        // Primary Stage setup
+        primaryStage.setScene(mapScene);
+        primaryStage.setTitle("Map View - Capture Simulation");
+        primaryStage.show();
+
+        // Action for capture button
+        captureButton.setOnAction(event -> {
+            // Capture a snapshot of the MapView
+            WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
+
+            // Optionally, save the image to a file for debugging
+            try {
+                File outputFile = new File("map_snapshot.png");
+                ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
+                System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // Analyze the captured map and generate terrain map
+            int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, 40, 40);
+            simulation.setMap(new SimMap(terrainMap));
+
+            // Transition to the SimulationPanel
+            //showSnapshot(snapshot);
+            openSimulationPanel(primaryStage, simulation, terrainMap,snapshot);
+        });
+    }
+
+    public void showSnapshot(WritableImage snapshot) {
+        // Utwórz ImageView z snapshot
+        ImageView imageView = new ImageView(snapshot);
+
+        // Dopasuj rozmiar ImageView (opcjonalne)
+        imageView.setPreserveRatio(true);
+        imageView.setFitWidth(800); // Zmień szerokość według potrzeb
+
+        // Stwórz okno z layoutem i dodaj obraz
+        StackPane root = new StackPane(imageView);
+        Scene scene = new Scene(root, 800, 600); // Ustaw rozmiar sceny
+
+        // Nowe okno (Stage)
+        Stage snapshotStage = new Stage();
+        snapshotStage.setTitle("Snapshot Preview");
+        snapshotStage.setScene(scene);
+        snapshotStage.show();
+    }
+
+
+    //int[][] terrainMap = MapGenerator.generate(width, height);
+    private void openSimulationPanel(Stage primaryStage, SimCore simulation, int[][] terrainMap,WritableImage snapshot)
+    {
+        //int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(mapView, 5, 5);
         simulation.setMap(new SimMap(terrainMap));
 
         // Panel symulacji z mapą terenu
-        SimulationPanel panel = new SimulationPanel(width*20 , height*20, simulation.getGroups(), terrainMap);
+        SimulationPanel panel = new SimulationPanel(terrainMap[0].length * 20, terrainMap.length * 20,
+                simulation.getGroups(), terrainMap,snapshot);
 
         // Panel kontrolny
         VBox controlPanel = new VBox();
@@ -63,6 +153,7 @@ public class App extends Application {
 
         Button addButton = new Button("Add Group");
         Button startButton = new Button("Start Simulation");
+
 
         // Obsługa przycisku "Add Group"
         addButton.setOnAction(event -> {
@@ -140,6 +231,7 @@ public class App extends Application {
             }
         });
 
+
         // Obsługa kliknięcia myszką na mapę
         panel.setOnMouseClicked((MouseEvent event) -> {
             // Obliczamy współrzędne na podstawie klikniętej pozycji
@@ -164,14 +256,14 @@ public class App extends Application {
                 startButton
         );
 
-        // Separator pionowy
+    //seperator i tworznie okna
         Separator verticalSeparator = new Separator();
         verticalSeparator.setOrientation(javafx.geometry.Orientation.VERTICAL);
         verticalSeparator.setPrefHeight(800);
-
-        // Układ aplikacji
         HBox root = new HBox();
         root.getChildren().addAll(panel, verticalSeparator, controlPanel);
+
+
 
         // Scena i okno główne
         Scene scene = new Scene(root, 1600, 800);
@@ -185,8 +277,12 @@ public class App extends Application {
                 simulation.stopSimulation();
             }
             System.exit(0);
-        });
-    }
+
+          });
+        }
+
+
+
 
     public static void main(String[] args) {
         launch(args);

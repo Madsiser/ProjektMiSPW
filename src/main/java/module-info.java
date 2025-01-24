@@ -1,9 +1,11 @@
 module ProjektMiSPW {
-    requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.graphics;
     requires SimNG;
+    requires com.gluonhq.maps;
+    requires com.gluonhq.attach.storage;
+    requires com.gluonhq.attach.util;
+    requires java.desktop;
+    requires javafx.swing;
 
-//    opens pl.sim to javafx.fxml;
     exports pl.sim.frontend;
 }

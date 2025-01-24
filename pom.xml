@@ -30,6 +30,28 @@
             <systemPath>${project.basedir}/lib/Gluon/maps-2.0.0-ea+7-SNAPSHOT.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.gluonhq.attach</groupId>
+            <artifactId>storage</artifactId>
+            <version>4.0.22</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gluonhq.attach</groupId>
+            <artifactId>util</artifactId>
+            <version>4.0.22</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.gluonhq</groupId>-->
+<!--            <artifactId>maps</artifactId>-->
+<!--            <version>2.0.0-ea+7-SNAPSHOT</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.gluonhq.attach</groupId>-->
+<!--            <artifactId>storage</artifactId>-->
+<!--            <version>4.0.21</version>-->
+<!--        </dependency>-->
+
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>21.0.1</version>
@@ -43,6 +65,16 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>21.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>21-ea+24</version>
         </dependency>
     </dependencies>
 
@@ -59,6 +91,18 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.gluonhq</groupId>
+                <artifactId>client-maven-plugin</artifactId>
+                <version>0.1.42</version>
+                <configuration>
+                    <target>1.2</target>
+                    <attachList>
+                        <list>position</list>
+                    </attachList>
+                    <mainClass>GluonApp</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
