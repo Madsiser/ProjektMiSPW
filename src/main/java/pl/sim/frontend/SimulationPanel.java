@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class SimulationPanel extends Canvas {
     private List<SimGroup> groups;
-    private int[][] terrainMap; // Mapa terenu
+    private final int[][] terrainMap; // Mapa terenu
 
     public SimulationPanel(double width, double height, List<SimGroup> groups, int[][] terrainMap) {
         super(width, height);
@@ -46,12 +46,6 @@ public class SimulationPanel extends Canvas {
                     Color terrainColor = getTerrainColor(terrainMap[i][j]);
                     gc.setFill(terrainColor);
                     gc.fillRect(i * gridWidth, j * gridHeight, gridWidth, gridHeight);
-
-                    // Rysowanie wartości logicznej z terrainMap jako tekst
-                    gc.setFill(Color.BLACK);
-                    gc.setFont(javafx.scene.text.Font.font("Arial", 10));
-                    String terrainValue = String.valueOf(terrainMap[i][j]);
-                    gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
                 }
             }
         }
@@ -122,7 +116,39 @@ public class SimulationPanel extends Canvas {
                 gc.fillText(unitInfo, x + rectWidth / 2.0, y + rectHeight + 12 * lineOffset);
                 lineOffset++;
             }
+
+            //Zasięg strzału grupy
+            int maxShotRange = group.getUnits().stream()
+                    .mapToInt(SimUnit::getShotRange)
+                    .max()
+                    .orElse(0);
+            if (maxShotRange > 0) {
+                gc.setFill(new Color(1, 0, 0, 0.15));
+                double rangeDiameter = maxShotRange * 2 * 20;
+                gc.fillOval(pos.getX() * 20 - rangeDiameter / 2,
+                        pos.getY() * 20 - rangeDiameter / 2,
+                        rangeDiameter,
+                        rangeDiameter);
+            }
+
+            //Zasięg widoczności grupy
+            int visibilityRange = group.getUnits().stream()
+                    .mapToInt(SimUnit::getViewRange)
+                    .max()
+                    .orElse(0);
+            if (visibilityRange > 0) {
+                gc.setStroke(Color.BLACK);
+                gc.setLineWidth(1.5);
+                double visibilityDiameter = visibilityRange * 2 * 20;
+                gc.strokeOval(pos.getX() * 20 - visibilityDiameter / 2,
+                        pos.getY() * 20 - visibilityDiameter / 2,
+                        visibilityDiameter,
+                        visibilityDiameter);
+            }
         }
+
+
+
     }
 
     private Color getTerrainColor(int terrainValue) {
