@@ -31,11 +31,11 @@ public class GluonApp extends Application {
         MapPoint warsaw = new MapPoint(52.2297, 21.0122);
         mapView.setZoom(10);
         mapView.setCenter(warsaw);
-        mapView.setPrefSize(800,600);
+        mapView.setPrefSize(800, 600);
 
         //Pobieranie obrazu do generowania mapy
         TileRetriever tileRetriever = TileRetrieverProvider.getInstance().load();
-        CompletableFuture<Image> future = tileRetriever.loadTile(9,2*143,2*83); // Okolice ostrołęki
+        CompletableFuture<Image> future = tileRetriever.loadTile(9, 2 * 143, 2 * 83); // Okolice ostrołęki
         Image image = future.join();
         System.out.println("Obraz załadowany!");
         ImageView imageView = new ImageView(image);

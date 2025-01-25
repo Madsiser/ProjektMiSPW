@@ -13,7 +13,7 @@ public class GluonMapAnalyzer {
 
     public static int[][] analyzeMapFromGluon(WritableImage snapshot, int gridWidth, int gridHeight) {
         try {
-           // BufferedImage bufferedImage = SwingFXUtils.fromFXImage(snapshot, null);
+            // BufferedImage bufferedImage = SwingFXUtils.fromFXImage(snapshot, null);
             File tempFile = File.createTempFile("snapshot", ".png");
             ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", tempFile);
 
@@ -40,7 +40,7 @@ public class GluonMapAnalyzer {
                     int blue = rgb & 0xFF;
 
 
-                  //  System.out.println("RGB: (" + red + ", " + green + ", " + blue + ")");
+                    //  System.out.println("RGB: (" + red + ", " + green + ", " + blue + ")");
                     terrainMap[x][y] = getTerrainDifficulty(red, green, blue);
                 }
             }

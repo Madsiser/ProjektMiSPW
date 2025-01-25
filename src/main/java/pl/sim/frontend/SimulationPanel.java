@@ -21,7 +21,7 @@ public class SimulationPanel extends Canvas {
     private int[][] terrainMap;
     private Image backgroundImage;
 
-    public SimulationPanel(double width, double height, List<SimGroup> groups, int[][] terrainMap,Image backgroundImage) {
+    public SimulationPanel(double width, double height, List<SimGroup> groups, int[][] terrainMap, Image backgroundImage) {
         super(width, height);
         this.groups = groups;
         this.terrainMap = terrainMap;

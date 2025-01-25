@@ -6,6 +6,7 @@ module ProjektMiSPW {
     requires com.gluonhq.attach.util;
     requires java.desktop;
     requires javafx.swing;
+    requires com.google.gson;
 
     exports pl.sim.frontend;
 }
