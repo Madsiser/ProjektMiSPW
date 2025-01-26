@@ -18,7 +18,7 @@ public class BaseGroup extends SimGroup {
     protected SimPosition originalDestination;
     /** Miejsce, skąd ostatnio nas zaatakowano (pozycja wroga atakującego). */
     private SimPosition lastAttackerPosition = null;
-    /** Suma początkowych podjednostek w momencie tworzenia jednostki (grupy). */
+    /** Suma początkowych środków bojowych w momencie tworzenia jednostki (grupy). */
     protected int totalInitialUnits;
 
     /**
