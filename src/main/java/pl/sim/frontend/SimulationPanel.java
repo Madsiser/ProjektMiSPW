@@ -16,8 +16,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static pl.sim.frontend.GluonMapAnalyzer.ROAD_VALUE;
+
 public class SimulationPanel extends Canvas {
     private List<SimGroup> groups;
+    public static boolean drawTerrainValues = false;
     private int[][] terrainMap;
     private Image backgroundImage;
 
@@ -45,14 +48,14 @@ public class SimulationPanel extends Canvas {
             gc.drawImage(backgroundImage, 0, 0, getWidth(), getHeight());
         }
 
-        if (terrainMap != null) {
+        if (terrainMap != null&&drawTerrainValues) {
             for (int i = 0; i < terrainMap.length; i++) {
                 for (int j = 0; j < terrainMap[i].length; j++) {
 
                     // Rysowanie wartości logicznej z terrainMap jako tekst
                     gc.setFill(Color.BLACK);
                     gc.setFont(javafx.scene.text.Font.font("Arial", 10));
-                    String terrainValue = String.valueOf(terrainMap[i][j]);
+                    String terrainValue = String.valueOf(getTerrainCategory(terrainMap[i][j]));
                     gc.fillText(terrainValue, i * gridWidth + gridWidth / 4.0, j * gridHeight + gridHeight / 1.5);
                 }
             }
@@ -104,7 +107,7 @@ public class SimulationPanel extends Canvas {
 
             // Nazwa grupy
             gc.setFill(Color.BLACK);
-            gc.setFont(javafx.scene.text.Font.font("Arial", 14));
+            gc.setFont(javafx.scene.text.Font.font("Arial", 18));
             String groupName = group.getName();
             Text textNode = new Text(groupName);
             textNode.setFont(gc.getFont());
@@ -112,7 +115,7 @@ public class SimulationPanel extends Canvas {
             gc.fillText(groupName, x + rectWidth / 2.0 - groupNameWidth / 2.0, y - 5);
 
             // Wyświetlanie podsumowania amunicji dla grupy jednostek
-            gc.setFont(javafx.scene.text.Font.font("Arial", 12));
+            gc.setFont(javafx.scene.text.Font.font("Arial", 16));
             gc.setFill(Color.BLACK);
 
             int lineOffset = 1;
@@ -125,7 +128,7 @@ public class SimulationPanel extends Canvas {
                 lineOffset++;
             }
 
-
+            //zasieg strzalu
             int maxShotRange = group.getUnits().stream()
                     .mapToInt(SimUnit::getShotRange)
                     .max()
@@ -133,8 +136,8 @@ public class SimulationPanel extends Canvas {
             if (maxShotRange > 0) {
                 gc.setFill(new Color(1, 0, 0, 0.15));
                 double rangeDiameter = maxShotRange * 2 * 20;
-                gc.fillOval(pos.getX() * 20 - rangeDiameter / 2,
-                        pos.getY() * 20 - rangeDiameter / 2,
+                gc.fillOval(pos.getX() * App.heightRectangle - rangeDiameter / 2,
+                        pos.getY() * App.heightRectangle - rangeDiameter / 2,
                         rangeDiameter,
                         rangeDiameter);
             }
@@ -145,16 +148,35 @@ public class SimulationPanel extends Canvas {
                     .max()
                     .orElse(0);
             if (visibilityRange > 0) {
-                gc.setStroke(new Color(0, 1, 0, 0.25));
+                gc.setStroke(new Color(0, 0, 0, 0.25));
                 gc.setLineWidth(1.5);
                 double visibilityDiameter = visibilityRange * 2 * 20;
-                gc.strokeOval(pos.getX() * 20 - visibilityDiameter / 2,
-                        pos.getY() * 20 - visibilityDiameter / 2,
+                gc.strokeOval(pos.getX() * App.heightRectangle - visibilityDiameter / 2,
+                        pos.getY() * App.heightRectangle - visibilityDiameter / 2,
                         visibilityDiameter,
                         visibilityDiameter);
             }
         }
     }
+    private static int getTerrainCategory(int value) {
+        if (value == 0) {
+            return 0; // Droga
+        } else if (value == GluonMapAnalyzer.GRASS_VALUE) {
+            return 2; // Trawa
+        } else if (value == GluonMapAnalyzer.FOREST_VALUE) {
+            return 3; // Las
+        } else if (value == GluonMapAnalyzer.VALLEY_VALUE) {
+            return 4; //doliny
+        } else if (value == GluonMapAnalyzer.DESERT_VALUE) {
+            return 5; // Pustynia
+        } else if (value == GluonMapAnalyzer.MOUNTAIN_VALUE) {
+            return 6; // Góry
+
+        } else {
+            return 1; // Domyślna wartość, jeśli wartość nie pasuje
+        }
+    }
+
 
 
 }

@@ -11,6 +11,8 @@ import java.io.File;
 public class GluonMapAnalyzer {
 
 
+
+
     public static int[][] analyzeMapFromGluon(WritableImage snapshot, int gridWidth, int gridHeight) {
         try {
             // BufferedImage bufferedImage = SwingFXUtils.fromFXImage(snapshot, null);
@@ -40,7 +42,7 @@ public class GluonMapAnalyzer {
                     int blue = rgb & 0xFF;
 
 
-                    //  System.out.println("RGB: (" + red + ", " + green + ", " + blue + ")");
+                      System.out.println("RGB: (x"+x +"y"+y + red + ", " + green + ", " + blue + ")");
                     terrainMap[x][y] = getTerrainDifficulty(red, green, blue);
                 }
             }
@@ -52,11 +54,48 @@ public class GluonMapAnalyzer {
         }
     }
 
+
+    private static final int[] ROAD_COLOR = {128, 128, 128};
+    public static final int ROAD_VALUE = 429496729;
+    private static final int[] GRASS_COLOR = {215, 239, 192};
+    public static final int GRASS_VALUE = 536870911;
+    private static final int[] FOREST_COLOR = {34, 139, 34};
+    public static final int FOREST_VALUE = 715827882;
+
+    private static final int[] DESERT_COLOR = {237, 201, 175};
+    public static final int DESERT_VALUE = 1073741823;
+    private static final int[] MOUNTAIN_COLOR = {247, 237, 209};
+    public static final int MOUNTAIN_VALUE = 2147483647;
+
+
+    private static final int[] VALLEY_COLOR = {173, 209, 158};
+    public static final int VALLEY_VALUE = 357913941; // Przykładowa wartość, możesz dostosować
+
+    private static final int COLOR_TOLERANCE = 15;
+
     private static int getTerrainDifficulty(int red, int green, int blue) {
         if (blue > 210 && green > 200 && red < 180) {
-            return 0; // woda
+            return 0; // Woda
+        } else if (isColorMatch(red, green, blue, GRASS_COLOR)) {
+            return GRASS_VALUE; // Trawa
+        } else if (isColorMatch(red, green, blue, MOUNTAIN_COLOR)) {
+            return MOUNTAIN_VALUE; // Góry
+        } else if (isColorMatch(red, green, blue, FOREST_COLOR)) {
+            return FOREST_VALUE; // Las
+        } else if (isColorMatch(red, green, blue, ROAD_COLOR)) {
+            return ROAD_VALUE; // Droga
+        } else if (isColorMatch(red, green, blue, DESERT_COLOR)) {
+            return DESERT_VALUE; // Pustynia
+        } else if (isColorMatch(red, green, blue, VALLEY_COLOR)) {
+            return VALLEY_VALUE; // Doliny
         } else {
-            return 1; // przejazd
+            return ROAD_VALUE; // Przejazd (domyślny teren)
         }
+    }
+
+    private static boolean isColorMatch(int red, int green, int blue, int[] targetColor) {
+        return Math.abs(red - targetColor[0]) <= COLOR_TOLERANCE &&
+                Math.abs(green - targetColor[1]) <= COLOR_TOLERANCE &&
+                Math.abs(blue - targetColor[2]) <= COLOR_TOLERANCE;
     }
 }

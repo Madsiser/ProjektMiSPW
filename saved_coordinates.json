@@ -10,5 +10,13 @@
   "WWA": {
     "latitude": 52.0,
     "longitude": 21.0122
+  },
+  "Dolne Włochy": {
+    "latitude": 39.19024398523043,
+    "longitude": 16.58868156445564
+  },
+  "Lausanne": {
+    "latitude": 46.59669547901962,
+    "longitude": 6.539100752581106
   }
 }

@@ -37,8 +37,12 @@ import java.util.Map;
 import com.google.gson.*;
 import java.io.*;
 import java.util.*;
+
+import static pl.sim.frontend.SimulationPanel.drawTerrainValues;
+
 public class App extends Application {
     private boolean simulationRunning = false; // Flaga stanu symulacji
+
     private AnimationTimer timer;
     Map<String, MapPoint> savedCoordinates = new HashMap<>();
     File coordinatesFile = new File("saved_coordinates.json");
@@ -72,21 +76,25 @@ public class App extends Application {
             savedCoordinates = new HashMap<>();
         }
     }
+    public static int heightRectangle =10;
+    public static int widthRectangle =10;
+    public static int matrixWidth = 100;
+    public static int matrixHeight=100;
+
     @Override
     public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
         MapView mapView = new MapView();
         //MapPoint(30.2297, 21.0122);
         MapPoint warsaw = new MapPoint(30.2297, 21.0122);
-        mapView.setZoom(10);
+        mapView.setZoom(12);
         mapView.setCenter(warsaw);
         //rozmiar pierwszej mapy
         mapView.setPrefSize(1000, 1000);
         //pozniej to przypisze
-        int matrixWidth = 50;
-        int matrixHeight=50;
-        int heightRectangle =20;
-        int widthRectangle =20;
+       // int matrixWidth = 50;
+       // int matrixHeight=50;
+
 
 
 // Wywołanie ładowania danych przy uruchomieniu programu
@@ -181,6 +189,31 @@ public class App extends Application {
             }
         });
 
+        //widocznosc siatki
+        Button toggleDrawingButton = new Button("Toggle Terrain Values");
+        toggleDrawingButton.setOnAction(event -> {
+            drawTerrainValues = !drawTerrainValues; // Przełączanie stanu
+            System.out.println("Drawing terrain values: " + (drawTerrainValues ? "ON" : "OFF"));
+
+        });
+
+
+
+        mapView.setOnMouseClicked(event -> {
+            // Pobranie współrzędnych kliknięcia
+            double clickedX = event.getX();
+            double clickedY = event.getY();
+
+            // Przekształcenie współrzędnych na rzeczywiste szerokość i wysokość geograficzną
+            MapPoint clickedPoint = mapView.getMapPosition(clickedX, clickedY);
+
+            // Aktualizacja pól tekstowych
+            latitudeField.setText(String.valueOf(clickedPoint.getLatitude()));
+            longitudeField.setText(String.valueOf(clickedPoint.getLongitude()));
+
+            // Informacja w konsoli (opcjonalnie)
+            System.out.println("Clicked coordinates: Latitude = " + clickedPoint.getLatitude() + ", Longitude = " + clickedPoint.getLongitude());
+        });
 // Przycisk do ustawiania pozycji na podstawie wybranych współrzędnych
         Button goToSavedLocationButton = new Button("Go To Saved Location");
         goToSavedLocationButton.setStyle("-fx-background-color: #FFC107; -fx-text-fill: black; -fx-font-size: 14px;");
@@ -220,7 +253,7 @@ public class App extends Application {
                 e.printStackTrace();
             }
             // ilość kafelków
-            int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, 50, 50);
+            int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, matrixWidth, matrixHeight);
             simulation.setMap(new SimMap(terrainMap));
 
             openSimulationPanel(primaryStage, simulation, terrainMap, snapshot);
@@ -237,7 +270,8 @@ public class App extends Application {
                 savedCoordinatesDropdown,
                 goToSavedLocationButton,
                 setMapPositionButton,
-                captureButton
+                captureButton,
+                toggleDrawingButton
         );
 
 // Główny kontener (HBox) dla mapy i panelu kontrolnego
@@ -262,7 +296,7 @@ public class App extends Application {
         simulation.setMap(new SimMap(terrainMap));
 
         // Panel symulacji z mapą terenu *20 czyli jden kefelek 20px
-        SimulationPanel panel = new SimulationPanel(terrainMap[0].length * 20, terrainMap.length * 20,
+        SimulationPanel panel = new SimulationPanel(terrainMap[0].length *widthRectangle ,terrainMap.length * heightRectangle,
                 simulation.getGroups(), terrainMap,snapshot);
 
         // Panel kontrolny
@@ -294,6 +328,7 @@ public class App extends Application {
 
         Button addButton = new Button("Add Group");
         Button startButton = new Button("Start Simulation");
+
 
 
         // Obsługa przycisku "Add Group"
@@ -376,8 +411,8 @@ public class App extends Application {
         // Obsługa kliknięcia myszką na mapę
         panel.setOnMouseClicked((MouseEvent event) -> {
             // Obliczamy współrzędne na podstawie klikniętej pozycji
-            int x = (int) Math.floor(event.getX() / 20); // Skala 20x20 na mapie
-            int y = (int) Math.floor(event.getY() / 20);
+            int x = (int) Math.floor(event.getX() / heightRectangle); // Skala 20x20 na mapie
+            int y = (int) Math.floor(event.getY() / widthRectangle);
 
             // Ustawiamy współrzędne w polach tekstowych
             xField.setText(String.valueOf(x));
@@ -395,6 +430,7 @@ public class App extends Application {
                 unitCountField,
                 addButton,
                 startButton
+
         );
 
     //seperator i tworznie okna
