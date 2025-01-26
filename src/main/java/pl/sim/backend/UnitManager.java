@@ -6,10 +6,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Klasa zarządzająca tworzeniem jednostek na podstawie parametrów z pliku konfiguracyjnego.
+ * Plik konfiguracyjny (`unit_attributes.properties`) zawiera szczegółowe atrybuty każdej jednostki.
+ */
 public class UnitManager {
 
+    /** Obiekt do przechowywania właściwości wczytanych z pliku `unit_attributes.properties`. */
     private static final Properties properties = new Properties();
 
+    //Statyczny blok inicjalizacyjny odpowiedzialny za wczytywanie właściwości z pliku
     static {
         try (InputStream input = UnitManager.class.getClassLoader().getResourceAsStream("unit_attributes.properties")) {
             if (input == null) {
@@ -21,6 +27,13 @@ public class UnitManager {
         }
     }
 
+    /**
+     * Tworzy instancję `SimUnit` na podstawie identyfikatora jednostki i liczby początkowych podjednostek.
+     *
+     * @param unitId Identyfikator jednostki (np. "W1", "W2" z pliku konfiguracyjnego).
+     * @param initialUnits Liczba początkowych podjednostek w grupie.
+     * @return Nowa instancja klasy `SimUnit`.
+     */
     public static SimUnit createUnit(String unitId, int initialUnits) {
         String prefix = unitId + ".";
         return new SimUnit(
