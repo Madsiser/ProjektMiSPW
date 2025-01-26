@@ -20,7 +20,7 @@ public class Logger {
                         unit.getInitialUnits(),
                         unit.getTotalCurrentAmmunition(),
                         unit.getInitialAmmunition()*unit.getInitialUnits(),
-                        unit.getShotRange()
+                        unit.getShootingRange()
                 ));
             }
         }
