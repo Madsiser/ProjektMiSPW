@@ -2,29 +2,42 @@ package pl.sim.backend;
 
 import pl.simNG.SimUnit;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class UnitManager {
 
-    public static class Abrams extends SimUnit {
-        public Abrams(int initialUnits) {
-            super("Abrams", "tank", 10, 5, 3, initialUnits, 50, 2.0, 2.0, 3.0, 2.0, 350.0, 300.0,2.0);
+    private static final Properties properties = new Properties();
+
+    static {
+        try (InputStream input = UnitManager.class.getClassLoader().getResourceAsStream("unit_attributes.properties")) {
+            if (input == null) {
+                throw new IllegalStateException("Nie znaleziono pliku unit_attributes.properties");
+            }
+            properties.load(input);
+        } catch (IOException e) {
+            throw new RuntimeException("Błąd podczas wczytywania pliku unit_attributes.properties", e);
         }
     }
 
-    public static class BWP extends SimUnit {
-        public BWP(int initialUnits) {
-            super("BWP", "combat vehicle", 8, 4, 4, initialUnits, 60, 3.0, 3.0, 2.5, 1.8, 150.0,200.0, 3.0);
-        }
-    }
-
-    public static class Soldier extends SimUnit {
-        public Soldier(int initialUnits) {
-            super("Soldier", "soldier", 5, 2, 1, initialUnits, 100, 1.0, 1.0, 0.5, 1.7, 10.0,20.0,5);
-        }
-    }
-
-    public static class Krab extends SimUnit {
-        public Krab(int initialUnits) {
-            super("Krab", "artillery", 15, 10, 2, initialUnits, 40, 4.0, 4.0, 3.5, 2.5, 200.0,300.0,2.0);
-        }
+    public static SimUnit createUnit(String unitId, int initialUnits) {
+        String prefix = unitId + ".";
+        return new SimUnit(
+                properties.getProperty(prefix + "name"),
+                properties.getProperty(prefix + "type"),
+                Integer.parseInt(properties.getProperty(prefix + "visibilityRange")),
+                Integer.parseInt(properties.getProperty(prefix + "shootingRange")),
+                Integer.parseInt(properties.getProperty(prefix + "speed")),
+                initialUnits,
+                Integer.parseInt(properties.getProperty(prefix + "initialAmmunition")),
+                Double.parseDouble(properties.getProperty(prefix + "horizontalDeviation")),
+                Double.parseDouble(properties.getProperty(prefix + "verticalDeviation")),
+                Double.parseDouble(properties.getProperty(prefix + "width")),
+                Double.parseDouble(properties.getProperty(prefix + "height")),
+                Double.parseDouble(properties.getProperty(prefix + "armorThickness")),
+                Double.parseDouble(properties.getProperty(prefix + "armorPenetration")),
+                Double.parseDouble(properties.getProperty(prefix + "fireIntensity"))
+        ) {};
     }
 }

@@ -372,6 +372,4 @@ public class BaseGroup extends SimGroup {
             addTask(() -> unitShot(unit), nextShotInterval);
         }
     }
-
-
 }
