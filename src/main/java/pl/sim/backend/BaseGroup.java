@@ -104,7 +104,7 @@ public class BaseGroup extends SimGroup {
         if (!route.isEmpty()) {
             SimVector2i direction = route.poll();
             if (direction != null) {
-                SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY()).scale(stepSize);
+                SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY());
                 position.add(smoothDirection.getDx(), smoothDirection.getDy());
                 Logger.log(this, "Kontynuuje ruch po trasie. Następny krok: " + position, parent.getSimulationTime());
             }
@@ -121,7 +121,7 @@ public class BaseGroup extends SimGroup {
         if (!route.isEmpty()) {
             SimVector2i direction = route.poll();
             if (direction != null) {
-                SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY()).scale(speed);
+                SimVector2d smoothDirection = new SimVector2d(direction.getX(), direction.getY());
                 position.add(smoothDirection.getDx(), smoothDirection.getDy());
                 Logger.log(this, "Porusza się w kierunku celu. Pozycja: " + position, parent.getSimulationTime());
             }
@@ -340,4 +340,6 @@ public class BaseGroup extends SimGroup {
             addTask(() -> unitShot(unit), nextShotInterval);
         }
     }
+
+
 }
