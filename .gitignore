@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+#####
+map_snapshot.png
+simulation_log.txt
