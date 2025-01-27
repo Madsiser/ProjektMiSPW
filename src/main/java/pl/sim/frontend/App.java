@@ -29,10 +29,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import pl.sim.backend.BattalionManager;
 import pl.sim.backend.MapGenerator;
-import pl.simNG.SimCore;
-import pl.simNG.SimForceType;
-import pl.simNG.SimGroup;
-import pl.simNG.SimPosition;
+import pl.sim.backend.UnitManager;
+import pl.simNG.*;
 import pl.simNG.map.SimMap;
 
 import javax.imageio.ImageIO;
@@ -449,23 +447,8 @@ public class App extends Application {
                 }
 
                 // Dodajemy nową grupę na podstawie wybranego typu batalionu
-                SimGroup newGroup;
-                switch (battalionType) {
-                    case "Tank Battalion":
-                        newGroup = new BattalionManager.TankBattalion(name, new SimPosition(x, y), forceType, unitCount);
-                        break;
-                    case "Mechanized Battalion":
-                        newGroup = new BattalionManager.MechanizedBattalion(name, new SimPosition(x, y), forceType, unitCount);
-                        break;
-                    case "Infantry Battalion":
-                        newGroup = new BattalionManager.InfantryBattalion(name, new SimPosition(x, y), forceType, unitCount);
-                        break;
-                    case "Artillery Battalion":
-                        newGroup = new BattalionManager.ArtilleryBattalion(name, new SimPosition(x, y), forceType, unitCount);
-                        break;
-                    default:
-                        throw new IllegalArgumentException("Invalid battalion type selected.");
-                }
+                // Generowanie grupy
+                SimGroup newGroup = createGroup(name, new SimPosition(x, y), forceType, battalionType, unitCount);
 
                 simulation.addGroup(newGroup);
 
@@ -562,6 +545,22 @@ public class App extends Application {
         }
 
 
+
+
+    private SimGroup createGroup(String name, SimPosition position, SimForceType forceType, String battalionType, int unitCount) {
+        switch (battalionType) {
+            case "Tank Battalion":
+                return new BattalionManager.TankBattalion(name, position, forceType, unitCount);
+            case "Mechanized Battalion":
+                return new BattalionManager.MechanizedBattalion(name, position, forceType, unitCount);
+            case "Infantry Battalion":
+                return new BattalionManager.InfantryBattalion(name, position, forceType, unitCount);
+            case "Artillery Battalion":
+                return new BattalionManager.ArtilleryBattalion(name, position, forceType, unitCount);
+            default:
+                throw new IllegalArgumentException("Invalid battalion type.");
+        }
+    }
 
 
     public static void main(String[] args) {
