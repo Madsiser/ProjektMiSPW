@@ -2,8 +2,13 @@ package pl.sim.frontend;
 
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
+import com.gluonhq.maps.tile.TileRetriever;
+import com.gluonhq.maps.tile.TileRetrieverProvider;
 import com.google.gson.reflect.TypeToken;
 import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,6 +17,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
@@ -20,6 +26,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import pl.sim.backend.BattalionManager;
 import pl.sim.backend.MapGenerator;
 import pl.simNG.SimCore;
@@ -37,12 +44,13 @@ import java.util.Map;
 import com.google.gson.*;
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 
 import static pl.sim.frontend.SimulationPanel.drawTerrainValues;
 
 public class App extends Application {
     private boolean simulationRunning = false; // Flaga stanu symulacji
-
+    public static MapPoint newCenter;
     private AnimationTimer timer;
     Map<String, MapPoint> savedCoordinates = new HashMap<>();
     File coordinatesFile = new File("saved_coordinates.json");
@@ -87,6 +95,7 @@ public class App extends Application {
         MapView mapView = new MapView();
         //MapPoint(30.2297, 21.0122);
         MapPoint warsaw = new MapPoint(30.2297, 21.0122);
+        MapPoint warsaw2 = new MapPoint(3.2297, 21.0122);
         mapView.setZoom(12);
         mapView.setCenter(warsaw);
         //rozmiar pierwszej mapy
@@ -169,12 +178,14 @@ public class App extends Application {
         setMapPositionButton.setStyle("-fx-background-color: #007BFF; -fx-text-fill: white; -fx-font-size: 14px;");
 
         setMapPositionButton.setOnAction(event -> {
+
             try {
                 double latitude = Double.parseDouble(latitudeField.getText());
                 double longitude = Double.parseDouble(longitudeField.getText());
 
                 // Aktualizacja pozycji mapy
                 MapPoint newCenter = new MapPoint(latitude, longitude);
+                //mapView.flyTo(0, newCenter, 2.0);
                 mapView.setCenter(newCenter);
 
                 // Informacja zwrotna o zmianie
@@ -239,25 +250,117 @@ public class App extends Application {
             System.out.println("Map centered on: " + selectedLocation + " -> " + selectedPoint);
         });
 
+        mapView.setOnScroll(event -> {
+            double deltaY = event.getDeltaY(); // Kierunek przewijania
+            int currentZoom = (int) mapView.getZoom();
+            int newZoom = currentZoom;
+
+            if (deltaY > 0) {
+                // Przybliżanie
+                newZoom = Math.min(currentZoom + 1, 20);
+            } else {
+                // Oddalanie
+                newZoom = Math.max(currentZoom - 1, 1);
+            }
+
+            // Pozycja kursora myszy w pikselach względem mapy
+            double mouseX = event.getX();
+            double mouseY = event.getY();
+
+            // Przekształcenie współrzędnych pikselowych na współrzędne geograficzne
+            MapPoint cursorPosition = mapView.getMapPosition(mouseX, mouseY);
+
+            // Zmiana zoomu
+            mapView.setZoom(newZoom);
+
+            // Ponowne ustawienie centrum mapy w taki sposób, aby miejsce pod kursorem pozostało w tym samym punkcie
+            if (cursorPosition != null) {
+                mapView.setCenter(cursorPosition);
+            }
+
+            // Opcjonalne logowanie
+            System.out.println("Zoom level: " + newZoom + ", Center: " + mapView.getCenter());
+        });
+
+
+
         // Przycisk do przejścia do symulacji
         Button captureButton = new Button("Capture Map and Start Simulation");
         captureButton.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px;");
+
         captureButton.setOnAction(event -> {
-            WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
+            double latitude = Double.parseDouble(latitudeField.getText());
+            double longitude = Double.parseDouble(longitudeField.getText());
 
-            try {
-                File outputFile = new File("map_snapshot.png");
-                ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
-                System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
-            } catch (IOException e) {
-                e.printStackTrace();
+            // Aktualizacja pozycji mapy
+
+            newCenter = new MapPoint(latitude,longitude);
+
+            if(mapView.getZoom()!=12) {
+                int startZoom = (int) mapView.getZoom();
+                int endZoom = 12;
+
+                // Ustawienie nowego centrum mapy
+                mapView.setCenter(newCenter);
+                double zoomSpeed = 0.8;
+
+                // Animacja zoomu
+                Timeline zoomAnimation = new Timeline();
+
+                // Iteracyjna zmiana zoomu
+                if (startZoom < endZoom) {
+                    // Przybliżanie 
+                    for (int zoomLevel = startZoom; zoomLevel <= endZoom; zoomLevel++) {
+                        int finalZoomLevel = zoomLevel;
+                        zoomAnimation.getKeyFrames().add(
+                                new KeyFrame(Duration.seconds((zoomLevel - startZoom) * zoomSpeed),
+                                        event2 -> mapView.setZoom(finalZoomLevel)) // Zmiana zoomu
+                        );
+                    }
+                } else {
+                    // oddalanie
+                    for (int zoomLevel = startZoom; zoomLevel >= endZoom; zoomLevel--) {
+                        int finalZoomLevel = zoomLevel;
+                        zoomAnimation.getKeyFrames().add(
+                                new KeyFrame(Duration.seconds((startZoom - zoomLevel) * zoomSpeed),
+                                        event2 -> mapView.setZoom(finalZoomLevel)) // Zmiana zoomu
+                        );
+                    }
+                }
+
+                // Dodaj dodatkowe opóźnienie
+                zoomAnimation.getKeyFrames().add(
+                        new KeyFrame(Duration.seconds(Math.abs(endZoom - startZoom + 1) * zoomSpeed))
+                );
+
+                // Akcja po zakończeniu animacji
+                zoomAnimation.setOnFinished(event2 -> {
+                    System.out.println("Zoom animation completed to level: " + mapView.getZoom());
+
+                    // Dalsze kroki po zakończeniu animacji
+                    WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
+
+                    try {
+                        System.out.println("esa");
+                        File outputFile = new File("map_snapshot.png");
+                        ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
+                        System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, matrixWidth, matrixHeight);
+                    simulation.setMap(new SimMap(terrainMap));
+                    openSimulationPanel(primaryStage, simulation, terrainMap, snapshot);
+                });
+
+                // Uruchom animację
+                zoomAnimation.play();
             }
-            // ilość kafelków
-            int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, matrixWidth, matrixHeight);
-            simulation.setMap(new SimMap(terrainMap));
 
-            openSimulationPanel(primaryStage, simulation, terrainMap, snapshot);
         });
+
 
 
 // Dodanie elementów do panelu kontrolnego
