@@ -42,7 +42,7 @@ public class GluonMapAnalyzer {
                     int blue = rgb & 0xFF;
 
 
-                      System.out.println("RGB: (x"+x +"y"+y + red + ", " + green + ", " + blue + ")");
+                  //    System.out.println("RGB: (x"+x +"y"+y + red + ", " + green + ", " + blue + ")");
                     terrainMap[x][y] = getTerrainDifficulty(red, green, blue);
                 }
             }
