@@ -176,7 +176,7 @@ public class SimulationPanel extends Canvas {
 
 
             int maxShotRange = group.getUnits().stream()
-                    .mapToInt(SimUnit::getShotRange)
+                    .mapToInt(SimUnit::getShootingRange)
                     .max()
                     .orElse(0);
             if (maxShotRange > 0) {
@@ -190,7 +190,7 @@ public class SimulationPanel extends Canvas {
 
             //Zasięg widoczności grupy
             int visibilityRange = group.getUnits().stream()
-                    .mapToInt(SimUnit::getViewRange)
+                    .mapToInt(SimUnit::getVisibilityRange)
                     .max()
                     .orElse(0);
             if (visibilityRange > 0) {

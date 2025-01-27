@@ -1,1281 +1,624 @@
-[0000]:[T1] Konfiguracja dla jednostki Abrams: fireIntensity = 2.0, pierwszy strzał za: 9
+[0000]:[] Konfiguracja dla jednostki Abrams: fireIntensity = 2.0, pierwszy strzał za: 9
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0000]:[] Konfiguracja dla jednostki Abrams: fireIntensity = 2.0, pierwszy strzał za: 9
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0001]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0000]:[T2] Konfiguracja dla jednostki Abrams: fireIntensity = 2.0, pierwszy strzał za: 9
+[0001]:[] Kontynuuje ruch po trasie. Następny krok: (37,00, 19,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0001]:[T1] Kontynuowanie ruchu po pierwotnej trasie.
+[0001]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0001]:[] Kontynuuje ruch po trasie. Następny krok: (21,00, 18,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0002]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0001]:[T1] Kontynuuje ruch po trasie. Następny krok: (5,00, 3,00)
+[0002]:[] Kontynuuje ruch po trasie. Następny krok: (36,00, 19,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0001]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0002]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0002]:[] Kontynuuje ruch po trasie. Następny krok: (20,00, 18,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0003]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0001]:[T2] Kontynuuje ruch po trasie. Następny krok: (45,00, 8,00)
+[0003]:[] Kontynuuje ruch po trasie. Następny krok: (35,00, 19,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0002]:[T1] Kontynuowanie ruchu po pierwotnej trasie.
+[0003]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0003]:[] Kontynuuje ruch po trasie. Następny krok: (19,00, 18,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0004]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0002]:[T1] Kontynuuje ruch po trasie. Następny krok: (4,00, 3,00)
+[0004]:[] Kontynuuje ruch po trasie. Następny krok: (35,00, 18,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0002]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0004]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0004]:[] Kontynuuje ruch po trasie. Następny krok: (19,00, 17,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0005]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0002]:[T2] Kontynuuje ruch po trasie. Następny krok: (44,00, 8,00)
+[0005]:[] Kontynuuje ruch po trasie. Następny krok: (35,00, 17,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0003]:[T1] Kontynuowanie ruchu po pierwotnej trasie.
+[0005]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0005]:[] Kontynuuje ruch po trasie. Następny krok: (19,00, 16,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0006]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0003]:[T1] Kontynuuje ruch po trasie. Następny krok: (3,00, 3,00)
+[0006]:[] Kontynuuje ruch po trasie. Następny krok: (35,00, 16,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0003]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0006]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0006]:[] Kontynuuje ruch po trasie. Następny krok: (19,00, 15,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0007]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0003]:[T2] Kontynuuje ruch po trasie. Następny krok: (43,00, 8,00)
+[0007]:[] Kontynuuje ruch po trasie. Następny krok: (34,00, 16,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0004]:[T1] Kontynuowanie ruchu po pierwotnej trasie.
+[0007]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0007]:[] Kontynuuje ruch po trasie. Następny krok: (18,00, 15,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0008]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0004]:[T1] Kontynuuje ruch po trasie. Następny krok: (2,00, 3,00)
+[0008]:[] Kontynuuje ruch po trasie. Następny krok: (34,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0004]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0008]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0008]:[] Kontynuuje ruch po trasie. Następny krok: (18,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0009]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0004]:[T2] Kontynuuje ruch po trasie. Następny krok: (42,00, 8,00)
+[0009]:[] Kontynuuje ruch po trasie. Następny krok: (33,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0005]:[T1] Kontynuowanie ruchu po pierwotnej trasie.
+[0009]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0009]:[] Kontynuuje ruch po trasie. Następny krok: (17,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0010]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0005]:[T1] Kontynuuje ruch po trasie. Następny krok: (2,00, 2,00)
+[0010]:[] Kontynuuje ruch po trasie. Następny krok: (32,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0005]:[T1] Dotarł w pobliże celu. Pozycja celu: (2,00, 2,00), aktualna pozycja: (2,00, 2,00)
+[0010]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0010]:[] Kontynuuje ruch po trasie. Następny krok: (16,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0011]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0005]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0011]:[] Kontynuuje ruch po trasie. Następny krok: (31,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0005]:[T2] Kontynuuje ruch po trasie. Następny krok: (41,00, 8,00)
+[0011]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0011]:[] Kontynuuje ruch po trasie. Następny krok: (15,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0012]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0006]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0012]:[] Kontynuuje ruch po trasie. Następny krok: (30,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0006]:[T2] Kontynuuje ruch po trasie. Następny krok: (40,00, 8,00)
+[0012]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0012]:[] Kontynuuje ruch po trasie. Następny krok: (14,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0013]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0007]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0013]:[] Kontynuuje ruch po trasie. Następny krok: (29,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0007]:[T2] Kontynuuje ruch po trasie. Następny krok: (39,00, 8,00)
+[0013]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0013]:[] Kontynuuje ruch po trasie. Następny krok: (13,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0014]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0008]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0014]:[] Kontynuuje ruch po trasie. Następny krok: (28,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0008]:[T2] Kontynuuje ruch po trasie. Następny krok: (38,00, 8,00)
+[0014]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0014]:[] Kontynuuje ruch po trasie. Następny krok: (12,00, 14,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0015]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0009]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0015]:[] Kontynuuje ruch po trasie. Następny krok: (27,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0009]:[T2] Kontynuuje ruch po trasie. Następny krok: (37,00, 8,00)
+[0015]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0015]:[] Kontynuuje ruch po trasie. Następny krok: (12,00, 13,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0016]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0010]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0016]:[] Kontynuuje ruch po trasie. Następny krok: (26,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0010]:[T2] Kontynuuje ruch po trasie. Następny krok: (36,00, 8,00)
+[0016]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0016]:[] Kontynuuje ruch po trasie. Następny krok: (12,00, 12,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0017]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0011]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0017]:[] Kontynuuje ruch po trasie. Następny krok: (25,00, 15,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0011]:[T2] Kontynuuje ruch po trasie. Następny krok: (35,00, 8,00)
+[0017]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0017]:[] Kontynuuje ruch po trasie. Następny krok: (12,00, 11,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0018]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0012]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0018]:[] Kontynuuje ruch po trasie. Następny krok: (25,00, 14,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0012]:[T2] Kontynuuje ruch po trasie. Następny krok: (34,00, 8,00)
+[0018]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0018]:[] Kontynuuje ruch po trasie. Następny krok: (12,00, 10,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0019]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0013]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0019]:[] Kontynuuje ruch po trasie. Następny krok: (24,00, 14,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0013]:[T2] Kontynuuje ruch po trasie. Następny krok: (33,00, 8,00)
+[0019]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0019]:[] Kontynuuje ruch po trasie. Następny krok: (11,00, 10,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0020]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0014]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0020]:[] Kontynuuje ruch po trasie. Następny krok: (24,00, 13,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0014]:[T2] Kontynuuje ruch po trasie. Następny krok: (32,00, 8,00)
+[0020]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0020]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 10,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0021]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0015]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0021]:[] Kontynuuje ruch po trasie. Następny krok: (23,00, 13,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0015]:[T2] Kontynuuje ruch po trasie. Następny krok: (31,00, 8,00)
+[0021]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0021]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 9,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0022]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0016]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0022]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 13,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0016]:[T2] Kontynuuje ruch po trasie. Następny krok: (30,00, 8,00)
+[0022]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0022]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 8,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0023]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0017]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0023]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 12,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0017]:[T2] Kontynuuje ruch po trasie. Następny krok: (29,00, 8,00)
+[0023]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0023]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 7,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0024]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0018]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0024]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 11,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0018]:[T2] Kontynuuje ruch po trasie. Następny krok: (28,00, 8,00)
+[0024]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0024]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 6,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0025]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0025]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 10,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0019]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0025]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0025]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 5,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0026]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0019]:[T2] Kontynuuje ruch po trasie. Następny krok: (27,00, 8,00)
+[0026]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 9,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0020]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0026]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0026]:[] Kontynuuje ruch po trasie. Następny krok: (10,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0027]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0020]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 8,00)
+[0027]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 8,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0021]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0027]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0027]:[] Kontynuuje ruch po trasie. Następny krok: (9,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0028]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0021]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 9,00)
+[0028]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 7,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0022]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0028]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0028]:[] Kontynuuje ruch po trasie. Następny krok: (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0029]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0022]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 10,00)
+[0029]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 6,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0023]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0029]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0029]:[] Kontynuuje ruch po trasie. Następny krok: (7,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0030]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0023]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 11,00)
+[0030]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 5,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0024]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0030]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0030]:[] Kontynuuje ruch po trasie. Następny krok: (6,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0031]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0024]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 12,00)
+[0031]:[] Kontynuuje ruch po trasie. Następny krok: (22,00, 4,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0025]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0031]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0031]:[] Kontynuuje ruch po trasie. Następny krok: (5,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0032]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0025]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 13,00)
+[0032]:[] Kontynuuje ruch po trasie. Następny krok: (21,00, 4,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0026]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0032]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0032]:[] Kontynuuje ruch po trasie. Następny krok: (4,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0033]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0026]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 14,00)
+[0033]:[] Kontynuuje ruch po trasie. Następny krok: (20,00, 4,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0027]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0033]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0033]:[] Kontynuuje ruch po trasie. Następny krok: (4,00, 3,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0034]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0027]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 15,00)
+[0034]:[] Kontynuuje ruch po trasie. Następny krok: (19,00, 4,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0028]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
+[0034]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0034]:[] Kontynuuje ruch po trasie. Następny krok: (3,00, 3,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0035]:[] Kontynuowanie ruchu po pierwotnej trasie.
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0028]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 16,00)
+[0035]:[] Kontynuuje ruch po trasie. Następny krok: (18,00, 4,00)
 STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0029]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0029]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0030]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0030]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 18,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0031]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0031]:[T2] Kontynuuje ruch po trasie. Następny krok: (26,00, 19,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0032]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0032]:[T2] Kontynuuje ruch po trasie. Następny krok: (25,00, 19,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0033]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0033]:[T2] Kontynuuje ruch po trasie. Następny krok: (24,00, 19,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0034]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0034]:[T2] Kontynuuje ruch po trasie. Następny krok: (23,00, 19,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0035]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0035]:[T2] Kontynuuje ruch po trasie. Następny krok: (22,00, 19,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0036]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0036]:[T2] Kontynuuje ruch po trasie. Następny krok: (22,00, 18,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0037]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0037]:[T2] Kontynuuje ruch po trasie. Następny krok: (22,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0038]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0038]:[T2] Kontynuuje ruch po trasie. Następny krok: (21,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0039]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0039]:[T2] Kontynuuje ruch po trasie. Następny krok: (20,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0040]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0040]:[T2] Kontynuuje ruch po trasie. Następny krok: (19,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0041]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0041]:[T2] Kontynuuje ruch po trasie. Następny krok: (18,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0042]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0042]:[T2] Kontynuuje ruch po trasie. Następny krok: (17,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0043]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0043]:[T2] Kontynuuje ruch po trasie. Następny krok: (16,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0044]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0044]:[T2] Kontynuuje ruch po trasie. Następny krok: (15,00, 17,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0045]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0045]:[T2] Kontynuuje ruch po trasie. Następny krok: (15,00, 16,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0046]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0046]:[T2] Kontynuuje ruch po trasie. Następny krok: (15,00, 15,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0047]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0047]:[T2] Kontynuuje ruch po trasie. Następny krok: (15,00, 14,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0048]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0048]:[T2] Kontynuuje ruch po trasie. Następny krok: (15,00, 13,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0049]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0049]:[T2] Kontynuuje ruch po trasie. Następny krok: (15,00, 12,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0050]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0050]:[T2] Kontynuuje ruch po trasie. Następny krok: (14,00, 12,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0051]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0051]:[T2] Kontynuuje ruch po trasie. Następny krok: (13,00, 12,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0052]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0052]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 12,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0053]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0053]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 11,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0054]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0054]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 10,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0055]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0055]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 9,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0056]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0056]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 8,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0057]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0057]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 7,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0058]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0058]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 6,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0059]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0059]:[T2] Kontynuuje ruch po trasie. Następny krok: (12,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0060]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0060]:[T2] Kontynuuje ruch po trasie. Następny krok: (11,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0061]:[T1] Zbliżanie się do celu, odległość: 9.486832980505138, minimalny zasięg: 5
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0061]:[T1] Oblicza trasę do celu. Cel: (11,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0061]:[T1] Porusza się w kierunku celu. Pozycja: (3,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0061]:[T2] Zbliżanie się do celu, odległość: 8.54400374531753, minimalny zasięg: 5
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0061]:[T2] Oblicza trasę do celu. Cel: (3,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0061]:[T2] Porusza się w kierunku celu. Pozycja: (10,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0062]:[T1] Zbliżanie się do celu, odległość: 7.615773105863909, minimalny zasięg: 5
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0062]:[T1] Oblicza trasę do celu. Cel: (10,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0062]:[T1] Porusza się w kierunku celu. Pozycja: (4,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0062]:[T2] Zbliżanie się do celu, odległość: 6.708203932499369, minimalny zasięg: 5
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0062]:[T2] Oblicza trasę do celu. Cel: (4,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0062]:[T2] Porusza się w kierunku celu. Pozycja: (9,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0063]:[T1] Zbliżanie się do celu, odległość: 5.830951894845301, minimalny zasięg: 5
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0063]:[T1] Oblicza trasę do celu. Cel: (9,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0063]:[T1] Porusza się w kierunku celu. Pozycja: (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0063]:[T2] Zbliżanie się do celu, odległość: 5.0, minimalny zasięg: 5
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0063]:[T2] Oblicza trasę do celu. Cel: (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0063]:[T2] Porusza się w kierunku celu. Pozycja: (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0064]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2500
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0064]:[T1] Z jednostki Abrams może strzelać maks 50 pod-jednostek. Wylosowano 33 do strzału, ale ograniczono do 33 (cel ma 50, ammo=2500).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
-[0064]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 49/50. Stracono amunicję: 50
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2450/2500 | Zasięg: 5 |
-[0064]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2450/2500 | Zasięg: 5 |
-[0064]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2450/2500 | Zasięg: 5 |
-[0064]:[T1] Seria strzałów zakończona: wystrzelono 33 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 2500 do 2467.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2467/2500 | Zasięg: 5 |
-[0064]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2450
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2450/2500 | Zasięg: 5 |
-[0064]:[T2] Z jednostki Abrams może strzelać maks 49 pod-jednostek. Wylosowano 45 do strzału, ale ograniczono do 45 (cel ma 50, ammo=2450).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2450/2500 | Zasięg: 5 |
-[0064]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 49/50. Stracono amunicję: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2418/2500 | Zasięg: 5 |
-[0064]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2418/2500 | Zasięg: 5 |
-[0064]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2418/2500 | Zasięg: 5 |
-[0064]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 48/50. Stracono amunicję: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2369/2500 | Zasięg: 5 |
-[0064]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 48
-STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2369/2500 | Zasięg: 5 |
-[0064]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2369/2500 | Zasięg: 5 |
-[0064]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 47/50. Stracono amunicję: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2320/2500 | Zasięg: 5 |
-[0064]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2320/2500 | Zasięg: 5 |
-[0064]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2320/2500 | Zasięg: 5 |
-[0064]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 46/50. Stracono amunicję: 50
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2270/2500 | Zasięg: 5 |
-[0064]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 46
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2270/2500 | Zasięg: 5 |
-[0064]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2270/2500 | Zasięg: 5 |
-[0064]:[T2] Seria strzałów zakończona: wystrzelono 45 pocisków. Zniszczono 4 jednostek [T1]. Amunicja spadła z 2450 do 2405.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2405/2500 | Zasięg: 5 |
-[0072]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2270
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2270/2500 | Zasięg: 5 |
-[0072]:[T1] Z jednostki Abrams może strzelać maks 46 pod-jednostek. Wylosowano 34 do strzału, ale ograniczono do 34 (cel ma 49, ammo=2270).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2270/2500 | Zasięg: 5 |
-[0072]:[T1] Seria strzałów zakończona: wystrzelono 34 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 2270 do 2236.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2236/2500 | Zasięg: 5 |
-[0072]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2405
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2405/2500 | Zasięg: 5 |
-[0072]:[T2] Z jednostki Abrams może strzelać maks 49 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 46, ammo=2405).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2405/2500 | Zasięg: 5 |
-[0072]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 45/50. Stracono amunicję: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2187/2500 | Zasięg: 5 |
-[0072]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 45
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2187/2500 | Zasięg: 5 |
-[0072]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2187/2500 | Zasięg: 5 |
-[0072]:[T2] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 2405 do 2398.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2398/2500 | Zasięg: 5 |
-[0080]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2187
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2187/2500 | Zasięg: 5 |
-[0080]:[T1] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 33 do strzału, ale ograniczono do 33 (cel ma 49, ammo=2187).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2187/2500 | Zasięg: 5 |
-[0080]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 48/50. Stracono amunicję: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2349/2500 | Zasięg: 5 |
-[0080]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 48
-STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2349/2500 | Zasięg: 5 |
-[0080]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2349/2500 | Zasięg: 5 |
-[0080]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 47/50. Stracono amunicję: 49
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2300/2500 | Zasięg: 5 |
-[0080]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2300/2500 | Zasięg: 5 |
-[0080]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2300/2500 | Zasięg: 5 |
-[0080]:[T1] Seria strzałów zakończona: wystrzelono 33 pocisków. Zniszczono 2 jednostek [T2]. Amunicja spadła z 2187 do 2154.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2154/2500 | Zasięg: 5 |
-[0080]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2300
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2300/2500 | Zasięg: 5 |
-[0080]:[T2] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 45, ammo=2300).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2300/2500 | Zasięg: 5 |
-[0080]:[T2] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 2300 do 2293.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2293/2500 | Zasięg: 5 |
-[0088]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2154
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2154/2500 | Zasięg: 5 |
-[0088]:[T1] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 47, ammo=2154).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2154/2500 | Zasięg: 5 |
-[0088]:[T1] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 2154 do 2147.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2147/2500 | Zasięg: 5 |
-[0088]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2293
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2293/2500 | Zasięg: 5 |
-[0088]:[T2] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 45 do strzału, ale ograniczono do 45 (cel ma 45, ammo=2293).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2293/2500 | Zasięg: 5 |
-[0088]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 44/50. Stracono amunicję: 48
-STAN GRUPY: Jednostka: Abrams | Aktywne: 44/50 | Amunicja: 2099/2500 | Zasięg: 5 |
-[0088]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 44/50 | Amunicja: 2099/2500 | Zasięg: 5 |
-[0088]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 44/50 | Amunicja: 2099/2500 | Zasięg: 5 |
-[0088]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 43/50. Stracono amunicję: 48
-STAN GRUPY: Jednostka: Abrams | Aktywne: 43/50 | Amunicja: 2051/2500 | Zasięg: 5 |
-[0088]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 43/50 | Amunicja: 2051/2500 | Zasięg: 5 |
-[0088]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 43/50 | Amunicja: 2051/2500 | Zasięg: 5 |
-[0088]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 42/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 2004/2500 | Zasięg: 5 |
-[0088]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 42
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 2004/2500 | Zasięg: 5 |
-[0088]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 2004/2500 | Zasięg: 5 |
-[0088]:[T2] Seria strzałów zakończona: wystrzelono 45 pocisków. Zniszczono 3 jednostek [T1]. Amunicja spadła z 2293 do 2248.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2248/2500 | Zasięg: 5 |
-[0096]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2004
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 2004/2500 | Zasięg: 5 |
-[0096]:[T1] Z jednostki Abrams może strzelać maks 42 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 47, ammo=2004).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 2004/2500 | Zasięg: 5 |
-[0096]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 46/50. Stracono amunicję: 48
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2200/2500 | Zasięg: 5 |
-[0096]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 46
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2200/2500 | Zasięg: 5 |
-[0096]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2200/2500 | Zasięg: 5 |
-[0096]:[T1] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 2004 do 1998.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1998/2500 | Zasięg: 5 |
-[0096]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2200
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2200/2500 | Zasięg: 5 |
-[0096]:[T2] Z jednostki Abrams może strzelać maks 46 pod-jednostek. Wylosowano 24 do strzału, ale ograniczono do 24 (cel ma 42, ammo=2200).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2200/2500 | Zasięg: 5 |
-[0096]:[T2] Seria strzałów zakończona: wystrzelono 24 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 2200 do 2176.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2176/2500 | Zasięg: 5 |
-[0104]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1998
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1998/2500 | Zasięg: 5 |
-[0104]:[T1] Z jednostki Abrams może strzelać maks 42 pod-jednostek. Wylosowano 8 do strzału, ale ograniczono do 8 (cel ma 46, ammo=1998).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1998/2500 | Zasięg: 5 |
-[0104]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 45/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2129/2500 | Zasięg: 5 |
-[0104]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 45
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2129/2500 | Zasięg: 5 |
-[0104]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2129/2500 | Zasięg: 5 |
-[0104]:[T1] Seria strzałów zakończona: wystrzelono 8 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1998 do 1990.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1990/2500 | Zasięg: 5 |
-[0104]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2129
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2129/2500 | Zasięg: 5 |
-[0104]:[T2] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 1 do strzału, ale ograniczono do 1 (cel ma 42, ammo=2129).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2129/2500 | Zasięg: 5 |
-[0104]:[T2] Seria strzałów zakończona: wystrzelono 1 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 2129 do 2128.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2128/2500 | Zasięg: 5 |
-[0112]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1990
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1990/2500 | Zasięg: 5 |
-[0112]:[T1] Z jednostki Abrams może strzelać maks 42 pod-jednostek. Wylosowano 29 do strzału, ale ograniczono do 29 (cel ma 45, ammo=1990).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1990/2500 | Zasięg: 5 |
-[0112]:[T1] Seria strzałów zakończona: wystrzelono 29 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 1990 do 1961.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1961/2500 | Zasięg: 5 |
-[0112]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2128
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2128/2500 | Zasięg: 5 |
-[0112]:[T2] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 17 do strzału, ale ograniczono do 17 (cel ma 42, ammo=2128).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2128/2500 | Zasięg: 5 |
-[0112]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 41/50. Stracono amunicję: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1917/2500 | Zasięg: 5 |
-[0112]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 41
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1917/2500 | Zasięg: 5 |
-[0112]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1917/2500 | Zasięg: 5 |
-[0112]:[T2] Seria strzałów zakończona: wystrzelono 17 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 2128 do 2111.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2111/2500 | Zasięg: 5 |
-[0120]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1917
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1917/2500 | Zasięg: 5 |
-[0120]:[T1] Z jednostki Abrams może strzelać maks 41 pod-jednostek. Wylosowano 35 do strzału, ale ograniczono do 35 (cel ma 45, ammo=1917).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1917/2500 | Zasięg: 5 |
-[0120]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 44/50. Stracono amunicję: 48
-STAN GRUPY: Jednostka: Abrams | Aktywne: 44/50 | Amunicja: 2063/2500 | Zasięg: 5 |
-[0120]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 44/50 | Amunicja: 2063/2500 | Zasięg: 5 |
-[0120]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 44/50 | Amunicja: 2063/2500 | Zasięg: 5 |
-[0120]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 43/50. Stracono amunicję: 46
-STAN GRUPY: Jednostka: Abrams | Aktywne: 43/50 | Amunicja: 2017/2500 | Zasięg: 5 |
-[0120]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 43/50 | Amunicja: 2017/2500 | Zasięg: 5 |
-[0120]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 43/50 | Amunicja: 2017/2500 | Zasięg: 5 |
-[0120]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 42/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1970/2500 | Zasięg: 5 |
-[0120]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 42
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1970/2500 | Zasięg: 5 |
-[0120]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1970/2500 | Zasięg: 5 |
-[0120]:[T1] Seria strzałów zakończona: wystrzelono 35 pocisków. Zniszczono 3 jednostek [T2]. Amunicja spadła z 1917 do 1882.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1882/2500 | Zasięg: 5 |
-[0120]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1970
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1970/2500 | Zasięg: 5 |
-[0120]:[T2] Z jednostki Abrams może strzelać maks 42 pod-jednostek. Wylosowano 13 do strzału, ale ograniczono do 13 (cel ma 41, ammo=1970).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1970/2500 | Zasięg: 5 |
-[0120]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 40/50. Stracono amunicję: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1838/2500 | Zasięg: 5 |
-[0120]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1838/2500 | Zasięg: 5 |
-[0120]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1838/2500 | Zasięg: 5 |
-[0120]:[T2] Seria strzałów zakończona: wystrzelono 13 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 1970 do 1957.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 42/50 | Amunicja: 1957/2500 | Zasięg: 5 |
-[0128]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1838
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1838/2500 | Zasięg: 5 |
-[0128]:[T1] Z jednostki Abrams może strzelać maks 40 pod-jednostek. Wylosowano 33 do strzału, ale ograniczono do 33 (cel ma 42, ammo=1838).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1838/2500 | Zasięg: 5 |
-[0128]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 41/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1910/2500 | Zasięg: 5 |
-[0128]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 41
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1910/2500 | Zasięg: 5 |
-[0128]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1910/2500 | Zasięg: 5 |
-[0128]:[T1] Seria strzałów zakończona: wystrzelono 33 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1838 do 1805.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1805/2500 | Zasięg: 5 |
-[0128]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1910
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1910/2500 | Zasięg: 5 |
-[0128]:[T2] Z jednostki Abrams może strzelać maks 41 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 40, ammo=1910).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1910/2500 | Zasięg: 5 |
-[0128]:[T2] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1910 do 1908.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 41/50 | Amunicja: 1908/2500 | Zasięg: 5 |
-[0136]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1805
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1805/2500 | Zasięg: 5 |
-[0136]:[T1] Z jednostki Abrams może strzelać maks 40 pod-jednostek. Wylosowano 35 do strzału, ale ograniczono do 35 (cel ma 41, ammo=1805).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1805/2500 | Zasięg: 5 |
-[0136]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 40/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1861/2500 | Zasięg: 5 |
-[0136]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1861/2500 | Zasięg: 5 |
-[0136]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1861/2500 | Zasięg: 5 |
-[0136]:[T1] Seria strzałów zakończona: wystrzelono 35 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1805 do 1770.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1770/2500 | Zasięg: 5 |
-[0136]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1861
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1861/2500 | Zasięg: 5 |
-[0136]:[T2] Z jednostki Abrams może strzelać maks 40 pod-jednostek. Wylosowano 22 do strzału, ale ograniczono do 22 (cel ma 40, ammo=1861).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1861/2500 | Zasięg: 5 |
-[0136]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 39/50. Stracono amunicję: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 39/50 | Amunicja: 1726/2500 | Zasięg: 5 |
-[0136]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 39
-STAN GRUPY: Jednostka: Abrams | Aktywne: 39/50 | Amunicja: 1726/2500 | Zasięg: 5 |
-[0136]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 39/50 | Amunicja: 1726/2500 | Zasięg: 5 |
-[0136]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 38/50. Stracono amunicję: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1682/2500 | Zasięg: 5 |
-[0136]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 38
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1682/2500 | Zasięg: 5 |
-[0136]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1682/2500 | Zasięg: 5 |
-[0136]:[T2] Seria strzałów zakończona: wystrzelono 22 pocisków. Zniszczono 2 jednostek [T1]. Amunicja spadła z 1861 do 1839.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 40/50 | Amunicja: 1839/2500 | Zasięg: 5 |
-[0144]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1682
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1682/2500 | Zasięg: 5 |
-[0144]:[T1] Z jednostki Abrams może strzelać maks 38 pod-jednostek. Wylosowano 23 do strzału, ale ograniczono do 23 (cel ma 40, ammo=1682).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1682/2500 | Zasięg: 5 |
-[0144]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 39/50. Stracono amunicję: 45
-STAN GRUPY: Jednostka: Abrams | Aktywne: 39/50 | Amunicja: 1794/2500 | Zasięg: 5 |
-[0144]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 39
-STAN GRUPY: Jednostka: Abrams | Aktywne: 39/50 | Amunicja: 1794/2500 | Zasięg: 5 |
-[0144]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 39/50 | Amunicja: 1794/2500 | Zasięg: 5 |
-[0144]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 38/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1747/2500 | Zasięg: 5 |
-[0144]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 38
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1747/2500 | Zasięg: 5 |
-[0144]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1747/2500 | Zasięg: 5 |
-[0144]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 37/50. Stracono amunicję: 46
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1701/2500 | Zasięg: 5 |
-[0144]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 37
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1701/2500 | Zasięg: 5 |
-[0144]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1701/2500 | Zasięg: 5 |
-[0144]:[T1] Seria strzałów zakończona: wystrzelono 23 pocisków. Zniszczono 3 jednostek [T2]. Amunicja spadła z 1682 do 1659.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 38/50 | Amunicja: 1659/2500 | Zasięg: 5 |
-[0144]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1701
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1701/2500 | Zasięg: 5 |
-[0144]:[T2] Z jednostki Abrams może strzelać maks 37 pod-jednostek. Wylosowano 20 do strzału, ale ograniczono do 20 (cel ma 38, ammo=1701).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1701/2500 | Zasięg: 5 |
-[0144]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 37/50. Stracono amunicję: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1615/2500 | Zasięg: 5 |
-[0144]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 37
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1615/2500 | Zasięg: 5 |
-[0144]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1615/2500 | Zasięg: 5 |
-[0144]:[T2] Seria strzałów zakończona: wystrzelono 20 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 1701 do 1681.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1681/2500 | Zasięg: 5 |
-[0152]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1615
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1615/2500 | Zasięg: 5 |
-[0152]:[T1] Z jednostki Abrams może strzelać maks 37 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 37, ammo=1615).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1615/2500 | Zasięg: 5 |
-[0152]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 36/50. Stracono amunicję: 47
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1634/2500 | Zasięg: 5 |
-[0152]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 36
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1634/2500 | Zasięg: 5 |
-[0152]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1634/2500 | Zasięg: 5 |
-[0152]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 35/50. Stracono amunicję: 45
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1589/2500 | Zasięg: 5 |
-[0152]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 35
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1589/2500 | Zasięg: 5 |
-[0152]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1589/2500 | Zasięg: 5 |
-[0152]:[T1] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 2 jednostek [T2]. Amunicja spadła z 1615 do 1612.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1612/2500 | Zasięg: 5 |
-[0152]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1589
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1589/2500 | Zasięg: 5 |
-[0152]:[T2] Z jednostki Abrams może strzelać maks 35 pod-jednostek. Wylosowano 25 do strzału, ale ograniczono do 25 (cel ma 37, ammo=1589).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1589/2500 | Zasięg: 5 |
-[0152]:[T2] Seria strzałów zakończona: wystrzelono 25 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1589 do 1564.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1564/2500 | Zasięg: 5 |
-[0160]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1612
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1612/2500 | Zasięg: 5 |
-[0160]:[T1] Z jednostki Abrams może strzelać maks 37 pod-jednostek. Wylosowano 27 do strzału, ale ograniczono do 27 (cel ma 35, ammo=1612).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1612/2500 | Zasięg: 5 |
-[0160]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 34/50. Stracono amunicję: 46
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1518/2500 | Zasięg: 5 |
-[0160]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 34
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1518/2500 | Zasięg: 5 |
-[0160]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1518/2500 | Zasięg: 5 |
-[0160]:[T1] Seria strzałów zakończona: wystrzelono 27 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1612 do 1585.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 37/50 | Amunicja: 1585/2500 | Zasięg: 5 |
-[0160]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1518
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1518/2500 | Zasięg: 5 |
-[0160]:[T2] Z jednostki Abrams może strzelać maks 34 pod-jednostek. Wylosowano 19 do strzału, ale ograniczono do 19 (cel ma 37, ammo=1518).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1518/2500 | Zasięg: 5 |
-[0160]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 36/50. Stracono amunicję: 42
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1543/2500 | Zasięg: 5 |
-[0160]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 36
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1543/2500 | Zasięg: 5 |
-[0160]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1543/2500 | Zasięg: 5 |
-[0160]:[T2] Seria strzałów zakończona: wystrzelono 19 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 1518 do 1499.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1499/2500 | Zasięg: 5 |
-[0168]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1543
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1543/2500 | Zasięg: 5 |
-[0168]:[T1] Z jednostki Abrams może strzelać maks 36 pod-jednostek. Wylosowano 14 do strzału, ale ograniczono do 14 (cel ma 34, ammo=1543).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1543/2500 | Zasięg: 5 |
-[0168]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 33/50. Stracono amunicję: 45
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1454/2500 | Zasięg: 5 |
-[0168]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 33
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1454/2500 | Zasięg: 5 |
-[0168]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1454/2500 | Zasięg: 5 |
-[0168]:[T1] Seria strzałów zakończona: wystrzelono 14 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1543 do 1529.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1529/2500 | Zasięg: 5 |
-[0168]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1454
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1454/2500 | Zasięg: 5 |
-[0168]:[T2] Z jednostki Abrams może strzelać maks 33 pod-jednostek. Wylosowano 5 do strzału, ale ograniczono do 5 (cel ma 36, ammo=1454).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1454/2500 | Zasięg: 5 |
-[0168]:[T2] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1454 do 1449.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1449/2500 | Zasięg: 5 |
-[0176]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1529
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1529/2500 | Zasięg: 5 |
-[0176]:[T1] Z jednostki Abrams może strzelać maks 36 pod-jednostek. Wylosowano 12 do strzału, ale ograniczono do 12 (cel ma 33, ammo=1529).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1529/2500 | Zasięg: 5 |
-[0176]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 32/50. Stracono amunicję: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1406/2500 | Zasięg: 5 |
-[0176]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 32
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1406/2500 | Zasięg: 5 |
-[0176]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1406/2500 | Zasięg: 5 |
-[0176]:[T1] Seria strzałów zakończona: wystrzelono 12 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1529 do 1517.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 36/50 | Amunicja: 1517/2500 | Zasięg: 5 |
-[0176]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1406
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1406/2500 | Zasięg: 5 |
-[0176]:[T2] Z jednostki Abrams może strzelać maks 32 pod-jednostek. Wylosowano 28 do strzału, ale ograniczono do 28 (cel ma 36, ammo=1406).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1406/2500 | Zasięg: 5 |
-[0176]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 35/50. Stracono amunicję: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1474/2500 | Zasięg: 5 |
-[0176]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 35
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1474/2500 | Zasięg: 5 |
-[0176]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 35/50 | Amunicja: 1474/2500 | Zasięg: 5 |
-[0176]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 34/50. Stracono amunicję: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1434/2500 | Zasięg: 5 |
-[0176]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 34
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1434/2500 | Zasięg: 5 |
-[0176]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 34/50 | Amunicja: 1434/2500 | Zasięg: 5 |
-[0176]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 33/50. Stracono amunicję: 41
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1393/2500 | Zasięg: 5 |
-[0176]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 33
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1393/2500 | Zasięg: 5 |
-[0176]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 33/50 | Amunicja: 1393/2500 | Zasięg: 5 |
-[0176]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 32/50. Stracono amunicję: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1353/2500 | Zasięg: 5 |
-[0176]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 32
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1353/2500 | Zasięg: 5 |
-[0176]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1353/2500 | Zasięg: 5 |
-[0176]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 31/50. Stracono amunicję: 42
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1311/2500 | Zasięg: 5 |
-[0176]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 31
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1311/2500 | Zasięg: 5 |
-[0176]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1311/2500 | Zasięg: 5 |
-[0176]:[T2] Seria strzałów zakończona: wystrzelono 28 pocisków. Zniszczono 5 jednostek [T1]. Amunicja spadła z 1406 do 1378.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 32/50 | Amunicja: 1378/2500 | Zasięg: 5 |
-[0184]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1311
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1311/2500 | Zasięg: 5 |
-[0184]:[T1] Z jednostki Abrams może strzelać maks 31 pod-jednostek. Wylosowano 17 do strzału, ale ograniczono do 17 (cel ma 32, ammo=1311).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1311/2500 | Zasięg: 5 |
-[0184]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 31/50. Stracono amunicję: 44
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1334/2500 | Zasięg: 5 |
-[0184]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 31
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1334/2500 | Zasięg: 5 |
-[0184]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1334/2500 | Zasięg: 5 |
-[0184]:[T1] Seria strzałów zakończona: wystrzelono 17 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 1311 do 1294.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1294/2500 | Zasięg: 5 |
-[0184]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1334
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1334/2500 | Zasięg: 5 |
-[0184]:[T2] Z jednostki Abrams może strzelać maks 31 pod-jednostek. Wylosowano 27 do strzału, ale ograniczono do 27 (cel ma 31, ammo=1334).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1334/2500 | Zasięg: 5 |
-[0184]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 30/50. Stracono amunicję: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1251/2500 | Zasięg: 5 |
-[0184]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 30
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1251/2500 | Zasięg: 5 |
-[0184]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1251/2500 | Zasięg: 5 |
-[0184]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 29/50. Stracono amunicję: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1208/2500 | Zasięg: 5 |
-[0184]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 29
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1208/2500 | Zasięg: 5 |
-[0184]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1208/2500 | Zasięg: 5 |
-[0184]:[T2] Seria strzałów zakończona: wystrzelono 27 pocisków. Zniszczono 2 jednostek [T1]. Amunicja spadła z 1334 do 1307.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1307/2500 | Zasięg: 5 |
-[0192]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1208
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1208/2500 | Zasięg: 5 |
-[0192]:[T1] Z jednostki Abrams może strzelać maks 29 pod-jednostek. Wylosowano 8 do strzału, ale ograniczono do 8 (cel ma 31, ammo=1208).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1208/2500 | Zasięg: 5 |
-[0192]:[T1] Seria strzałów zakończona: wystrzelono 8 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 1208 do 1200.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1200/2500 | Zasięg: 5 |
-[0192]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1307
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1307/2500 | Zasięg: 5 |
-[0192]:[T2] Z jednostki Abrams może strzelać maks 31 pod-jednostek. Wylosowano 11 do strzału, ale ograniczono do 11 (cel ma 29, ammo=1307).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1307/2500 | Zasięg: 5 |
-[0192]:[T2] Seria strzałów zakończona: wystrzelono 11 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1307 do 1296.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1296/2500 | Zasięg: 5 |
-[0200]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1200
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1200/2500 | Zasięg: 5 |
-[0200]:[T1] Z jednostki Abrams może strzelać maks 29 pod-jednostek. Wylosowano 11 do strzału, ale ograniczono do 11 (cel ma 31, ammo=1200).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1200/2500 | Zasięg: 5 |
-[0200]:[T1] Seria strzałów zakończona: wystrzelono 11 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 1200 do 1189.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1189/2500 | Zasięg: 5 |
-[0200]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1296
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1296/2500 | Zasięg: 5 |
-[0200]:[T2] Z jednostki Abrams może strzelać maks 31 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 29, ammo=1296).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1296/2500 | Zasięg: 5 |
-[0200]:[T2] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1296 do 1290.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1290/2500 | Zasięg: 5 |
-[0208]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1189
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1189/2500 | Zasięg: 5 |
-[0208]:[T1] Z jednostki Abrams może strzelać maks 29 pod-jednostek. Wylosowano 1 do strzału, ale ograniczono do 1 (cel ma 31, ammo=1189).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1189/2500 | Zasięg: 5 |
-[0208]:[T1] Seria strzałów zakończona: wystrzelono 1 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 1189 do 1188.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1188/2500 | Zasięg: 5 |
-[0208]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1290
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1290/2500 | Zasięg: 5 |
-[0208]:[T2] Z jednostki Abrams może strzelać maks 31 pod-jednostek. Wylosowano 25 do strzału, ale ograniczono do 25 (cel ma 29, ammo=1290).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1290/2500 | Zasięg: 5 |
-[0208]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 28/50. Stracono amunicję: 37
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1151/2500 | Zasięg: 5 |
-[0208]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 28
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1151/2500 | Zasięg: 5 |
-[0208]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1151/2500 | Zasięg: 5 |
-[0208]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 27/50. Stracono amunicję: 39
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 1112/2500 | Zasięg: 5 |
-[0208]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 27
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 1112/2500 | Zasięg: 5 |
-[0208]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 1112/2500 | Zasięg: 5 |
-[0208]:[T2] Seria strzałów zakończona: wystrzelono 25 pocisków. Zniszczono 2 jednostek [T1]. Amunicja spadła z 1290 do 1265.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1265/2500 | Zasięg: 5 |
-[0216]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1112
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 1112/2500 | Zasięg: 5 |
-[0216]:[T1] Z jednostki Abrams może strzelać maks 27 pod-jednostek. Wylosowano 10 do strzału, ale ograniczono do 10 (cel ma 31, ammo=1112).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 1112/2500 | Zasięg: 5 |
-[0216]:[T1] Seria strzałów zakończona: wystrzelono 10 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 1112 do 1102.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 1102/2500 | Zasięg: 5 |
-[0216]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1265
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1265/2500 | Zasięg: 5 |
-[0216]:[T2] Z jednostki Abrams może strzelać maks 31 pod-jednostek. Wylosowano 31 do strzału, ale ograniczono do 27 (cel ma 27, ammo=1265).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1265/2500 | Zasięg: 5 |
-[0216]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 26/50. Stracono amunicję: 43
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 1059/2500 | Zasięg: 5 |
-[0216]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 26
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 1059/2500 | Zasięg: 5 |
-[0216]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 1059/2500 | Zasięg: 5 |
-[0216]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 25/50. Stracono amunicję: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 1019/2500 | Zasięg: 5 |
-[0216]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 25
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 1019/2500 | Zasięg: 5 |
-[0216]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 1019/2500 | Zasięg: 5 |
-[0216]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 24/50. Stracono amunicję: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 979/2500 | Zasięg: 5 |
-[0216]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 24
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 979/2500 | Zasięg: 5 |
-[0216]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 979/2500 | Zasięg: 5 |
-[0216]:[T2] Seria strzałów zakończona: wystrzelono 27 pocisków. Zniszczono 3 jednostek [T1]. Amunicja spadła z 1265 do 1238.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 31/50 | Amunicja: 1238/2500 | Zasięg: 5 |
-[0224]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 979
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 979/2500 | Zasięg: 5 |
-[0224]:[T1] Z jednostki Abrams może strzelać maks 24 pod-jednostek. Wylosowano 21 do strzału, ale ograniczono do 21 (cel ma 31, ammo=979).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 979/2500 | Zasięg: 5 |
-[0224]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 30/50. Stracono amunicję: 42
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1196/2500 | Zasięg: 5 |
-[0224]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 30
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1196/2500 | Zasięg: 5 |
-[0224]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1196/2500 | Zasięg: 5 |
-[0224]:[T1] Seria strzałów zakończona: wystrzelono 21 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 979 do 958.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 958/2500 | Zasięg: 5 |
-[0224]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1196
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1196/2500 | Zasięg: 5 |
-[0224]:[T2] Z jednostki Abrams może strzelać maks 30 pod-jednostek. Wylosowano 25 do strzału, ale ograniczono do 24 (cel ma 24, ammo=1196).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1196/2500 | Zasięg: 5 |
-[0224]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 23/50. Stracono amunicję: 42
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 916/2500 | Zasięg: 5 |
-[0224]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 23
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 916/2500 | Zasięg: 5 |
-[0224]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 916/2500 | Zasięg: 5 |
-[0224]:[T2] Seria strzałów zakończona: wystrzelono 24 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 1196 do 1172.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1172/2500 | Zasięg: 5 |
-[0232]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 916
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 916/2500 | Zasięg: 5 |
-[0232]:[T1] Z jednostki Abrams może strzelać maks 23 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 30, ammo=916).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 916/2500 | Zasięg: 5 |
-[0232]:[T1] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 916 do 913.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 913/2500 | Zasięg: 5 |
-[0232]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1172
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1172/2500 | Zasięg: 5 |
-[0232]:[T2] Z jednostki Abrams może strzelać maks 30 pod-jednostek. Wylosowano 19 do strzału, ale ograniczono do 19 (cel ma 23, ammo=1172).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1172/2500 | Zasięg: 5 |
-[0232]:[T2] Seria strzałów zakończona: wystrzelono 19 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1172 do 1153.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1153/2500 | Zasięg: 5 |
-[0240]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 913
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 913/2500 | Zasięg: 5 |
-[0240]:[T1] Z jednostki Abrams może strzelać maks 23 pod-jednostek. Wylosowano 12 do strzału, ale ograniczono do 12 (cel ma 30, ammo=913).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 913/2500 | Zasięg: 5 |
-[0240]:[T1] Seria strzałów zakończona: wystrzelono 12 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 913 do 901.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 901/2500 | Zasięg: 5 |
-[0240]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1153
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1153/2500 | Zasięg: 5 |
-[0240]:[T2] Z jednostki Abrams może strzelać maks 30 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 23, ammo=1153).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1153/2500 | Zasięg: 5 |
-[0240]:[T2] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1153 do 1146.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1146/2500 | Zasięg: 5 |
-[0248]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 901
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 901/2500 | Zasięg: 5 |
-[0248]:[T1] Z jednostki Abrams może strzelać maks 23 pod-jednostek. Wylosowano 5 do strzału, ale ograniczono do 5 (cel ma 30, ammo=901).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 901/2500 | Zasięg: 5 |
-[0248]:[T1] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 901 do 896.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 896/2500 | Zasięg: 5 |
-[0248]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1146
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1146/2500 | Zasięg: 5 |
-[0248]:[T2] Z jednostki Abrams może strzelać maks 30 pod-jednostek. Wylosowano 20 do strzału, ale ograniczono do 20 (cel ma 23, ammo=1146).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1146/2500 | Zasięg: 5 |
-[0248]:[T2] Seria strzałów zakończona: wystrzelono 20 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1146 do 1126.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1126/2500 | Zasięg: 5 |
-[0256]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 896
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 896/2500 | Zasięg: 5 |
-[0256]:[T1] Z jednostki Abrams może strzelać maks 23 pod-jednostek. Wylosowano 9 do strzału, ale ograniczono do 9 (cel ma 30, ammo=896).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 896/2500 | Zasięg: 5 |
-[0256]:[T1] Seria strzałów zakończona: wystrzelono 9 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 896 do 887.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 887/2500 | Zasięg: 5 |
-[0256]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1126
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1126/2500 | Zasięg: 5 |
-[0256]:[T2] Z jednostki Abrams może strzelać maks 30 pod-jednostek. Wylosowano 24 do strzału, ale ograniczono do 23 (cel ma 23, ammo=1126).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1126/2500 | Zasięg: 5 |
-[0256]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 22/50. Stracono amunicję: 37
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0256]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 22
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0256]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0256]:[T2] Seria strzałów zakończona: wystrzelono 23 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 1126 do 1103.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 30/50 | Amunicja: 1103/2500 | Zasięg: 5 |
-[0264]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 850
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0264]:[T1] Z jednostki Abrams może strzelać maks 22 pod-jednostek. Wylosowano 11 do strzału, ale ograniczono do 11 (cel ma 30, ammo=850).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0264]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 29/50. Stracono amunicję: 40
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1063/2500 | Zasięg: 5 |
-[0264]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 29
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1063/2500 | Zasięg: 5 |
-[0264]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1063/2500 | Zasięg: 5 |
-[0264]:[T1] Seria strzałów zakończona: wystrzelono 11 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 850 do 839.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 839/2500 | Zasięg: 5 |
-[0264]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1063
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1063/2500 | Zasięg: 5 |
-[0264]:[T2] Z jednostki Abrams może strzelać maks 29 pod-jednostek. Wylosowano 24 do strzału, ale ograniczono do 22 (cel ma 22, ammo=1063).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1063/2500 | Zasięg: 5 |
-[0264]:[T2] Seria strzałów zakończona: wystrzelono 22 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1063 do 1041.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 29/50 | Amunicja: 1041/2500 | Zasięg: 5 |
-[0272]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 839
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 839/2500 | Zasięg: 5 |
-[0272]:[T1] Z jednostki Abrams może strzelać maks 22 pod-jednostek. Wylosowano 17 do strzału, ale ograniczono do 17 (cel ma 29, ammo=839).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 839/2500 | Zasięg: 5 |
-[0272]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 28/50. Stracono amunicję: 31
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1010/2500 | Zasięg: 5 |
-[0272]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 28
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1010/2500 | Zasięg: 5 |
-[0272]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1010/2500 | Zasięg: 5 |
-[0272]:[T1] Seria strzałów zakończona: wystrzelono 17 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 839 do 822.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 822/2500 | Zasięg: 5 |
-[0272]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1010
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1010/2500 | Zasięg: 5 |
-[0272]:[T2] Z jednostki Abrams może strzelać maks 28 pod-jednostek. Wylosowano 4 do strzału, ale ograniczono do 4 (cel ma 22, ammo=1010).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1010/2500 | Zasięg: 5 |
-[0272]:[T2] Seria strzałów zakończona: wystrzelono 4 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 1010 do 1006.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1006/2500 | Zasięg: 5 |
-[0280]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 822
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 822/2500 | Zasięg: 5 |
-[0280]:[T1] Z jednostki Abrams może strzelać maks 22 pod-jednostek. Wylosowano 9 do strzału, ale ograniczono do 9 (cel ma 28, ammo=822).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 822/2500 | Zasięg: 5 |
-[0280]:[T1] Seria strzałów zakończona: wystrzelono 9 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 822 do 813.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 813/2500 | Zasięg: 5 |
-[0280]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 1006
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1006/2500 | Zasięg: 5 |
-[0280]:[T2] Z jednostki Abrams może strzelać maks 28 pod-jednostek. Wylosowano 22 do strzału, ale ograniczono do 22 (cel ma 22, ammo=1006).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 1006/2500 | Zasięg: 5 |
-[0280]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 21/50. Stracono amunicję: 38
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 775/2500 | Zasięg: 5 |
-[0280]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 21
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 775/2500 | Zasięg: 5 |
-[0280]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 775/2500 | Zasięg: 5 |
-[0280]:[T2] Seria strzałów zakończona: wystrzelono 22 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 1006 do 984.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 28/50 | Amunicja: 984/2500 | Zasięg: 5 |
-[0288]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 775
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 775/2500 | Zasięg: 5 |
-[0288]:[T1] Z jednostki Abrams może strzelać maks 21 pod-jednostek. Wylosowano 15 do strzału, ale ograniczono do 15 (cel ma 28, ammo=775).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 775/2500 | Zasięg: 5 |
-[0288]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 27/50. Stracono amunicję: 34
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 950/2500 | Zasięg: 5 |
-[0288]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 27
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 950/2500 | Zasięg: 5 |
-[0288]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 27/50 | Amunicja: 950/2500 | Zasięg: 5 |
-[0288]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 26/50. Stracono amunicję: 35
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 915/2500 | Zasięg: 5 |
-[0288]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 26
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 915/2500 | Zasięg: 5 |
-[0288]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 915/2500 | Zasięg: 5 |
-[0288]:[T1] Seria strzałów zakończona: wystrzelono 15 pocisków. Zniszczono 2 jednostek [T2]. Amunicja spadła z 775 do 760.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 760/2500 | Zasięg: 5 |
-[0288]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 915
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 915/2500 | Zasięg: 5 |
-[0288]:[T2] Z jednostki Abrams może strzelać maks 26 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 21, ammo=915).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 915/2500 | Zasięg: 5 |
-[0288]:[T2] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 915 do 909.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 909/2500 | Zasięg: 5 |
-[0296]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 760
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 760/2500 | Zasięg: 5 |
-[0296]:[T1] Z jednostki Abrams może strzelać maks 21 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 26, ammo=760).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 760/2500 | Zasięg: 5 |
-[0296]:[T1] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 760 do 758.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 758/2500 | Zasięg: 5 |
-[0296]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 909
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 909/2500 | Zasięg: 5 |
-[0296]:[T2] Z jednostki Abrams może strzelać maks 26 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 21, ammo=909).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 909/2500 | Zasięg: 5 |
-[0296]:[T2] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 909 do 903.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 903/2500 | Zasięg: 5 |
-[0304]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 758
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 758/2500 | Zasięg: 5 |
-[0304]:[T1] Z jednostki Abrams może strzelać maks 21 pod-jednostek. Wylosowano 13 do strzału, ale ograniczono do 13 (cel ma 26, ammo=758).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 758/2500 | Zasięg: 5 |
-[0304]:[T1] Seria strzałów zakończona: wystrzelono 13 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 758 do 745.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 745/2500 | Zasięg: 5 |
-[0304]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 903
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 903/2500 | Zasięg: 5 |
-[0304]:[T2] Z jednostki Abrams może strzelać maks 26 pod-jednostek. Wylosowano 23 do strzału, ale ograniczono do 21 (cel ma 21, ammo=903).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 903/2500 | Zasięg: 5 |
-[0304]:[T2] Seria strzałów zakończona: wystrzelono 21 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 903 do 882.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 882/2500 | Zasięg: 5 |
-[0312]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 745
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 745/2500 | Zasięg: 5 |
-[0312]:[T1] Z jednostki Abrams może strzelać maks 21 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 26, ammo=745).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 745/2500 | Zasięg: 5 |
-[0312]:[T1] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 745 do 743.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 743/2500 | Zasięg: 5 |
-[0312]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 882
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 882/2500 | Zasięg: 5 |
-[0312]:[T2] Z jednostki Abrams może strzelać maks 26 pod-jednostek. Wylosowano 11 do strzału, ale ograniczono do 11 (cel ma 21, ammo=882).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 882/2500 | Zasięg: 5 |
-[0312]:[T2] Seria strzałów zakończona: wystrzelono 11 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 882 do 871.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 871/2500 | Zasięg: 5 |
-[0320]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 743
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 743/2500 | Zasięg: 5 |
-[0320]:[T1] Z jednostki Abrams może strzelać maks 21 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 26, ammo=743).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 743/2500 | Zasięg: 5 |
-[0320]:[T1] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 743 do 741.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 741/2500 | Zasięg: 5 |
-[0320]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 871
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 871/2500 | Zasięg: 5 |
-[0320]:[T2] Z jednostki Abrams może strzelać maks 26 pod-jednostek. Wylosowano 22 do strzału, ale ograniczono do 21 (cel ma 21, ammo=871).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 871/2500 | Zasięg: 5 |
-[0320]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 20/50. Stracono amunicję: 30
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0320]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 20
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0320]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0320]:[T2] Seria strzałów zakończona: wystrzelono 21 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 871 do 850.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0328]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 711
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0328]:[T1] Z jednostki Abrams może strzelać maks 20 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 26, ammo=711).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0328]:[T1] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 711 do 704.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 704/2500 | Zasięg: 5 |
-[0328]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 850
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0328]:[T2] Z jednostki Abrams może strzelać maks 26 pod-jednostek. Wylosowano 13 do strzału, ale ograniczono do 13 (cel ma 20, ammo=850).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 850/2500 | Zasięg: 5 |
-[0328]:[T2] Seria strzałów zakończona: wystrzelono 13 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 850 do 837.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 26/50 | Amunicja: 837/2500 | Zasięg: 5 |
-[0336]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 704
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 704/2500 | Zasięg: 5 |
-[0336]:[T1] Z jednostki Abrams może strzelać maks 20 pod-jednostek. Wylosowano 16 do strzału, ale ograniczono do 16 (cel ma 26, ammo=704).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 704/2500 | Zasięg: 5 |
-[0336]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 25/50. Stracono amunicję: 32
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 805/2500 | Zasięg: 5 |
-[0336]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 25
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 805/2500 | Zasięg: 5 |
-[0336]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 805/2500 | Zasięg: 5 |
-[0336]:[T1] Seria strzałów zakończona: wystrzelono 16 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 704 do 688.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 688/2500 | Zasięg: 5 |
-[0336]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 805
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 805/2500 | Zasięg: 5 |
-[0336]:[T2] Z jednostki Abrams może strzelać maks 25 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 20, ammo=805).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 805/2500 | Zasięg: 5 |
-[0336]:[T2] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 805 do 799.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 25/50 | Amunicja: 799/2500 | Zasięg: 5 |
-[0344]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 688
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 688/2500 | Zasięg: 5 |
-[0344]:[T1] Z jednostki Abrams może strzelać maks 20 pod-jednostek. Wylosowano 10 do strzału, ale ograniczono do 10 (cel ma 25, ammo=688).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 688/2500 | Zasięg: 5 |
-[0344]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 24/50. Stracono amunicję: 34
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 765/2500 | Zasięg: 5 |
-[0344]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 24
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 765/2500 | Zasięg: 5 |
-[0344]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 765/2500 | Zasięg: 5 |
-[0344]:[T1] Seria strzałów zakończona: wystrzelono 10 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 688 do 678.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 678/2500 | Zasięg: 5 |
-[0344]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 765
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 765/2500 | Zasięg: 5 |
-[0344]:[T2] Z jednostki Abrams może strzelać maks 24 pod-jednostek. Wylosowano 24 do strzału, ale ograniczono do 20 (cel ma 20, ammo=765).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 765/2500 | Zasięg: 5 |
-[0344]:[T2] Seria strzałów zakończona: wystrzelono 20 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 765 do 745.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 745/2500 | Zasięg: 5 |
-[0352]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 678
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 678/2500 | Zasięg: 5 |
-[0352]:[T1] Z jednostki Abrams może strzelać maks 20 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 24, ammo=678).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 678/2500 | Zasięg: 5 |
-[0352]:[T1] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 678 do 671.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 671/2500 | Zasięg: 5 |
-[0352]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 745
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 745/2500 | Zasięg: 5 |
-[0352]:[T2] Z jednostki Abrams może strzelać maks 24 pod-jednostek. Wylosowano 24 do strzału, ale ograniczono do 20 (cel ma 20, ammo=745).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 745/2500 | Zasięg: 5 |
-[0352]:[T2] Seria strzałów zakończona: wystrzelono 20 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 745 do 725.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 725/2500 | Zasięg: 5 |
-[0360]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 671
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 671/2500 | Zasięg: 5 |
-[0360]:[T1] Z jednostki Abrams może strzelać maks 20 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 24, ammo=671).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 671/2500 | Zasięg: 5 |
-[0360]:[T1] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 671 do 669.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 669/2500 | Zasięg: 5 |
-[0360]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 725
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 725/2500 | Zasięg: 5 |
-[0360]:[T2] Z jednostki Abrams może strzelać maks 24 pod-jednostek. Wylosowano 14 do strzału, ale ograniczono do 14 (cel ma 20, ammo=725).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 725/2500 | Zasięg: 5 |
-[0360]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 19/50. Stracono amunicję: 33
-STAN GRUPY: Jednostka: Abrams | Aktywne: 19/50 | Amunicja: 636/2500 | Zasięg: 5 |
-[0360]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 19
-STAN GRUPY: Jednostka: Abrams | Aktywne: 19/50 | Amunicja: 636/2500 | Zasięg: 5 |
-[0360]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 19/50 | Amunicja: 636/2500 | Zasięg: 5 |
-[0360]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 18/50. Stracono amunicję: 37
-STAN GRUPY: Jednostka: Abrams | Aktywne: 18/50 | Amunicja: 599/2500 | Zasięg: 5 |
-[0360]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 18
-STAN GRUPY: Jednostka: Abrams | Aktywne: 18/50 | Amunicja: 599/2500 | Zasięg: 5 |
-[0360]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 18/50 | Amunicja: 599/2500 | Zasięg: 5 |
-[0360]:[T2] Seria strzałów zakończona: wystrzelono 14 pocisków. Zniszczono 2 jednostek [T1]. Amunicja spadła z 725 do 711.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0368]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 599
-STAN GRUPY: Jednostka: Abrams | Aktywne: 18/50 | Amunicja: 599/2500 | Zasięg: 5 |
-[0368]:[T1] Z jednostki Abrams może strzelać maks 18 pod-jednostek. Wylosowano 15 do strzału, ale ograniczono do 15 (cel ma 24, ammo=599).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 18/50 | Amunicja: 599/2500 | Zasięg: 5 |
-[0368]:[T1] Seria strzałów zakończona: wystrzelono 15 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 599 do 584.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 18/50 | Amunicja: 584/2500 | Zasięg: 5 |
-[0368]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 711
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0368]:[T2] Z jednostki Abrams może strzelać maks 24 pod-jednostek. Wylosowano 19 do strzału, ale ograniczono do 18 (cel ma 18, ammo=711).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 711/2500 | Zasięg: 5 |
-[0368]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 17/50. Stracono amunicję: 30
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 554/2500 | Zasięg: 5 |
-[0368]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 17
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 554/2500 | Zasięg: 5 |
-[0368]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 554/2500 | Zasięg: 5 |
-[0368]:[T2] Seria strzałów zakończona: wystrzelono 18 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 711 do 693.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 693/2500 | Zasięg: 5 |
-[0376]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 554
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 554/2500 | Zasięg: 5 |
-[0376]:[T1] Z jednostki Abrams może strzelać maks 17 pod-jednostek. Wylosowano 11 do strzału, ale ograniczono do 11 (cel ma 24, ammo=554).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 554/2500 | Zasięg: 5 |
-[0376]:[T1] Seria strzałów zakończona: wystrzelono 11 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 554 do 543.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 543/2500 | Zasięg: 5 |
-[0376]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 693
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 693/2500 | Zasięg: 5 |
-[0376]:[T2] Z jednostki Abrams może strzelać maks 24 pod-jednostek. Wylosowano 19 do strzału, ale ograniczono do 17 (cel ma 17, ammo=693).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 693/2500 | Zasięg: 5 |
-[0376]:[T2] Seria strzałów zakończona: wystrzelono 17 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 693 do 676.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 24/50 | Amunicja: 676/2500 | Zasięg: 5 |
-[0384]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 543
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 543/2500 | Zasięg: 5 |
-[0384]:[T1] Z jednostki Abrams może strzelać maks 17 pod-jednostek. Wylosowano 11 do strzału, ale ograniczono do 11 (cel ma 24, ammo=543).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 543/2500 | Zasięg: 5 |
-[0384]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 23/50. Stracono amunicję: 31
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 645/2500 | Zasięg: 5 |
-[0384]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 23
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 645/2500 | Zasięg: 5 |
-[0384]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 23/50 | Amunicja: 645/2500 | Zasięg: 5 |
-[0384]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 22/50. Stracono amunicję: 27
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 618/2500 | Zasięg: 5 |
-[0384]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 22
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 618/2500 | Zasięg: 5 |
-[0384]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 618/2500 | Zasięg: 5 |
-[0384]:[T1] Seria strzałów zakończona: wystrzelono 11 pocisków. Zniszczono 2 jednostek [T2]. Amunicja spadła z 543 do 532.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 532/2500 | Zasięg: 5 |
-[0384]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 618
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 618/2500 | Zasięg: 5 |
-[0384]:[T2] Z jednostki Abrams może strzelać maks 22 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 17, ammo=618).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 618/2500 | Zasięg: 5 |
-[0384]:[T2] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 618 do 616.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 616/2500 | Zasięg: 5 |
-[0392]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 532
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 532/2500 | Zasięg: 5 |
-[0392]:[T1] Z jednostki Abrams może strzelać maks 17 pod-jednostek. Wylosowano 12 do strzału, ale ograniczono do 12 (cel ma 22, ammo=532).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 532/2500 | Zasięg: 5 |
-[0392]:[T1] Seria strzałów zakończona: wystrzelono 12 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 532 do 520.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 520/2500 | Zasięg: 5 |
-[0392]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 616
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 616/2500 | Zasięg: 5 |
-[0392]:[T2] Z jednostki Abrams może strzelać maks 22 pod-jednostek. Wylosowano 9 do strzału, ale ograniczono do 9 (cel ma 17, ammo=616).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 616/2500 | Zasięg: 5 |
-[0392]:[T2] Seria strzałów zakończona: wystrzelono 9 pocisków. Zniszczono 0 jednostek [T1]. Amunicja spadła z 616 do 607.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 607/2500 | Zasięg: 5 |
-[0400]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 520
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 520/2500 | Zasięg: 5 |
-[0400]:[T1] Z jednostki Abrams może strzelać maks 17 pod-jednostek. Wylosowano 16 do strzału, ale ograniczono do 16 (cel ma 22, ammo=520).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 520/2500 | Zasięg: 5 |
-[0400]:[T1] Seria strzałów zakończona: wystrzelono 16 pocisków. Zniszczono 0 jednostek [T2]. Amunicja spadła z 520 do 504.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 17/50 | Amunicja: 504/2500 | Zasięg: 5 |
-[0400]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 607
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 607/2500 | Zasięg: 5 |
-[0400]:[T2] Z jednostki Abrams może strzelać maks 22 pod-jednostek. Wylosowano 12 do strzału, ale ograniczono do 12 (cel ma 17, ammo=607).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 607/2500 | Zasięg: 5 |
-[0400]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 16/50. Stracono amunicję: 28
-STAN GRUPY: Jednostka: Abrams | Aktywne: 16/50 | Amunicja: 476/2500 | Zasięg: 5 |
-[0400]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 16
-STAN GRUPY: Jednostka: Abrams | Aktywne: 16/50 | Amunicja: 476/2500 | Zasięg: 5 |
-[0400]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 16/50 | Amunicja: 476/2500 | Zasięg: 5 |
-[0400]:[T2] Seria strzałów zakończona: wystrzelono 12 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 607 do 595.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 22/50 | Amunicja: 595/2500 | Zasięg: 5 |
-[0408]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 476
-STAN GRUPY: Jednostka: Abrams | Aktywne: 16/50 | Amunicja: 476/2500 | Zasięg: 5 |
-[0408]:[T1] Z jednostki Abrams może strzelać maks 16 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 22, ammo=476).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 16/50 | Amunicja: 476/2500 | Zasięg: 5 |
-[0408]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 21/50. Stracono amunicję: 26
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 569/2500 | Zasięg: 5 |
-[0408]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 21
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 569/2500 | Zasięg: 5 |
-[0408]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 569/2500 | Zasięg: 5 |
-[0408]:[T1] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 476 do 469.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 16/50 | Amunicja: 469/2500 | Zasięg: 5 |
-[0408]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 569
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 569/2500 | Zasięg: 5 |
-[0408]:[T2] Z jednostki Abrams może strzelać maks 21 pod-jednostek. Wylosowano 16 do strzału, ale ograniczono do 16 (cel ma 16, ammo=569).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 569/2500 | Zasięg: 5 |
-[0408]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 15/50. Stracono amunicję: 28
-STAN GRUPY: Jednostka: Abrams | Aktywne: 15/50 | Amunicja: 441/2500 | Zasięg: 5 |
-[0408]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 15
-STAN GRUPY: Jednostka: Abrams | Aktywne: 15/50 | Amunicja: 441/2500 | Zasięg: 5 |
-[0408]:[T1] Została zaatakowana przez T2 na pozycji (8,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 15/50 | Amunicja: 441/2500 | Zasięg: 5 |
-[0408]:[T2] Seria strzałów zakończona: wystrzelono 16 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 569 do 553.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 21/50 | Amunicja: 553/2500 | Zasięg: 5 |
-[0416]:[T1] Grupa T1 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 441
-STAN GRUPY: Jednostka: Abrams | Aktywne: 15/50 | Amunicja: 441/2500 | Zasięg: 5 |
-[0416]:[T1] Z jednostki Abrams może strzelać maks 15 pod-jednostek. Wylosowano 12 do strzału, ale ograniczono do 12 (cel ma 21, ammo=441).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 15/50 | Amunicja: 441/2500 | Zasięg: 5 |
-[0416]:[T2] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 20/50. Stracono amunicję: 26
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 527/2500 | Zasięg: 5 |
-[0416]:[T2] applyDamage: Początkowe jednostki: 50, Aktywne: 20
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 527/2500 | Zasięg: 5 |
-[0416]:[T2] Została zaatakowana przez T1 na pozycji (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 527/2500 | Zasięg: 5 |
-[0416]:[T1] Seria strzałów zakończona: wystrzelono 12 pocisków. Zniszczono 1 jednostek [T2]. Amunicja spadła z 441 do 429.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 15/50 | Amunicja: 429/2500 | Zasięg: 5 |
-[0416]:[T2] Grupa T2 rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 527
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 527/2500 | Zasięg: 5 |
-[0416]:[T2] Z jednostki Abrams może strzelać maks 20 pod-jednostek. Wylosowano 13 do strzału, ale ograniczono do 13 (cel ma 15, ammo=527).
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 527/2500 | Zasięg: 5 |
-[0416]:[T1] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 14/50. Stracono amunicję: 26
-STAN GRUPY: Jednostka: Abrams | Aktywne: 14/50 | Amunicja: 403/2500 | Zasięg: 5 |
-[0416]:[T1] applyDamage: Początkowe jednostki: 50, Aktywne: 14
-STAN GRUPY: Jednostka: Abrams | Aktywne: 14/50 | Amunicja: 403/2500 | Zasięg: 5 |
-[0416]:[T1] Grupa T1 została całkowicie usunięta.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 14/50 | Amunicja: 403/2500 | Zasięg: 5 |
-[0416]:[T1] Grupa T1 została rozbita przez T2!
-[0416]:[T2] Seria strzałów zakończona: wystrzelono 13 pocisków. Zniszczono 1 jednostek [T1]. Amunicja spadła z 527 do 514.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0416]:[T2] Ruch w stronę ostatniego atakującego. Pozycja: (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0416]:[T2] Oblicza trasę do celu. Cel: (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0416]:[T2] Porusza się w kierunku celu. Pozycja: (7,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0417]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0417]:[T2] Kontynuuje ruch po trasie. Następny krok: (6,00, 5,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0418]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0418]:[T2] Kontynuuje ruch po trasie. Następny krok: (6,00, 4,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0419]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0419]:[T2] Kontynuuje ruch po trasie. Następny krok: (6,00, 3,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0420]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0420]:[T2] Kontynuuje ruch po trasie. Następny krok: (6,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0421]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0421]:[T2] Kontynuuje ruch po trasie. Następny krok: (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0422]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0422]:[T2] Oblicza trasę do pierwotnego celu. Pozycja celu: (2,00, 2,00), aktualna pozycja: (5,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0422]:[T2] Kontynuuje ruch po trasie. Następny krok: (4,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0423]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0423]:[T2] Kontynuuje ruch po trasie. Następny krok: (3,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0424]:[T2] Kontynuowanie ruchu po pierwotnej trasie.
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0424]:[T2] Kontynuuje ruch po trasie. Następny krok: (2,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
-[0424]:[T2] Dotarł w pobliże celu. Pozycja celu: (2,00, 2,00), aktualna pozycja: (2,00, 2,00)
-STAN GRUPY: Jednostka: Abrams | Aktywne: 20/50 | Amunicja: 514/2500 | Zasięg: 5 |
+[0035]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0035]:[] Kontynuuje ruch po trasie. Następny krok: (2,00, 3,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0036]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0036]:[] Kontynuuje ruch po trasie. Następny krok: (17,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0036]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0036]:[] Kontynuuje ruch po trasie. Następny krok: (2,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0036]:[] Dotarł w pobliże celu. Pozycja celu: (2,00, 2,00), aktualna pozycja: (2,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0037]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0037]:[] Kontynuuje ruch po trasie. Następny krok: (16,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0038]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0038]:[] Kontynuuje ruch po trasie. Następny krok: (15,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0039]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0039]:[] Kontynuuje ruch po trasie. Następny krok: (14,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0040]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0040]:[] Kontynuuje ruch po trasie. Następny krok: (13,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0041]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0041]:[] Kontynuuje ruch po trasie. Następny krok: (12,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0042]:[] Kontynuowanie ruchu po pierwotnej trasie.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0042]:[] Kontynuuje ruch po trasie. Następny krok: (11,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0043]:[] Zbliżanie się do celu, odległość: 9.219544457292887, minimalny zasięg: 5
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0043]:[] Oblicza trasę do celu. Cel: (2,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0043]:[] Porusza się w kierunku celu. Pozycja: (10,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0043]:[] Zbliżanie się do celu, odległość: 8.246211251235321, minimalny zasięg: 5
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0043]:[] Oblicza trasę do celu. Cel: (10,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0043]:[] Porusza się w kierunku celu. Pozycja: (3,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0044]:[] Zbliżanie się do celu, odległość: 7.280109889280518, minimalny zasięg: 5
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0044]:[] Oblicza trasę do celu. Cel: (3,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0044]:[] Porusza się w kierunku celu. Pozycja: (9,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0044]:[] Zbliżanie się do celu, odległość: 6.324555320336759, minimalny zasięg: 5
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0044]:[] Oblicza trasę do celu. Cel: (9,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0044]:[] Porusza się w kierunku celu. Pozycja: (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0045]:[] Zbliżanie się do celu, odległość: 5.385164807134504, minimalny zasięg: 5
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0045]:[] Oblicza trasę do celu. Cel: (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0045]:[] Porusza się w kierunku celu. Pozycja: (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0048]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2500
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0048]:[] Z jednostki Abrams może strzelać maks 50 pod-jednostek. Wylosowano 45 do strzału, ale ograniczono do 10 (cel ma 10, ammo=2500).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2500/2500 | Zasięg: 5 |
+[0048]:[] Seria strzałów zakończona: wystrzelono 10 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2500 do 2490.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2490/2500 | Zasięg: 5 |
+[0048]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 500
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0048]:[] Z jednostki Abrams może strzelać maks 10 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 50, ammo=500).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 500/500 | Zasięg: 5 |
+[0048]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 500 do 494.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 10/10 | Amunicja: 494/500 | Zasięg: 5 |
+[0056]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2490
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2490/2500 | Zasięg: 5 |
+[0056]:[] Z jednostki Abrams może strzelać maks 50 pod-jednostek. Wylosowano 18 do strzału, ale ograniczono do 10 (cel ma 10, ammo=2490).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2490/2500 | Zasięg: 5 |
+[0056]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 9/10. Stracono amunicję: 49
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 445/500 | Zasięg: 5 |
+[0056]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 9
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 445/500 | Zasięg: 5 |
+[0056]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 445/500 | Zasięg: 5 |
+[0056]:[] Seria strzałów zakończona: wystrzelono 10 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 2490 do 2480.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2480/2500 | Zasięg: 5 |
+[0056]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 445
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 445/500 | Zasięg: 5 |
+[0056]:[] Z jednostki Abrams może strzelać maks 9 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 50, ammo=445).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 445/500 | Zasięg: 5 |
+[0056]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 445 do 442.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 442/500 | Zasięg: 5 |
+[0064]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2480
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2480/2500 | Zasięg: 5 |
+[0064]:[] Z jednostki Abrams może strzelać maks 50 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 9, ammo=2480).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2480/2500 | Zasięg: 5 |
+[0064]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2480 do 2477.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 50/50 | Amunicja: 2477/2500 | Zasięg: 5 |
+[0064]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 442
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 442/500 | Zasięg: 5 |
+[0064]:[] Z jednostki Abrams może strzelać maks 9 pod-jednostek. Wylosowano 7 do strzału, ale ograniczono do 7 (cel ma 50, ammo=442).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 442/500 | Zasięg: 5 |
+[0064]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 49/50. Stracono amunicję: 50
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2427/2500 | Zasięg: 5 |
+[0064]:[] applyDamage: Początkowe jednostki: 50, Aktywne: 49
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2427/2500 | Zasięg: 5 |
+[0064]:[] Została zaatakowana przez  na pozycji (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2427/2500 | Zasięg: 5 |
+[0064]:[] Seria strzałów zakończona: wystrzelono 7 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 442 do 435.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 9/10 | Amunicja: 435/500 | Zasięg: 5 |
+[0072]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2427
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2427/2500 | Zasięg: 5 |
+[0072]:[] Z jednostki Abrams może strzelać maks 49 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 9, ammo=2427).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2427/2500 | Zasięg: 5 |
+[0072]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 8/10. Stracono amunicję: 47
+STAN GRUPY: Jednostka: Abrams | Aktywne: 8/10 | Amunicja: 388/500 | Zasięg: 5 |
+[0072]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 8
+STAN GRUPY: Jednostka: Abrams | Aktywne: 8/10 | Amunicja: 388/500 | Zasięg: 5 |
+[0072]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 8/10 | Amunicja: 388/500 | Zasięg: 5 |
+[0072]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 2427 do 2421.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2421/2500 | Zasięg: 5 |
+[0072]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 388
+STAN GRUPY: Jednostka: Abrams | Aktywne: 8/10 | Amunicja: 388/500 | Zasięg: 5 |
+[0072]:[] Z jednostki Abrams może strzelać maks 8 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 49, ammo=388).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 8/10 | Amunicja: 388/500 | Zasięg: 5 |
+[0072]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 388 do 382.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 8/10 | Amunicja: 382/500 | Zasięg: 5 |
+[0080]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2421
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2421/2500 | Zasięg: 5 |
+[0080]:[] Z jednostki Abrams może strzelać maks 49 pod-jednostek. Wylosowano 20 do strzału, ale ograniczono do 8 (cel ma 8, ammo=2421).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2421/2500 | Zasięg: 5 |
+[0080]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 7/10. Stracono amunicję: 48
+STAN GRUPY: Jednostka: Abrams | Aktywne: 7/10 | Amunicja: 334/500 | Zasięg: 5 |
+[0080]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 7
+STAN GRUPY: Jednostka: Abrams | Aktywne: 7/10 | Amunicja: 334/500 | Zasięg: 5 |
+[0080]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 7/10 | Amunicja: 334/500 | Zasięg: 5 |
+[0080]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 6/10. Stracono amunicję: 49
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 285/500 | Zasięg: 5 |
+[0080]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 6
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 285/500 | Zasięg: 5 |
+[0080]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 285/500 | Zasięg: 5 |
+[0080]:[] Seria strzałów zakończona: wystrzelono 8 pocisków. Zniszczono 2 jednostek []. Amunicja spadła z 2421 do 2413.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 49/50 | Amunicja: 2413/2500 | Zasięg: 5 |
+[0080]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 285
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 285/500 | Zasięg: 5 |
+[0080]:[] Z jednostki Abrams może strzelać maks 6 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 49, ammo=285).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 285/500 | Zasięg: 5 |
+[0080]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 48/50. Stracono amunicję: 50
+STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2363/2500 | Zasięg: 5 |
+[0080]:[] applyDamage: Początkowe jednostki: 50, Aktywne: 48
+STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2363/2500 | Zasięg: 5 |
+[0080]:[] Została zaatakowana przez  na pozycji (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2363/2500 | Zasięg: 5 |
+[0080]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 285 do 282.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 282/500 | Zasięg: 5 |
+[0088]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2363
+STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2363/2500 | Zasięg: 5 |
+[0088]:[] Z jednostki Abrams może strzelać maks 48 pod-jednostek. Wylosowano 22 do strzału, ale ograniczono do 6 (cel ma 6, ammo=2363).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2363/2500 | Zasięg: 5 |
+[0088]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2363 do 2357.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 48/50 | Amunicja: 2357/2500 | Zasięg: 5 |
+[0088]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 282
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 282/500 | Zasięg: 5 |
+[0088]:[] Z jednostki Abrams może strzelać maks 6 pod-jednostek. Wylosowano 6 do strzału, ale ograniczono do 6 (cel ma 48, ammo=282).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 282/500 | Zasięg: 5 |
+[0088]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 47/50. Stracono amunicję: 49
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2308/2500 | Zasięg: 5 |
+[0088]:[] applyDamage: Początkowe jednostki: 50, Aktywne: 47
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2308/2500 | Zasięg: 5 |
+[0088]:[] Została zaatakowana przez  na pozycji (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2308/2500 | Zasięg: 5 |
+[0088]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 282 do 276.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 276/500 | Zasięg: 5 |
+[0096]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2308
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2308/2500 | Zasięg: 5 |
+[0096]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 24 do strzału, ale ograniczono do 6 (cel ma 6, ammo=2308).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2308/2500 | Zasięg: 5 |
+[0096]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2308 do 2302.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2302/2500 | Zasięg: 5 |
+[0096]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 276
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 276/500 | Zasięg: 5 |
+[0096]:[] Z jednostki Abrams może strzelać maks 6 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 47, ammo=276).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 276/500 | Zasięg: 5 |
+[0096]:[] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 276 do 274.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 274/500 | Zasięg: 5 |
+[0104]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2302
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2302/2500 | Zasięg: 5 |
+[0104]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 35 do strzału, ale ograniczono do 6 (cel ma 6, ammo=2302).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2302/2500 | Zasięg: 5 |
+[0104]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2302 do 2296.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2296/2500 | Zasięg: 5 |
+[0104]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 274
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 274/500 | Zasięg: 5 |
+[0104]:[] Z jednostki Abrams może strzelać maks 6 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 47, ammo=274).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 274/500 | Zasięg: 5 |
+[0104]:[] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 274 do 272.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 6/10 | Amunicja: 272/500 | Zasięg: 5 |
+[0112]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2296
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2296/2500 | Zasięg: 5 |
+[0112]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 39 do strzału, ale ograniczono do 6 (cel ma 6, ammo=2296).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2296/2500 | Zasięg: 5 |
+[0112]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 5/10. Stracono amunicję: 45
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 227/500 | Zasięg: 5 |
+[0112]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 5
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 227/500 | Zasięg: 5 |
+[0112]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 227/500 | Zasięg: 5 |
+[0112]:[] Seria strzałów zakończona: wystrzelono 6 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 2296 do 2290.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2290/2500 | Zasięg: 5 |
+[0112]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 227
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 227/500 | Zasięg: 5 |
+[0112]:[] Z jednostki Abrams może strzelać maks 5 pod-jednostek. Wylosowano 4 do strzału, ale ograniczono do 4 (cel ma 47, ammo=227).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 227/500 | Zasięg: 5 |
+[0112]:[] Seria strzałów zakończona: wystrzelono 4 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 227 do 223.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 223/500 | Zasięg: 5 |
+[0120]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2290
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2290/2500 | Zasięg: 5 |
+[0120]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 47 do strzału, ale ograniczono do 5 (cel ma 5, ammo=2290).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2290/2500 | Zasięg: 5 |
+[0120]:[] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2290 do 2285.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2285/2500 | Zasięg: 5 |
+[0120]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 223
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 223/500 | Zasięg: 5 |
+[0120]:[] Z jednostki Abrams może strzelać maks 5 pod-jednostek. Wylosowano 4 do strzału, ale ograniczono do 4 (cel ma 47, ammo=223).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 223/500 | Zasięg: 5 |
+[0120]:[] Seria strzałów zakończona: wystrzelono 4 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 223 do 219.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 219/500 | Zasięg: 5 |
+[0128]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2285
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2285/2500 | Zasięg: 5 |
+[0128]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 13 do strzału, ale ograniczono do 5 (cel ma 5, ammo=2285).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2285/2500 | Zasięg: 5 |
+[0128]:[] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2285 do 2280.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2280/2500 | Zasięg: 5 |
+[0128]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 219
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 219/500 | Zasięg: 5 |
+[0128]:[] Z jednostki Abrams może strzelać maks 5 pod-jednostek. Wylosowano 5 do strzału, ale ograniczono do 5 (cel ma 47, ammo=219).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 219/500 | Zasięg: 5 |
+[0128]:[] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 219 do 214.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 214/500 | Zasięg: 5 |
+[0136]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2280
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2280/2500 | Zasięg: 5 |
+[0136]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 19 do strzału, ale ograniczono do 5 (cel ma 5, ammo=2280).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2280/2500 | Zasięg: 5 |
+[0136]:[] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2280 do 2275.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2275/2500 | Zasięg: 5 |
+[0136]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 214
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 214/500 | Zasięg: 5 |
+[0136]:[] Z jednostki Abrams może strzelać maks 5 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 47, ammo=214).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 214/500 | Zasięg: 5 |
+[0136]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 214 do 211.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 5/10 | Amunicja: 211/500 | Zasięg: 5 |
+[0144]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2275
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2275/2500 | Zasięg: 5 |
+[0144]:[] Z jednostki Abrams może strzelać maks 47 pod-jednostek. Wylosowano 28 do strzału, ale ograniczono do 5 (cel ma 5, ammo=2275).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2275/2500 | Zasięg: 5 |
+[0144]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 4/10. Stracono amunicję: 45
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 166/500 | Zasięg: 5 |
+[0144]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 4
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 166/500 | Zasięg: 5 |
+[0144]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 166/500 | Zasięg: 5 |
+[0144]:[] Seria strzałów zakończona: wystrzelono 5 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 2275 do 2270.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 47/50 | Amunicja: 2270/2500 | Zasięg: 5 |
+[0144]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 166
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 166/500 | Zasięg: 5 |
+[0144]:[] Z jednostki Abrams może strzelać maks 4 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 47, ammo=166).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 166/500 | Zasięg: 5 |
+[0144]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 46/50. Stracono amunicję: 48
+STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2222/2500 | Zasięg: 5 |
+[0144]:[] applyDamage: Początkowe jednostki: 50, Aktywne: 46
+STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2222/2500 | Zasięg: 5 |
+[0144]:[] Została zaatakowana przez  na pozycji (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2222/2500 | Zasięg: 5 |
+[0144]:[] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 166 do 164.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 164/500 | Zasięg: 5 |
+[0152]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2222
+STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2222/2500 | Zasięg: 5 |
+[0152]:[] Z jednostki Abrams może strzelać maks 46 pod-jednostek. Wylosowano 29 do strzału, ale ograniczono do 4 (cel ma 4, ammo=2222).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2222/2500 | Zasięg: 5 |
+[0152]:[] Seria strzałów zakończona: wystrzelono 4 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2222 do 2218.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 46/50 | Amunicja: 2218/2500 | Zasięg: 5 |
+[0152]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 164
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 164/500 | Zasięg: 5 |
+[0152]:[] Z jednostki Abrams może strzelać maks 4 pod-jednostek. Wylosowano 4 do strzału, ale ograniczono do 4 (cel ma 46, ammo=164).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 164/500 | Zasięg: 5 |
+[0152]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 45/50. Stracono amunicję: 50
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2168/2500 | Zasięg: 5 |
+[0152]:[] applyDamage: Początkowe jednostki: 50, Aktywne: 45
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2168/2500 | Zasięg: 5 |
+[0152]:[] Została zaatakowana przez  na pozycji (4,00, 2,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2168/2500 | Zasięg: 5 |
+[0152]:[] Seria strzałów zakończona: wystrzelono 4 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 164 do 160.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 4/10 | Amunicja: 160/500 | Zasięg: 5 |
+[0160]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2168
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2168/2500 | Zasięg: 5 |
+[0160]:[] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 12 do strzału, ale ograniczono do 4 (cel ma 4, ammo=2168).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2168/2500 | Zasięg: 5 |
+[0160]:[] Jednostka Abrams została uszkodzona. Pozostało aktywnych: 3/10. Stracono amunicję: 39
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 121/500 | Zasięg: 5 |
+[0160]:[] applyDamage: Początkowe jednostki: 10, Aktywne: 3
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 121/500 | Zasięg: 5 |
+[0160]:[] Została zaatakowana przez  na pozycji (8,00, 4,00)
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 121/500 | Zasięg: 5 |
+[0160]:[] Seria strzałów zakończona: wystrzelono 4 pocisków. Zniszczono 1 jednostek []. Amunicja spadła z 2168 do 2164.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2164/2500 | Zasięg: 5 |
+[0160]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 121
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 121/500 | Zasięg: 5 |
+[0160]:[] Z jednostki Abrams może strzelać maks 3 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 45, ammo=121).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 121/500 | Zasięg: 5 |
+[0160]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 121 do 118.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 118/500 | Zasięg: 5 |
+[0168]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2164
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2164/2500 | Zasięg: 5 |
+[0168]:[] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 2 do strzału, ale ograniczono do 2 (cel ma 3, ammo=2164).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2164/2500 | Zasięg: 5 |
+[0168]:[] Seria strzałów zakończona: wystrzelono 2 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2164 do 2162.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2162/2500 | Zasięg: 5 |
+[0168]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 118
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 118/500 | Zasięg: 5 |
+[0168]:[] Z jednostki Abrams może strzelać maks 3 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 45, ammo=118).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 118/500 | Zasięg: 5 |
+[0168]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 118 do 115.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 115/500 | Zasięg: 5 |
+[0176]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 2162
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2162/2500 | Zasięg: 5 |
+[0176]:[] Z jednostki Abrams może strzelać maks 45 pod-jednostek. Wylosowano 37 do strzału, ale ograniczono do 3 (cel ma 3, ammo=2162).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2162/2500 | Zasięg: 5 |
+[0176]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 2162 do 2159.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 45/50 | Amunicja: 2159/2500 | Zasięg: 5 |
+[0176]:[] Grupa  rozpoczyna ostrzał. Jednostka: Abrams, Obecna amunicja: 115
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 115/500 | Zasięg: 5 |
+[0176]:[] Z jednostki Abrams może strzelać maks 3 pod-jednostek. Wylosowano 3 do strzału, ale ograniczono do 3 (cel ma 45, ammo=115).
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 115/500 | Zasięg: 5 |
+[0176]:[] Seria strzałów zakończona: wystrzelono 3 pocisków. Zniszczono 0 jednostek []. Amunicja spadła z 115 do 112.
+STAN GRUPY: Jednostka: Abrams | Aktywne: 3/10 | Amunicja: 112/500 | Zasięg: 5 |
