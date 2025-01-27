@@ -309,7 +309,7 @@ public class App extends Application {
 
                 // Iteracyjna zmiana zoomu
                 if (startZoom < endZoom) {
-                    // Przybliżanie 
+                    // Przybliżanie
                     for (int zoomLevel = startZoom; zoomLevel <= endZoom; zoomLevel++) {
                         int finalZoomLevel = zoomLevel;
                         zoomAnimation.getKeyFrames().add(
