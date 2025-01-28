@@ -146,7 +146,7 @@ public class SimulationPanel extends Canvas {
                 String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
                         unitName, activeUnits, initialUnits, totalCurrentAmmo, totalInitialAmmo);
 
-                //Rysowanie tekstu
+
                 Text unitTextNode = new Text(unitInfo);
                 unitTextNode.setFont(gc.getFont());
                 double unitInfoWidth = unitTextNode.getBoundsInLocal().getWidth();
@@ -154,33 +154,43 @@ public class SimulationPanel extends Canvas {
                 lineOffset++;
             }
 
-            //zasieg strzalu
+            // Rozmiar jednego kafelka
+            double tileHeight = gridHeight;
+            double tileWidth = gridWidth;
+
+// Zasięg strzału
             int maxShotRange = group.getUnits().stream()
                     .mapToInt(SimUnit::getShootingRange)
                     .max()
                     .orElse(0);
+
             if (maxShotRange > 0) {
+                double rangeDiameter = maxShotRange * 2 * tileHeight; // Mnożenie przez rozmiar kafelka w pikselach
                 gc.setFill(new Color(1, 0, 0, 0.15));
-                double rangeDiameter = maxShotRange * 2 * 20;
-                gc.fillOval(pos.getX() * App.heightRectangle - rangeDiameter / 2,
-                        pos.getY() * App.heightRectangle - rangeDiameter / 2,
+                gc.fillOval(
+                        pos.getX() * tileWidth - rangeDiameter / 2,
+                        pos.getY() * tileHeight - rangeDiameter / 2,
                         rangeDiameter,
-                        rangeDiameter);
+                        rangeDiameter
+                );
             }
 
-            //Zasięg widoczności grupy
+// Zasięg widoczności grupy
             int visibilityRange = group.getUnits().stream()
                     .mapToInt(SimUnit::getVisibilityRange)
                     .max()
                     .orElse(0);
+
             if (visibilityRange > 0) {
+                double visibilityDiameter = visibilityRange * 2 * tileHeight;
                 gc.setStroke(new Color(0, 0, 0, 0.25));
                 gc.setLineWidth(1.5);
-                double visibilityDiameter = visibilityRange * 2 * 20;
-                gc.strokeOval(pos.getX() * App.heightRectangle - visibilityDiameter / 2,
-                        pos.getY() * App.heightRectangle - visibilityDiameter / 2,
+                gc.strokeOval(
+                        pos.getX() * tileWidth - visibilityDiameter / 2,
+                        pos.getY() * tileHeight - visibilityDiameter / 2,
                         visibilityDiameter,
-                        visibilityDiameter);
+                        visibilityDiameter
+                );
             }
         }
     }
