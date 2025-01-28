@@ -294,7 +294,7 @@ public class App extends Application {
 
             newCenter = new MapPoint(latitude,longitude);
 
-            if(mapView.getZoom()!=12) {
+
                 int startZoom = (int) mapView.getZoom();
                 int endZoom = 12;
 
@@ -307,7 +307,7 @@ public class App extends Application {
 
                 // Iteracyjna zmiana zoomu
                 if (startZoom < endZoom) {
-                    // Przybliżanie
+                    // Przyblianie
                     for (int zoomLevel = startZoom; zoomLevel <= endZoom; zoomLevel++) {
                         int finalZoomLevel = zoomLevel;
                         zoomAnimation.getKeyFrames().add(
@@ -355,7 +355,7 @@ public class App extends Application {
 
                 // Uruchom animację
                 zoomAnimation.play();
-            }
+
 
         });
 
