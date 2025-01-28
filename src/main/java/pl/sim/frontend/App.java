@@ -31,6 +31,8 @@ import pl.sim.backend.BattalionManager;
 import pl.sim.backend.MapGenerator;
 import pl.sim.backend.UnitManager;
 import pl.simNG.*;
+import pl.simNG.commands.SimCommand;
+import pl.simNG.commands.SimCommandType;
 import pl.simNG.map.SimMap;
 
 import javax.imageio.ImageIO;
@@ -295,66 +297,66 @@ public class App extends Application {
             newCenter = new MapPoint(latitude,longitude);
 
 
-                int startZoom = (int) mapView.getZoom();
-                int endZoom = 12;
+            int startZoom = (int) mapView.getZoom();
+            int endZoom = 12;
 
-                // Ustawienie nowego centrum mapy
-                mapView.setCenter(newCenter);
-                double zoomSpeed = 0.8;
+            // Ustawienie nowego centrum mapy
+            mapView.setCenter(newCenter);
+            double zoomSpeed = 0.8;
 
-                // Animacja zoomu
-                Timeline zoomAnimation = new Timeline();
+            // Animacja zoomu
+            Timeline zoomAnimation = new Timeline();
 
-                // Iteracyjna zmiana zoomu
-                if (startZoom < endZoom) {
-                    // Przyblianie
-                    for (int zoomLevel = startZoom; zoomLevel <= endZoom; zoomLevel++) {
-                        int finalZoomLevel = zoomLevel;
-                        zoomAnimation.getKeyFrames().add(
-                                new KeyFrame(Duration.seconds((zoomLevel - startZoom) * zoomSpeed),
-                                        event2 -> mapView.setZoom(finalZoomLevel)) // Zmiana zoomu
-                        );
-                    }
-                } else {
-                    // oddalanie
-                    for (int zoomLevel = startZoom; zoomLevel >= endZoom; zoomLevel--) {
-                        int finalZoomLevel = zoomLevel;
-                        zoomAnimation.getKeyFrames().add(
-                                new KeyFrame(Duration.seconds((startZoom - zoomLevel) * zoomSpeed),
-                                        event2 -> mapView.setZoom(finalZoomLevel)) // Zmiana zoomu
-                        );
-                    }
+            // Iteracyjna zmiana zoomu
+            if (startZoom < endZoom) {
+                // Przybliżanie
+                for (int zoomLevel = startZoom; zoomLevel <= endZoom; zoomLevel++) {
+                    int finalZoomLevel = zoomLevel;
+                    zoomAnimation.getKeyFrames().add(
+                            new KeyFrame(Duration.seconds((zoomLevel - startZoom) * zoomSpeed),
+                                    event2 -> mapView.setZoom(finalZoomLevel)) // Zmiana zoomu
+                    );
+                }
+            } else {
+                // oddalanie
+                for (int zoomLevel = startZoom; zoomLevel >= endZoom; zoomLevel--) {
+                    int finalZoomLevel = zoomLevel;
+                    zoomAnimation.getKeyFrames().add(
+                            new KeyFrame(Duration.seconds((startZoom - zoomLevel) * zoomSpeed),
+                                    event2 -> mapView.setZoom(finalZoomLevel)) // Zmiana zoomu
+                    );
+                }
+            }
+
+            // Dodaj dodatkowe opóźnienie
+            zoomAnimation.getKeyFrames().add(
+                    new KeyFrame(Duration.seconds(Math.abs(endZoom - startZoom + 1) * zoomSpeed))
+            );
+
+            // Akcja po zakończeniu animacji
+            zoomAnimation.setOnFinished(event2 -> {
+                System.out.println("Zoom animation completed to level: " + mapView.getZoom());
+
+                // Dalsze kroki po zakończeniu animacji
+                WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
+
+                try {
+                    System.out.println("esa");
+                    File outputFile = new File("map_snapshot.png");
+                    ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
+                    System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
 
-                // Dodaj dodatkowe opóźnienie
-                zoomAnimation.getKeyFrames().add(
-                        new KeyFrame(Duration.seconds(Math.abs(endZoom - startZoom + 1) * zoomSpeed))
-                );
 
-                // Akcja po zakończeniu animacji
-                zoomAnimation.setOnFinished(event2 -> {
-                    System.out.println("Zoom animation completed to level: " + mapView.getZoom());
+                int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, matrixWidth, matrixHeight);
+                simulation.setMap(new SimMap(terrainMap));
+                openSimulationPanel(primaryStage, simulation, terrainMap, snapshot);
+            });
 
-                    // Dalsze kroki po zakończeniu animacji
-                    WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
-
-                    try {
-                        System.out.println("esa");
-                        File outputFile = new File("map_snapshot.png");
-                        ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
-                        System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-
-                    int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, matrixWidth, matrixHeight);
-                    simulation.setMap(new SimMap(terrainMap));
-                    openSimulationPanel(primaryStage, simulation, terrainMap, snapshot);
-                });
-
-                // Uruchom animację
-                zoomAnimation.play();
+            // Uruchom animację
+            zoomAnimation.play();
 
 
         });
@@ -450,6 +452,12 @@ public class App extends Application {
                 // Generowanie grupy
                 SimGroup newGroup = createGroup(name, new SimPosition(x, y), forceType, battalionType, unitCount);
 
+                SimCommander commander = new SimCommander();
+                commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(2,5)));
+                commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(19,23)));
+                commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(15,10)));
+                commander.addGroups(newGroup);
+                simulation.addCommanders(commander);
                 simulation.addGroup(newGroup);
 
                 // Aktualizacja panelu symulacji

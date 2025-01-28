@@ -114,17 +114,43 @@ public class SimulationPanel extends Canvas {
             double groupNameWidth = textNode.getBoundsInLocal().getWidth();
             gc.fillText(groupName, x + rectWidth / 2.0 - groupNameWidth / 2.0, y - 5);
 
-            // Wyświetlanie podsumowania amunicji dla grupy jednostek
-            gc.setFont(javafx.scene.text.Font.font("Arial", 16));
+            //Wyświetlanie podsumowania amunicji dla grupy jednostek
+            gc.setFont(javafx.scene.text.Font.font("Arial", 12));
             gc.setFill(Color.BLACK);
 
             int lineOffset = 1;
             for (String unitName : totalCurrentAmmoByName.keySet()) {
-                String unitInfo = String.format("%s Ammo: [%d/%d]",
-                        unitName,
-                        totalCurrentAmmoByName.get(unitName),
-                        totalInitialAmmoByName.get(unitName));
-                gc.fillText(unitInfo, x + rectWidth / 2.0, y + rectHeight + 12 * lineOffset);
+                //Liczenie aktywnej i początkowej ilości amunicji
+                int totalCurrentAmmo = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(SimUnit::getTotalCurrentAmmunition)
+                        .sum();
+
+                int totalInitialAmmo = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(SimUnit::getTotalInitialAmmunition)
+                        .sum();
+
+                //Liczenie aktywnych i początkowych jednostek
+                int activeUnits = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(SimUnit::getActiveUnits)
+                        .sum();
+
+                int initialUnits = group.getUnits().stream()
+                        .filter(u -> u.getName().equals(unitName))
+                        .mapToInt(SimUnit::getInitialUnits)
+                        .sum();
+
+                //Tworzenie tekstu z podsumowaniem
+                String unitInfo = String.format("%s [%d/%d] Ammo: [%d/%d]",
+                        unitName, activeUnits, initialUnits, totalCurrentAmmo, totalInitialAmmo);
+
+                //Rysowanie tekstu
+                Text unitTextNode = new Text(unitInfo);
+                unitTextNode.setFont(gc.getFont());
+                double unitInfoWidth = unitTextNode.getBoundsInLocal().getWidth();
+                gc.fillText(unitInfo, x + rectWidth / 2.0 - unitInfoWidth / 2.0, y + rectHeight + 12 * lineOffset);
                 lineOffset++;
             }
 
@@ -176,7 +202,4 @@ public class SimulationPanel extends Canvas {
             return 1; // Domyślna wartość, jeśli wartość nie pasuje
         }
     }
-
-
-
 }
