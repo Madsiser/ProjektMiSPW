@@ -203,7 +203,7 @@ public class BaseGroup extends SimGroup {
                 destroyGroup();
                 Logger.log(this, "Grupa " + this.getName() + " została rozbita przez " + attacker.getName() + "!", parent.getSimulationTime());
             } else {
-                lastAttackerPosition = attacker.getPosition();
+                lastAttackerPosition = new SimPosition(attacker.getPosition());
                 Logger.log(this,
                         "Została zaatakowana przez " + attacker.getName() + " na pozycji " + lastAttackerPosition, parent.getSimulationTime()
                 );
@@ -250,10 +250,10 @@ public class BaseGroup extends SimGroup {
 
             //Jeżeli brak celów w zasięgu – kończymy metodę i planujemy następny strzał
             if (targetsInRange.isEmpty()) {
-                Logger.log(this,
-                        "Brak celów w zasięgu strzału dla jednostki: " + unit.getName(),
-                        parent.getSimulationTime()
-                );
+//                Logger.log(this,
+//                        "Brak celów w zasięgu strzału dla jednostki: " + unit.getName(),
+//                        parent.getSimulationTime()
+//                );
                 scheduleNextShot(unit);
                 return;
             }
@@ -277,10 +277,10 @@ public class BaseGroup extends SimGroup {
             }
 
             if (totalWeight == 0) {
-                Logger.log(this,
-                        "Brak ważnych celów (aktywne jednostki=0) dla " + unit.getName(),
-                        parent.getSimulationTime()
-                );
+//                Logger.log(this,
+//                        "Brak ważnych celów (aktywne jednostki=0) dla " + unit.getName(),
+//                        parent.getSimulationTime()
+//                );
                 scheduleNextShot(unit);
                 return;
             }

@@ -507,7 +507,26 @@ public class App extends Application {
 
         ComboBox<SimGroup> groupDropdown = new ComboBox<>();
         groupDropdown.setPromptText("Select Group");
-        groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
+
+        groupDropdown.setItems(FXCollections.observableArrayList(
+                simulation.getGroups().stream()
+                        .filter(group -> !group.isDestroyed())
+                        .toList()
+        ));
+
+        AnimationTimer comboBoxUpdater = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                groupDropdown.setItems(FXCollections.observableArrayList(
+                        simulation.getGroups().stream()
+                                .filter(group -> !group.isDestroyed())
+                                .toList()
+                ));
+            }
+        };
+        comboBoxUpdater.start();
+
+        //groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
 
         HBox buttonContainer3 = new HBox();
         buttonContainer3.setSpacing(10);
