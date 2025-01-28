@@ -37,11 +37,8 @@ public class BaseGroup extends SimGroup {
      */
     @Override
     public void init(){
-        //Ruch jednostki
-        originalDestination = new SimPosition(2, 2);
-        this.route = calculateRouteTo(new SimPosition(2,2));
+        addProcess("commandLogic", this::commandLogic, 4);
         addTask(this::move,1);
-
         //Strzał środków bojowych w ramach tej jednostki
         for (SimUnit unit : units) {
             double fireIntensity = unit.getFireIntensity();
@@ -81,56 +78,57 @@ public class BaseGroup extends SimGroup {
      */
     @Override
     public void move() {
-        int groupSpeed = getSpeed();
-        double stepSize = 0.1 * groupSpeed;
-
-        int minShotRange = units.stream()
-                .mapToInt(SimUnit::getShootingRange)
-                .min()
-                .orElse(0);
-
-        visibleGroups.removeIf(SimGroup::isDestroyed);
-
-        //Przeciwnik znajduje się w zasięgu widoczności
-        if (!visibleGroups.isEmpty() && !(units.stream().allMatch(unit -> unit.getTotalCurrentAmmunition() == 0))) {
-            SimGroup target = visibleGroups.get(0);
-            if (target.isDestroyed()) {
-                Logger.log(this, "Cel został zniszczony, przerywam ruch w jego kierunku.", parent.getSimulationTime());
-                visibleGroups.remove(target);
-            } else {
-                double distanceToTarget = position.distanceTo(target.getPosition());
-                if (distanceToTarget > (minShotRange - 0.5)) {
-                    Logger.log(this, "Zbliżanie się do celu, odległość: " + distanceToTarget + ", minimalny zasięg: " + minShotRange, parent.getSimulationTime());
-                    attackTarget(target.getPosition(), stepSize);
-                }
-            }
-        }
-        //Jeżeli został zaatakowany i brak widocznych przeciwników
-        else if (lastAttackerPosition != null) {
-            boolean attackerStillExists = parent.getGroups().stream()
-                    .anyMatch(group -> group.getPosition().equals(lastAttackerPosition));
-
-            if (attackerStillExists) {
-                Logger.log(this, "Ruch w stronę ostatniego atakującego. Pozycja: " + lastAttackerPosition, parent.getSimulationTime());
-                attackTarget(lastAttackerPosition, stepSize);
-            } else {
-                Logger.log(this, "Przeciwnik, który nas atakował, został zniszczony. Rezygnuję z ruchu w jego kierunku.", parent.getSimulationTime());
-            }
-            lastAttackerPosition = null;
-        }
-        //Brak amunicji, powrót do pierwotnego celu
-        else if (units.stream().allMatch(unit -> unit.getTotalCurrentAmmunition() == 0)) {
-            Logger.log(this, "Powrót do pierwotnej trasy z powodu braku amunicji.", parent.getSimulationTime());
-            moveToOriginalDestination(stepSize);
-        }
-        //Domyślne poruszanie się po zadanej trasie
-        else if (!isCloseToDestination(position, originalDestination, 0.5)){
-            Logger.log(this, "Kontynuowanie ruchu po pierwotnej trasie.", parent.getSimulationTime());
-            moveToOriginalDestination(stepSize);
-            if(isCloseToDestination(position, originalDestination, 0.5)){
-                Logger.log(this, "Dotarł w pobliże celu. Pozycja celu: " + originalDestination + ", aktualna pozycja: " + position, parent.getSimulationTime());
-            }
-        }
+//        int groupSpeed = getSpeed();
+//        double stepSize = 0.1 * groupSpeed;
+//
+//        int minShotRange = units.stream()
+//                .mapToInt(SimUnit::getShootingRange)
+//                .min()
+//                .orElse(0);
+//
+//        visibleGroups.removeIf(SimGroup::isDestroyed);
+//
+//        //Przeciwnik znajduje się w zasięgu widoczności
+//        if (!visibleGroups.isEmpty() && !(units.stream().allMatch(unit -> unit.getTotalCurrentAmmunition() == 0))) {
+//            SimGroup target = visibleGroups.get(0);
+//            if (target.isDestroyed()) {
+//                Logger.log(this, "Cel został zniszczony, przerywam ruch w jego kierunku.", parent.getSimulationTime());
+//                visibleGroups.remove(target);
+//            } else {
+//                double distanceToTarget = position.distanceTo(target.getPosition());
+//                if (distanceToTarget > (minShotRange - 0.5)) {
+//                    Logger.log(this, "Zbliżanie się do celu, odległość: " + distanceToTarget + ", minimalny zasięg: " + minShotRange, parent.getSimulationTime());
+//                    attackTarget(target.getPosition(), stepSize);
+//                }
+//            }
+//        }
+//        //Jeżeli został zaatakowany i brak widocznych przeciwników
+//        else if (lastAttackerPosition != null) {
+//            boolean attackerStillExists = parent.getGroups().stream()
+//                    .anyMatch(group -> group.getPosition().equals(lastAttackerPosition));
+//
+//            if (attackerStillExists) {
+//                Logger.log(this, "Ruch w stronę ostatniego atakującego. Pozycja: " + lastAttackerPosition, parent.getSimulationTime());
+//                attackTarget(lastAttackerPosition, stepSize);
+//            } else {
+//                Logger.log(this, "Przeciwnik, który nas atakował, został zniszczony. Rezygnuję z ruchu w jego kierunku.", parent.getSimulationTime());
+//            }
+//            lastAttackerPosition = null;
+//        }
+//        //Brak amunicji, powrót do pierwotnego celu
+//        else if (units.stream().allMatch(unit -> unit.getTotalCurrentAmmunition() == 0)) {
+//            Logger.log(this, "Powrót do pierwotnej trasy z powodu braku amunicji.", parent.getSimulationTime());
+//            moveToOriginalDestination(stepSize);
+//        }
+//        //Domyślne poruszanie się po zadanej trasie
+//        else if (!isCloseToDestination(position, originalDestination, 0.5)){
+//            Logger.log(this, "Kontynuowanie ruchu po pierwotnej trasie.", parent.getSimulationTime());
+//            moveToOriginalDestination(stepSize);
+//            if(isCloseToDestination(position, originalDestination, 0.5)){
+//                Logger.log(this, "Dotarł w pobliże celu. Pozycja celu: " + originalDestination + ", aktualna pozycja: " + position, parent.getSimulationTime());
+//            }
+//        }
+        super.move();
         addTask(this::move, 1);
     }
 
