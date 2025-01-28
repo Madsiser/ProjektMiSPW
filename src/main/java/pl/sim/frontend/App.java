@@ -42,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.*;
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
@@ -54,6 +55,7 @@ public class App extends Application {
     private AnimationTimer timer;
     Map<String, MapPoint> savedCoordinates = new HashMap<>();
     File coordinatesFile = new File("saved_coordinates.json");
+
     private void saveCoordinatesToFile() {
         try (Writer writer = new FileWriter(coordinatesFile)) {
             Gson gson = new GsonBuilder()
@@ -78,16 +80,18 @@ public class App extends Application {
             Gson gson = new GsonBuilder()
                     .registerTypeAdapter(MapPoint.class, new MapPointAdapter())
                     .create();
-            savedCoordinates = gson.fromJson(reader, new TypeToken<Map<String, MapPoint>>() {}.getType());
+            savedCoordinates = gson.fromJson(reader, new TypeToken<Map<String, MapPoint>>() {
+            }.getType());
         } catch (Exception e) {
             System.out.println("Błąd podczas ładowania pliku: " + e.getMessage());
             savedCoordinates = new HashMap<>();
         }
     }
-    public static int heightRectangle =10;
-    public static int widthRectangle =10;
+
+    public static int heightRectangle = 10;
+    public static int widthRectangle = 10;
     public static int matrixWidth = 100;
-    public static int matrixHeight=100;
+    public static int matrixHeight = 100;
 
     @Override
     public void start(Stage primaryStage) {
@@ -101,12 +105,10 @@ public class App extends Application {
         //rozmiar pierwszej mapy
         mapView.setPrefSize(1000, 1000);
         //pozniej to przypisze
-       // int matrixWidth = 50;
-       // int matrixHeight=50;
+        // int matrixWidth = 50;
+        // int matrixHeight=50;
 
 
-
-// Wywołanie ładowania danych przy uruchomieniu programu
         loadCoordinatesFromFile();
 
 // Panel kontrolny po prawej stronie
@@ -114,34 +116,33 @@ public class App extends Application {
         rightControlPanel.setSpacing(10);
         rightControlPanel.setPrefWidth(500);
 
-        // Pola tekstowe do wpisywania współrzędnych
         TextField latitudeField = new TextField();
         latitudeField.setPromptText("Latitude (Szerokość geograficzna)");
-        latitudeField.setText(String.valueOf(warsaw.getLatitude())); // Ustaw wartość początkową
+        latitudeField.setText(String.valueOf(warsaw.getLatitude()));
 
         TextField longitudeField = new TextField();
         longitudeField.setPromptText("Longitude (Długość geograficzna)");
-        longitudeField.setText(String.valueOf(warsaw.getLongitude())); // Ustaw wartość początkową
+        longitudeField.setText(String.valueOf(warsaw.getLongitude()));
 
         TextField locationNameField = new TextField();
         locationNameField.setPromptText("Location Name");
-        // Lista rozwijana do wyboru zapisanych współrzędnych
+
         ObservableList<String> savedLocationsList = FXCollections.observableArrayList(savedCoordinates.keySet());
         ComboBox<String> savedCoordinatesDropdown = new ComboBox<>(savedLocationsList);
         savedCoordinatesDropdown.setPromptText("Select Saved Location");
-        // Przycisk do zapisywania współrzędnych
+
         Button saveCoordinatesButton = new Button("Save Coordinates");
         saveCoordinatesButton.setStyle("-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 12px;");
-        // Przycisk do ustawienia pozycji mapy
+
         Button setMapPositionButton = new Button("Set Map Position");
         setMapPositionButton.setStyle("-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 12px;");
-        // Przycisk do przejścia do symulacji
+
         Button captureButton = new Button("Capture Map and Start Simulation");
         captureButton.setStyle("-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 12px;");
-        // Przycisk do ustawiania pozycji na podstawie wybranych współrzędnych
+
         Button goToSavedLocationButton = new Button("Go To Saved Location");
         goToSavedLocationButton.setStyle("-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 12px;");
-        //widocznosc siatki
+
         CheckBox toggleDrawingCheckBox = new CheckBox("Grid visibility");
         toggleDrawingCheckBox.setStyle("- -fx-text-fill: white; -fx-font-size: 12px;");
 
@@ -164,7 +165,7 @@ public class App extends Application {
 
                 savedCoordinates.put(locationName, newPoint);
 
-                // Dodanie lokalizacji do listy rozwijanej, jeśli jej jeszcze nie ma
+
                 if (!savedLocationsList.contains(locationName)) {
                     savedLocationsList.add(locationName);
                 }
@@ -199,7 +200,7 @@ public class App extends Application {
                 // Informacja zwrotna o zmianie
                 System.out.println("Map position updated to: " + latitude + ", " + longitude);
             } catch (NumberFormatException e) {
-                // Obsługa błędu, jeśli współrzędne są nieprawidłowe
+
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Input Error");
                 alert.setHeaderText("Invalid Coordinates");
@@ -210,11 +211,10 @@ public class App extends Application {
 
 
         toggleDrawingCheckBox.setOnAction(event -> {
-            boolean isSelected = toggleDrawingCheckBox.isSelected(); // Sprawdź, czy CheckBox jest zaznaczony
-            SimulationPanel.drawTerrainValues = isSelected; // Zmień wartość flagi w SimulationPanel
+            boolean isSelected = toggleDrawingCheckBox.isSelected();
+            SimulationPanel.drawTerrainValues = isSelected;
             System.out.println("Terrain Values Display: " + (isSelected ? "Enabled" : "Disabled"));
         });
-
 
 
         mapView.setOnMouseClicked(event -> {
@@ -229,7 +229,7 @@ public class App extends Application {
             latitudeField.setText(String.valueOf(clickedPoint.getLatitude()));
             longitudeField.setText(String.valueOf(clickedPoint.getLongitude()));
 
-            // Informacja w konsoli (opcjonalnie)
+
             System.out.println("Clicked coordinates: Latitude = " + clickedPoint.getLatitude() + ", Longitude = " + clickedPoint.getLongitude());
         });
 
@@ -288,16 +288,13 @@ public class App extends Application {
         });
 
 
-
-
-
         captureButton.setOnAction(event -> {
             double latitude = Double.parseDouble(latitudeField.getText());
             double longitude = Double.parseDouble(longitudeField.getText());
 
             // Aktualizacja pozycji mapy
 
-            newCenter = new MapPoint(latitude,longitude);
+            newCenter = new MapPoint(latitude, longitude);
 
 
             int startZoom = (int) mapView.getZoom();
@@ -331,7 +328,7 @@ public class App extends Application {
                 }
             }
 
-            // Dodaj dodatkowe opóźnienie
+            //  dodatkowe opóźnienie
             zoomAnimation.getKeyFrames().add(
                     new KeyFrame(Duration.seconds(Math.abs(endZoom - startZoom + 1) * zoomSpeed))
             );
@@ -340,7 +337,7 @@ public class App extends Application {
             zoomAnimation.setOnFinished(event2 -> {
                 System.out.println("Zoom animation completed to level: " + mapView.getZoom());
 
-                // Dalsze kroki po zakończeniu animacji
+
                 WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
 
                 try {
@@ -364,11 +361,10 @@ public class App extends Application {
 
         });
 
-        // Etykieta na górze
+
         Label controlPanelLabel = new Label("Map Control Panel");
         controlPanelLabel.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
 
-// Układ pionowy dla pól współrzędnych i nazwy lokalizacji
         VBox coordinatesContainer = new VBox();
         coordinatesContainer.setSpacing(10);
         coordinatesContainer.getChildren().addAll(
@@ -378,17 +374,17 @@ public class App extends Application {
 
         );
 
-// Układ poziomy dla przycisków
+
         HBox buttonContainer = new HBox();
-        buttonContainer.setSpacing(10); // Odległość między przyciskami
+        buttonContainer.setSpacing(10);
         buttonContainer.getChildren().addAll(
                 setMapPositionButton,
                 saveCoordinatesButton
 
         );
-        // Układ poziomy dla przycisków
+
         HBox buttonContainer2 = new HBox();
-        buttonContainer2.setSpacing(10); // Odległość między przyciskami
+        buttonContainer2.setSpacing(10);
         buttonContainer2.getChildren().addAll(
                 savedCoordinatesDropdown,
                 goToSavedLocationButton
@@ -396,24 +392,23 @@ public class App extends Application {
         );
 
         HBox buttonContainer3 = new HBox();
-        buttonContainer3.setSpacing(10); // Odległość między przyciskami
+        buttonContainer3.setSpacing(10);
         buttonContainer3.getChildren().addAll(
                 toggleDrawingCheckBox,
-              captureButton
+                captureButton
         );
 
 
-
         rightControlPanel.setAlignment(Pos.TOP_CENTER);
-        coordinatesContainer.setAlignment(Pos.TOP_CENTER); // Wyśrodkowanie współrzędnych
-        buttonContainer.setAlignment(Pos.TOP_CENTER);      // Wyśrodkowanie pierwszego wiersza przycisków
-        buttonContainer2.setAlignment(Pos.TOP_CENTER);     // Wyśrodkowanie drugiego wiersza przycisków
+        coordinatesContainer.setAlignment(Pos.TOP_CENTER);
+        buttonContainer.setAlignment(Pos.TOP_CENTER);
+        buttonContainer2.setAlignment(Pos.TOP_CENTER);
         buttonContainer3.setAlignment(Pos.TOP_CENTER);
 
-// Dodanie wszystkiego do głównego panelu kontrolnego
+
         rightControlPanel.getChildren().addAll(
-                controlPanelLabel,      // Etykieta na górze
-                coordinatesContainer,   // Współrzędne i nazwa lokalizacji
+                controlPanelLabel,
+                coordinatesContainer,
                 buttonContainer,
                 buttonContainer2,
                 buttonContainer3
@@ -421,7 +416,6 @@ public class App extends Application {
         );
 
 
-// Główny kontener (HBox) dla mapy i panelu kontrolnego
         HBox mapContainer = new HBox();
         mapContainer.setSpacing(10);
         mapContainer.getChildren().addAll(mapView, rightControlPanel);
@@ -437,19 +431,18 @@ public class App extends Application {
 
 
     //int[][] terrainMap = MapGenerator.generate(width, height);
-    private void openSimulationPanel(Stage primaryStage, SimCore simulation, int[][] terrainMap,WritableImage snapshot)
-    {
+    private void openSimulationPanel(Stage primaryStage, SimCore simulation, int[][] terrainMap, WritableImage snapshot) {
         //int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(mapView, 5, 5);
         simulation.setMap(new SimMap(terrainMap));
 
         // Panel symulacji z mapą terenu *20 czyli jden kefelek 20px
-        SimulationPanel panel = new SimulationPanel(terrainMap[0].length *widthRectangle ,terrainMap.length * heightRectangle,
-                simulation.getGroups(), terrainMap,snapshot);
+        SimulationPanel panel = new SimulationPanel(terrainMap[0].length * widthRectangle, terrainMap.length * heightRectangle,
+                simulation.getGroups(), terrainMap, snapshot);
 
         // Panel kontrolny
         VBox controlPanel = new VBox();
         controlPanel.setSpacing(10);
-        controlPanel.setAlignment(Pos.TOP_CENTER); // Wyśrodkowanie całości
+        controlPanel.setAlignment(Pos.TOP_CENTER);
 
 
         String buttonStyle = "-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 12px;";
@@ -492,8 +485,8 @@ public class App extends Application {
         Button startButton = new Button("Start Simulation");
         startButton.setStyle(buttonStyle);
 
-        HBox buttonsContainer = new HBox(10); // Odstęp między przyciskami
-        buttonsContainer.setAlignment(Pos.TOP_CENTER); // Wyśrodkowanie linii
+        HBox buttonsContainer = new HBox(10);
+        buttonsContainer.setAlignment(Pos.TOP_CENTER);
         buttonsContainer.getChildren().addAll(addButton, startButton);
 
         Label ad = new Label("Add New Group");
@@ -506,18 +499,18 @@ public class App extends Application {
 
         );
 
-        // Dropdown do wyboru zadania
+
         ComboBox<String> taskDropdown = new ComboBox<>();
         taskDropdown.setPromptText("Select Task");
-        taskDropdown.getItems().addAll("MOVE", "ATTACK", "DEFENCE"); // Typy zadań
+        taskDropdown.getItems().addAll("MOVE", "ATTACK", "DEFENCE");
 
-        // Dropdown do wyboru grupy
+
         ComboBox<SimGroup> groupDropdown = new ComboBox<>();
         groupDropdown.setPromptText("Select Group");
-        groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups())); // Załaduj listę grup
+        groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
 
         HBox buttonContainer3 = new HBox();
-        buttonContainer3.setSpacing(10); // Odległość między przyciskami
+        buttonContainer3.setSpacing(10);
         buttonContainer3.getChildren().addAll(
                 taskDropdown,
                 groupDropdown
@@ -525,20 +518,17 @@ public class App extends Application {
         buttonContainer3.setAlignment(Pos.TOP_CENTER);
 
 
-// Pola współrzędnych
         TextField taskXField = new TextField();
         taskXField.setPromptText("Target X");
 
         TextField taskYField = new TextField();
         taskYField.setPromptText("Target Y");
 
-// Przycisk dodawania zadania
+
         Button addTaskButton = new Button("Add Task");
         addTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 
 
-
-        // Obsługa przycisku "Add Group"
         addButton.setOnAction(event -> {
             try {
                 String name = nameField.getText();
@@ -557,12 +547,12 @@ public class App extends Application {
                 SimGroup newGroup = createGroup(name, new SimPosition(x, y), forceType, battalionType, unitCount);
 
                 SimCommander commander = new SimCommander();
-               // commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(2,5)));
-              //  commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(19,23)));
-              //  commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(15,10)));
+                // commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(2,5)));
+                //  commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(19,23)));
+                //  commander.addCommand(new SimCommand(SimCommandType.MOVE, new SimPosition(15,10)));
                 commander.addGroups(newGroup);//dodaje grupe do dowodcy
 
-                System.out.println("commander"+commander);
+                System.out.println("commander" + commander);
                 simulation.addCommanders(commander);
                 simulation.addGroup(newGroup);
                 System.out.println(simulation.getGroups());
@@ -591,7 +581,7 @@ public class App extends Application {
             }
         });
 
-        // Obsługa przycisku "Start Simulation"
+
         startButton.setOnAction(event -> {
             if (!simulationRunning) {
                 simulationRunning = true;
@@ -612,18 +602,21 @@ public class App extends Application {
         });
 
 
-        // Obsługa kliknięcia myszką na mapę
         panel.setOnMouseClicked((MouseEvent event) -> {
             // Obliczamy współrzędne na podstawie klikniętej pozycji
             int x = (int) Math.floor(event.getX() / heightRectangle); // Skala 20x20 na mapie
             int y = (int) Math.floor(event.getY() / widthRectangle);
 
-            // Ustawiamy współrzędne w polach tekstowych
+
             xField.setText(String.valueOf(x));
             yField.setText(String.valueOf(y));
+
+            taskXField.setText(String.valueOf(x));
+            taskYField.setText(String.valueOf(y));
+
+
         });
         //////////////////oblsluga komend////////////////////////////////////////////////////////////////////////////////////////
-
 
 
         addTaskButton.setOnAction(event -> {
@@ -651,17 +644,17 @@ public class App extends Application {
 
             try {
                 // Pobierz współrzędne celu
-                int targetX = Integer.parseInt(taskXField.getText());
-                int targetY = Integer.parseInt(taskYField.getText());
+                double targetX = Integer.parseInt(taskXField.getText());
+                double targetY = Integer.parseInt(taskYField.getText());
 
                 // Tworzenie komendy
                 SimCommandType commandType = SimCommandType.valueOf(selectedTask);
                 SimCommand newCommand = new SimCommand(commandType, new SimPosition(targetX, targetY));
 
                 //potrzebuje sprawdzic jakiego comandera ma wybrana grupa i do niego dodac komende
-               selectedGroup.assignCommand(newCommand);
-             //   selectedGroup
-               // SimCommander commadner = new SimCommander();
+                selectedGroup.commander.addCommand(newCommand);
+                //   selectedGroup
+                // SimCommander commadner = new SimCommander();
                 //commadner.addGroups(selectedGroup);
 
                 // Czyszczenie pól
@@ -694,13 +687,12 @@ public class App extends Application {
 
         );
 
-    //seperator i tworznie okna
+
         Separator verticalSeparator = new Separator();
         verticalSeparator.setOrientation(javafx.geometry.Orientation.VERTICAL);
         verticalSeparator.setPrefHeight(800);
         HBox root = new HBox();
         root.getChildren().addAll(panel, verticalSeparator, controlPanel);
-
 
 
         // Scena i okno główne rozmiar
@@ -716,10 +708,8 @@ public class App extends Application {
             }
             System.exit(0);
 
-          });
-        }
-
-
+        });
+    }
 
 
     private SimGroup createGroup(String name, SimPosition position, SimForceType forceType, String battalionType, int unitCount) {
