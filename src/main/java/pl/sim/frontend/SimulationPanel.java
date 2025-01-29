@@ -158,24 +158,24 @@ public class SimulationPanel extends Canvas {
             double tileHeight = gridHeight;
             double tileWidth = gridWidth;
 
-// Zasięg strzału
+            // Zasięg strzału
             int maxShotRange = group.getUnits().stream()
                     .mapToInt(SimUnit::getShootingRange)
                     .max()
                     .orElse(0);
 
             if (maxShotRange > 0) {
-                double rangeDiameter = maxShotRange * 2 * tileHeight; // Mnożenie przez rozmiar kafelka w pikselach
+                double rangeDiameter = maxShotRange * 2 * tileHeight;
                 gc.setFill(new Color(1, 0, 0, 0.15));
                 gc.fillOval(
-                        pos.getX() * tileWidth - rangeDiameter / 2,
-                        pos.getY() * tileHeight - rangeDiameter / 2,
+                        (pos.getX() * tileWidth) + (tileWidth / 2) - (rangeDiameter / 2),
+                        (pos.getY() * tileHeight) + (tileHeight / 2) - (rangeDiameter / 2),
                         rangeDiameter,
                         rangeDiameter
                 );
             }
 
-// Zasięg widoczności grupy
+            // Zasięg widoczności grupy
             int visibilityRange = group.getUnits().stream()
                     .mapToInt(SimUnit::getVisibilityRange)
                     .max()
@@ -186,8 +186,8 @@ public class SimulationPanel extends Canvas {
                 gc.setStroke(new Color(0, 0, 0, 0.25));
                 gc.setLineWidth(1.5);
                 gc.strokeOval(
-                        pos.getX() * tileWidth - visibilityDiameter / 2,
-                        pos.getY() * tileHeight - visibilityDiameter / 2,
+                        (pos.getX() * tileWidth) + (tileWidth / 2) - (visibilityDiameter / 2),
+                        (pos.getY() * tileHeight) + (tileHeight / 2) - (visibilityDiameter / 2),
                         visibilityDiameter,
                         visibilityDiameter
                 );
