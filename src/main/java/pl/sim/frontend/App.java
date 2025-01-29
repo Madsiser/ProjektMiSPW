@@ -1,6 +1,5 @@
 package pl.sim.frontend;
 import javafx.animation.*;
-import javafx.geometry.VPos;
 import javafx.scene.canvas.Canvas;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
@@ -21,9 +20,6 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import pl.sim.backend.BattalionManager;
@@ -46,7 +42,7 @@ public class App extends Application {
     private AnimationTimer timer;
     Map<String, MapPoint> savedCoordinates = new HashMap<>();
     File coordinatesFile = new File("saved_coordinates.json");
-    public static int WIDTH = 1520;
+    public static int WIDTH = 1920;
     public static int HEIGHT = 1000;
 
     private void saveCoordinatesToFile() {
