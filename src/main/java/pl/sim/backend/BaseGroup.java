@@ -355,7 +355,7 @@ public class BaseGroup extends SimGroup {
                     //Sprawdzenie trafienia
                     if (unit.calculateHitProbability(unit, selectedUnit, distance)) {
                         //Sprawdzenie zniszczenia
-                        if (unit.calculateDestructionProbability(unit, selectedUnit, 0.25)) {
+                        if (unit.calculateDestructionProbability(unit, selectedUnit, UnitManager.randomFactor)) {
                             selectedGroup.applyDamage(this, selectedUnit);
                             kills++;
                             if (selectedUnit.getActiveUnits() <= 0) {

@@ -15,6 +15,8 @@ public class UnitManager {
     /** Obiekt do przechowywania właściwości wczytanych z pliku `unit_attributes.properties`. */
     private static final Properties properties = new Properties();
 
+    public static double randomFactor;
+
     //Statyczny blok inicjalizacyjny odpowiedzialny za wczytywanie właściwości z pliku
     static {
         try (InputStream input = UnitManager.class.getClassLoader().getResourceAsStream("unit_attributes.properties")) {
@@ -22,6 +24,9 @@ public class UnitManager {
                 throw new IllegalStateException("Nie znaleziono pliku unit_attributes.properties");
             }
             properties.load(input);
+
+            randomFactor = Double.parseDouble(properties.getProperty("randomFactor", "0.25"));
+
         } catch (IOException e) {
             throw new RuntimeException("Błąd podczas wczytywania pliku unit_attributes.properties", e);
         }

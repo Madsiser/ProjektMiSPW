@@ -468,7 +468,18 @@ public class App extends Application {
         forceTypeComboBox.setPromptText("Force Type");
 
         ComboBox<String> battalionTypeComboBox = new ComboBox<>();
-        battalionTypeComboBox.getItems().addAll("Tank Battalion", "Mechanized Battalion", "Infantry Battalion", "Artillery Battalion");
+        battalionTypeComboBox.getItems().addAll(
+                "Abrams Tank Battalion",
+                "Leopard Tank Battalion",
+                "T-90 Tank Battalion",
+                "Mechanized Battalion",
+                "Infantry Battalion",
+                "Artillery Battalion",
+                "Rocket Artillery Battalion",
+                "Mixed Tank Battalion",
+                "Fire Support Battalion",
+                "Heavy Battalion"
+        );
         battalionTypeComboBox.setPromptText("Battalion Type");
 
         TextField unitCountField = new TextField();
@@ -777,16 +788,28 @@ public class App extends Application {
 
     private SimGroup createGroup(String name, SimPosition position, SimForceType forceType, String battalionType, int unitCount) {
         switch (battalionType) {
-            case "Tank Battalion":
-                return new BattalionManager.TankBattalion(name, position, forceType, unitCount);
+            case "Abrams Tank Battalion":
+                return new BattalionManager.AbramsTankBattalion(name, position, forceType, unitCount);
+            case "Leopard Tank Battalion":
+                return new BattalionManager.LeopardTankBattalion(name, position, forceType, unitCount);
+            case "T-90 Tank Battalion":
+                return new BattalionManager.T90TankBattalion(name, position, forceType, unitCount);
             case "Mechanized Battalion":
                 return new BattalionManager.MechanizedBattalion(name, position, forceType, unitCount);
             case "Infantry Battalion":
                 return new BattalionManager.InfantryBattalion(name, position, forceType, unitCount);
             case "Artillery Battalion":
                 return new BattalionManager.ArtilleryBattalion(name, position, forceType, unitCount);
+            case "Rocket Artillery Battalion":
+                return new BattalionManager.RocketArtilleryBattalion(name, position, forceType, unitCount);
+            case "Mixed Tank Battalion":
+                return new BattalionManager.MixedTankBattalion(name, position, forceType, unitCount);
+            case "Fire Support Battalion":
+                return new BattalionManager.FireSupportBattalion(name, position, forceType, unitCount);
+            case "Heavy Battalion":
+                return new BattalionManager.HeavyBattalion(name, position, forceType, unitCount);
             default:
-                throw new IllegalArgumentException("Invalid battalion type.");
+                throw new IllegalArgumentException("Invalid battalion type: " + battalionType);
         }
     }
 
