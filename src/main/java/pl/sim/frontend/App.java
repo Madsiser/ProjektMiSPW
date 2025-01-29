@@ -408,6 +408,7 @@ public class App extends Application {
 
 // Ustawienie sceny
         Scene mapScene = new Scene(mapContainer, WIDTH, HEIGHT);
+        primaryStage.setResizable(false);
         primaryStage.setScene(mapScene);
         primaryStage.setTitle("Map View - Capture Simulation");
         primaryStage.show();
@@ -794,6 +795,7 @@ public class App extends Application {
 
         // Scena i okno główne rozmiar
         Scene scene = new Scene(root, WIDTH, HEIGHT);
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Symulacja - Pole walki");
         primaryStage.show();
