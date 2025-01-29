@@ -1,12 +1,4 @@
 {
-  "First": {
-    "latitude": 30.2297,
-    "longitude": 21.0122
-  },
-  "Second": {
-    "latitude": 30.2297,
-    "longitude": 21.0122
-  },
   "WWA": {
     "latitude": 52.0,
     "longitude": 21.0122
@@ -18,5 +10,57 @@
   "Lausanne": {
     "latitude": 46.59669547901962,
     "longitude": 6.539100752581106
+  },
+  "Waterloo": {
+    "latitude": 50.6806,
+    "longitude": 4.4122
+  },
+  "Normandia": {
+    "latitude": 49.4144,
+    "longitude": -0.8322
+  },
+  "Gettysburg": {
+    "latitude": 39.8309,
+    "longitude": -77.2311
+  },
+  "Stalingrad": {
+    "latitude": 48.708,
+    "longitude": 44.5133
+  },
+  "Verdun": {
+    "latitude": 49.1586,
+    "longitude": 5.3828
+  },
+  "Austerlitz": {
+    "latitude": 49.1333,
+    "longitude": 16.7667
+  },
+  "Hastings": {
+    "latitude": 50.9118,
+    "longitude": 0.4871
+  },
+  "Nevada Test Site": {
+    "latitude": 37.1167,
+    "longitude": -116.0333
+  },
+  "Yuma Proving Ground": {
+    "latitude": 32.8355,
+    "longitude": -114.3884
+  },
+  "Kura Test Range": {
+    "latitude": 57.2899,
+    "longitude": 160.0706
+  },
+  "Białe Błota": {
+    "latitude": 53.0902,
+    "longitude": 17.8519
+  },
+  "Woomera Test Range": {
+    "latitude": -30.9661,
+    "longitude": 136.5000
+  },
+  "Salisbury Plain": {
+    "latitude": 51.2205,
+    "longitude": -1.7800
   }
 }
