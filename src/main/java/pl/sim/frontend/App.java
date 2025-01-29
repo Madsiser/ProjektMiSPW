@@ -875,15 +875,14 @@ public class App extends Application {
             if (commander.getCurrentCommand() == null) {
                 groupLabel2 = new Label("Aktualne: brak");
             } else {
-                groupLabel2 = new Label("Aktualne: " + commander.getCurrentCommand().toString());
-
+                groupLabel2 = new Label("Aktualne: " + commander.getCurrentCommand().show());
             }
 
 
 
             for(int i=0 ; i< commander.getCommandQueue().size() ; i++)
             {
-                Label taskLabel = new Label(commander.getCommandQueue().get(i).toString() );
+                Label taskLabel = new Label(commander.getCommandQueue().get(i).show() );
                 taskList.getChildren().add(taskLabel);
             }
 
