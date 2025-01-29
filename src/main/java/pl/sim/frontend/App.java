@@ -569,15 +569,15 @@ public class App extends Application {
         Label speedLabel = new Label("Simulation Speed:");
         speedLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: black;");
 
-        Slider speedSlider = new Slider(1, 500, simulation.getTimeOfOneStep());
+        Slider speedSlider = new Slider(0.2, 3, simulation.getTimeOfOneStep()/100);
         speedSlider.setShowTickMarks(true);
         speedSlider.setShowTickLabels(true);
-        speedSlider.setMajorTickUnit(100);
-        speedSlider.setMinorTickCount(4);
-        speedSlider.setBlockIncrement(10);
+        speedSlider.setMajorTickUnit(1);
+        speedSlider.setMinorTickCount(1);
+        speedSlider.setBlockIncrement(1);
 
         speedSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
-            int newSpeed = newValue.intValue();
+            int newSpeed = (int) Math.round(100.0 / newValue.doubleValue());
             simulation.setTimeOfOneStep(newSpeed); // Zmieniamy prędkość symulacji
             System.out.println("Zmieniono prędkość symulacji na: " + newSpeed + " ms na krok");
         });
