@@ -548,11 +548,15 @@ public class App extends Application {
 
         //groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
 
+        Button clearTaskButton = new Button("Clear Task");
+        //clearTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+
         HBox buttonContainer3 = new HBox();
         buttonContainer3.setSpacing(10);
         buttonContainer3.getChildren().addAll(
                 taskDropdown,
-                groupDropdown
+                groupDropdown,
+                clearTaskButton
         );
         buttonContainer3.setAlignment(Pos.TOP_CENTER);
 
@@ -563,9 +567,6 @@ public class App extends Application {
         taskYField.setPromptText("Target Y");
 
         Button addTaskButton = new Button("Add Task");
-        addTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
-
-        Button clearTaskButton = new Button("Clear Task");
         addTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 
         Label speedLabel = new Label("Simulation Speed:");
@@ -792,7 +793,6 @@ public class App extends Application {
                 taskXField,
                 taskYField,
                 addTaskButton,
-                clearTaskButton,
                 speedControl
 
         );
