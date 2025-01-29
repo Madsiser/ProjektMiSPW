@@ -341,7 +341,6 @@ public class App extends Application {
                 WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
 
                 try {
-                    System.out.println("esa");
                     File outputFile = new File("map_snapshot.png");
                     ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
                     System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
@@ -566,6 +565,9 @@ public class App extends Application {
         Button addTaskButton = new Button("Add Task");
         addTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 
+        Button clearTaskButton = new Button("Clear Task");
+        addTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+
         Label speedLabel = new Label("Simulation Speed:");
         speedLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: black;");
 
@@ -691,6 +693,39 @@ public class App extends Application {
         //////////////////oblsluga komend////////////////////////////////////////////////////////////////////////////////////////
 
 
+        clearTaskButton.setOnAction(event -> {
+            SimGroup selectedGroup = groupDropdown.getValue();
+
+            if (selectedGroup == null) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Input Error");
+                alert.setHeaderText("No Group Selected");
+                alert.setContentText("Please select a group.");
+                alert.showAndWait();
+                return;
+            }
+
+            try {
+                //potrzebuje sprawdzic jakiego comandera ma wybrana grupa i do niego dodac komende
+                selectedGroup.commander.stopCommands();
+                //   selectedGroup
+                // SimCommander commadner = new SimCommander();
+                //commadner.addGroups(selectedGroup);
+
+                // Czyszczenie pól
+                taskDropdown.setValue(null);
+                taskXField.clear();
+                taskYField.clear();
+
+            } catch (NumberFormatException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Input Error");
+                alert.setHeaderText("Invalid Coordinates");
+                alert.setContentText("Please enter valid numeric coordinates.");
+                alert.showAndWait();
+            }
+        });
+
         addTaskButton.setOnAction(event -> {
             SimGroup selectedGroup = groupDropdown.getValue();
             String selectedTask = taskDropdown.getValue();
@@ -757,6 +792,7 @@ public class App extends Application {
                 taskXField,
                 taskYField,
                 addTaskButton,
+                clearTaskButton,
                 speedControl
 
         );
