@@ -2,12 +2,9 @@ package pl.sim.frontend;
 
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
-import com.gluonhq.maps.tile.TileRetriever;
-import com.gluonhq.maps.tile.TileRetrieverProvider;
 import com.google.gson.reflect.TypeToken;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -17,19 +14,13 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import pl.sim.backend.BattalionManager;
-import pl.sim.backend.MapGenerator;
-import pl.sim.backend.UnitManager;
 import pl.simNG.*;
 import pl.simNG.commands.SimCommand;
 import pl.simNG.commands.SimCommandType;
@@ -43,18 +34,14 @@ import java.util.Map;
 
 import com.google.gson.*;
 
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.CompletableFuture;
-
-import static pl.sim.frontend.SimulationPanel.drawTerrainValues;
-
 public class App extends Application {
     private boolean simulationRunning = false; // Flaga stanu symulacji
     public static MapPoint newCenter;
     private AnimationTimer timer;
     Map<String, MapPoint> savedCoordinates = new HashMap<>();
     File coordinatesFile = new File("saved_coordinates.json");
+    public static int WIDTH = 1520;
+    public static int HEIGHT = 1000;
 
     private void saveCoordinatesToFile() {
         try (Writer writer = new FileWriter(coordinatesFile)) {
@@ -420,7 +407,7 @@ public class App extends Application {
         mapContainer.getChildren().addAll(mapView, rightControlPanel);
 
 // Ustawienie sceny
-        Scene mapScene = new Scene(mapContainer, 1400, 1030);
+        Scene mapScene = new Scene(mapContainer, WIDTH, HEIGHT);
         primaryStage.setScene(mapScene);
         primaryStage.setTitle("Map View - Capture Simulation");
         primaryStage.show();
@@ -806,7 +793,7 @@ public class App extends Application {
 
 
         // Scena i okno główne rozmiar
-        Scene scene = new Scene(root, 1400, 1030);
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Symulacja - Pole walki");
         primaryStage.show();
