@@ -1,5 +1,7 @@
 package pl.sim.frontend;
-
+import javafx.animation.*;
+import javafx.geometry.VPos;
+import javafx.scene.canvas.Canvas;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
 import com.google.gson.reflect.TypeToken;
@@ -13,11 +15,15 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import pl.sim.backend.BattalionManager;
@@ -80,6 +86,8 @@ public class App extends Application {
     public static int matrixWidth = 100;
     public static int matrixHeight = 100;
 
+
+
     @Override
     public void start(Stage primaryStage) {
         SimCore simulation = new SimCore();
@@ -95,7 +103,7 @@ public class App extends Application {
         // int matrixWidth = 50;
         // int matrixHeight=50;
 
-
+        Canvas mapCanvas = new Canvas(mapView.getWidth(), mapView.getHeight());
         loadCoordinatesFromFile();
 
 // Panel kontrolny po prawej stronie
@@ -132,6 +140,10 @@ public class App extends Application {
 
         CheckBox toggleDrawingCheckBox = new CheckBox("Grid visibility");
         toggleDrawingCheckBox.setStyle("- -fx-text-fill: white; -fx-font-size: 12px;");
+
+
+
+
 
 
         saveCoordinatesButton.setOnAction(event -> {
@@ -291,6 +303,18 @@ public class App extends Application {
             mapView.setCenter(newCenter);
             double zoomSpeed = 0.8;
 
+            // Pobranie kontekstu graficznego mapy
+            GraphicsContext gc = mapCanvas.getGraphicsContext2D();
+
+//            Platform.runLater(() -> {
+//                loadingLabel.setVisible(true);
+//                gc.setFill(Color.RED);
+//                gc.setFont(javafx.scene.text.Font.font("Arial", 36));
+//                gc.setTextAlign(TextAlignment.CENTER);
+//                gc.setTextBaseline(VPos.CENTER);
+//                gc.fillText("Loading...", mapCanvas.getWidth() / 2, mapCanvas.getHeight() / 2);
+//            });
+           // loadingLabel.setVisible(true);
             // Animacja zoomu
             Timeline zoomAnimation = new Timeline();
 
@@ -334,7 +358,6 @@ public class App extends Application {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
 
                 int[][] terrainMap = GluonMapAnalyzer.analyzeMapFromGluon(snapshot, matrixWidth, matrixHeight);
                 simulation.setMap(new SimMap(terrainMap));
@@ -404,7 +427,7 @@ public class App extends Application {
 
         HBox mapContainer = new HBox();
         mapContainer.setSpacing(10);
-        mapContainer.getChildren().addAll(mapView, rightControlPanel);
+        mapContainer.getChildren().addAll(mapView, rightControlPanel,mapCanvas);
 
 // Ustawienie sceny
         Scene mapScene = new Scene(mapContainer, WIDTH, HEIGHT);
@@ -506,6 +529,7 @@ public class App extends Application {
                 nameAndPositionContainer,
                 typeAndUnitContainer
 
+
         );
 
 
@@ -560,7 +584,18 @@ public class App extends Application {
         Label speedLabel = new Label("Simulation Speed:");
         speedLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: black;");
 
+        ///zadania
+        VBox groupTaskPanel = new VBox();
+        groupTaskPanel.setSpacing(10);
+        groupTaskPanel.setPrefWidth(300);
+        groupTaskPanel.setStyle("-fx-border-color: black; -fx-padding: 10;");
+        // Etykieta nagłówka
+        Label groupTaskLabel = new Label("Group Tasks");
+        groupTaskLabel.setStyle("-fx-border-color: black; -fx-padding: 10;");
+        groupTaskPanel.setStyle("-fx-padding: 10;");
+
         Slider speedSlider = new Slider(0.2, 3, simulation.getTimeOfOneStep()/100);
+      
         speedSlider.setShowTickMarks(true);
         speedSlider.setShowTickLabels(true);
         speedSlider.setMajorTickUnit(1);
@@ -715,6 +750,7 @@ public class App extends Application {
             }
         });
 
+
         addTaskButton.setOnAction(event -> {
             SimGroup selectedGroup = groupDropdown.getValue();
             String selectedTask = taskDropdown.getValue();
@@ -749,6 +785,7 @@ public class App extends Application {
 
                 //potrzebuje sprawdzic jakiego comandera ma wybrana grupa i do niego dodac komende
                 selectedGroup.commander.addCommand(newCommand);
+                updateGroupTaskPanel(groupTaskPanel, simulation);
                 //   selectedGroup
                 // SimCommander commadner = new SimCommander();
                 //commadner.addGroups(selectedGroup);
@@ -783,6 +820,7 @@ public class App extends Application {
                 addTaskButton,
                 speedControl
 
+
         );
 
 
@@ -790,7 +828,7 @@ public class App extends Application {
         verticalSeparator.setOrientation(javafx.geometry.Orientation.VERTICAL);
         verticalSeparator.setPrefHeight(800);
         HBox root = new HBox();
-        root.getChildren().addAll(panel, verticalSeparator, controlPanel);
+        root.getChildren().addAll(panel, verticalSeparator, controlPanel,groupTaskPanel);
 
 
         // Scena i okno główne rozmiar
@@ -808,8 +846,48 @@ public class App extends Application {
             System.exit(0);
 
         });
+
+        // Ustawienie automatycznego odświeżania panelu z zadaniami
+        Timeline taskUpdateTimeline = new Timeline(
+                new KeyFrame(Duration.seconds(0.1), event -> updateGroupTaskPanel(groupTaskPanel, simulation))
+        );
+        taskUpdateTimeline.setCycleCount(Animation.INDEFINITE); // Powtarzanie w nieskończoność
+        taskUpdateTimeline.play(); // Uruchomienie aktualizacji
     }
 
+    private void updateGroupTaskPanel(VBox groupTaskPanel, SimCore simulation) {
+        groupTaskPanel.getChildren().clear(); // Czyścimy panel
+        Label groupTaskLabel = new Label("Group Tasks");
+        groupTaskLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+        groupTaskPanel.getChildren().add(groupTaskLabel);
+
+
+
+        for (SimGroup group : simulation.getGroups()) {
+            // Nagłówek z nazwą grupy
+            Label groupLabel = new Label(group.getName());
+
+
+            groupLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
+            VBox taskList = new VBox();
+            taskList.setSpacing(5);
+            SimCommander commander = group.commander;
+
+            groupLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
+            Label groupLabel2 = new Label("Aktualne:"+commander.getCurrentCommand());
+
+
+
+            for(int i=0 ; i< commander.getCommandQueue().size() ; i++)
+            {
+                Label taskLabel = new Label(commander.getCommandQueue().get(i).toString() );
+                taskList.getChildren().add(taskLabel);
+            }
+
+            HBox groupBox = new HBox(10, groupLabel,groupLabel2);
+            groupTaskPanel.getChildren().addAll(groupBox, taskList);
+        }
+    }
 
     private SimGroup createGroup(String name, SimPosition position, SimForceType forceType, String battalionType, int unitCount) {
         switch (battalionType) {
