@@ -255,37 +255,37 @@ public class App extends Application {
             System.out.println("Map centered on: " + selectedLocation + " -> " + selectedPoint);
         });
 
-        mapView.setOnScroll(event -> {
-            double deltaY = event.getDeltaY(); // Kierunek przewijania
-            int currentZoom = (int) mapView.getZoom();
-            int newZoom = currentZoom;
-
-            if (deltaY > 0) {
-                // Przybliżanie
-                newZoom = Math.min(currentZoom + 1, 20);
-            } else {
-                // Oddalanie
-                newZoom = Math.max(currentZoom - 1, 1);
-            }
-
-            // Pozycja kursora myszy w pikselach względem mapy
-            double mouseX = event.getX();
-            double mouseY = event.getY();
-
-            // Przekształcenie współrzędnych pikselowych na współrzędne geograficzne
-            MapPoint cursorPosition = mapView.getMapPosition(mouseX, mouseY);
-
-            // Zmiana zoomu
-            mapView.setZoom(newZoom);
-
-            // Ponowne ustawienie centrum mapy w taki sposób, aby miejsce pod kursorem pozostało w tym samym punkcie
-            if (cursorPosition != null) {
-                mapView.setCenter(cursorPosition);
-            }
-
-            // Opcjonalne logowanie
-            System.out.println("Zoom level: " + newZoom + ", Center: " + mapView.getCenter());
-        });
+//        mapView.setOnScroll(event -> {
+//            double deltaY = event.getDeltaY(); // Kierunek przewijania
+//            int currentZoom = (int) mapView.getZoom();
+//            int newZoom = currentZoom;
+//
+//            if (deltaY > 0) {
+//                // Przybliżanie
+//                newZoom = Math.min(currentZoom + 1, 20);
+//            } else {
+//                // Oddalanie
+//                newZoom = Math.max(currentZoom - 1, 1);
+//            }
+//
+//            // Pozycja kursora myszy w pikselach względem mapy
+//            double mouseX = event.getX();
+//            double mouseY = event.getY();
+//
+//            // Przekształcenie współrzędnych pikselowych na współrzędne geograficzne
+//            MapPoint cursorPosition = mapView.getMapPosition(mouseX, mouseY);
+//
+//            // Zmiana zoomu
+//            mapView.setZoom(newZoom);
+//
+//            // Ponowne ustawienie centrum mapy w taki sposób, aby miejsce pod kursorem pozostało w tym samym punkcie
+//            if (cursorPosition != null) {
+//                mapView.setCenter(cursorPosition);
+//            }
+//
+//            // Opcjonalne logowanie
+//            System.out.println("Zoom level: " + newZoom + ", Center: " + mapView.getCenter());
+//        });
 
 
         captureButton.setOnAction(event -> {
@@ -296,7 +296,7 @@ public class App extends Application {
 
             newCenter = new MapPoint(latitude, longitude);
 
-
+            mapView.setZoom(6);
             int startZoom = (int) mapView.getZoom();
             int endZoom = 12;
 
