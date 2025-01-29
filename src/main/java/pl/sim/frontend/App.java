@@ -4,9 +4,10 @@ import javafx.geometry.VPos;
 import javafx.scene.canvas.Canvas;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
-import com.gluonhq.maps.tile.TileRetriever;
-import com.gluonhq.maps.tile.TileRetrieverProvider;
 import com.google.gson.reflect.TypeToken;
+import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,12 +17,9 @@ import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
@@ -29,8 +27,6 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import pl.sim.backend.BattalionManager;
-import pl.sim.backend.MapGenerator;
-import pl.sim.backend.UnitManager;
 import pl.simNG.*;
 import pl.simNG.commands.SimCommand;
 import pl.simNG.commands.SimCommandType;
@@ -44,18 +40,14 @@ import java.util.Map;
 
 import com.google.gson.*;
 
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.CompletableFuture;
-
-import static pl.sim.frontend.SimulationPanel.drawTerrainValues;
-
 public class App extends Application {
     private boolean simulationRunning = false; // Flaga stanu symulacji
     public static MapPoint newCenter;
     private AnimationTimer timer;
     Map<String, MapPoint> savedCoordinates = new HashMap<>();
     File coordinatesFile = new File("saved_coordinates.json");
+    public static int WIDTH = 1520;
+    public static int HEIGHT = 1000;
 
     private void saveCoordinatesToFile() {
         try (Writer writer = new FileWriter(coordinatesFile)) {
@@ -360,7 +352,6 @@ public class App extends Application {
                 WritableImage snapshot = mapView.snapshot(new SnapshotParameters(), null);
 
                 try {
-                    System.out.println("esa");
                     File outputFile = new File("map_snapshot.png");
                     ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", outputFile);
                     System.out.println("Snapshot saved to: " + outputFile.getAbsolutePath());
@@ -439,7 +430,8 @@ public class App extends Application {
         mapContainer.getChildren().addAll(mapView, rightControlPanel,mapCanvas);
 
 // Ustawienie sceny
-        Scene mapScene = new Scene(mapContainer, 1400, 1030);
+        Scene mapScene = new Scene(mapContainer, WIDTH, HEIGHT);
+        primaryStage.setResizable(false);
         primaryStage.setScene(mapScene);
         primaryStage.setTitle("Map View - Capture Simulation");
         primaryStage.show();
@@ -568,11 +560,15 @@ public class App extends Application {
 
         //groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
 
+        Button clearTaskButton = new Button("Clear Task");
+        //clearTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+
         HBox buttonContainer3 = new HBox();
         buttonContainer3.setSpacing(10);
         buttonContainer3.getChildren().addAll(
                 taskDropdown,
-                groupDropdown
+                groupDropdown,
+                clearTaskButton
         );
         buttonContainer3.setAlignment(Pos.TOP_CENTER);
 
@@ -598,15 +594,16 @@ public class App extends Application {
         groupTaskLabel.setStyle("-fx-border-color: black; -fx-padding: 10;");
         groupTaskPanel.setStyle("-fx-padding: 10;");
 
-        Slider speedSlider = new Slider(1, 500, simulation.getTimeOfOneStep());
+        Slider speedSlider = new Slider(0.2, 3, simulation.getTimeOfOneStep()/100);
+      
         speedSlider.setShowTickMarks(true);
         speedSlider.setShowTickLabels(true);
-        speedSlider.setMajorTickUnit(100);
-        speedSlider.setMinorTickCount(4);
-        speedSlider.setBlockIncrement(10);
+        speedSlider.setMajorTickUnit(1);
+        speedSlider.setMinorTickCount(1);
+        speedSlider.setBlockIncrement(1);
 
         speedSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
-            int newSpeed = newValue.intValue();
+            int newSpeed = (int) Math.round(100.0 / newValue.doubleValue());
             simulation.setTimeOfOneStep(newSpeed); // Zmieniamy prędkość symulacji
             System.out.println("Zmieniono prędkość symulacji na: " + newSpeed + " ms na krok");
         });
@@ -720,6 +717,38 @@ public class App extends Application {
         //////////////////oblsluga komend////////////////////////////////////////////////////////////////////////////////////////
 
 
+        clearTaskButton.setOnAction(event -> {
+            SimGroup selectedGroup = groupDropdown.getValue();
+
+            if (selectedGroup == null) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Input Error");
+                alert.setHeaderText("No Group Selected");
+                alert.setContentText("Please select a group.");
+                alert.showAndWait();
+                return;
+            }
+
+            try {
+                //potrzebuje sprawdzic jakiego comandera ma wybrana grupa i do niego dodac komende
+                selectedGroup.commander.stopCommands();
+                //   selectedGroup
+                // SimCommander commadner = new SimCommander();
+                //commadner.addGroups(selectedGroup);
+
+                // Czyszczenie pól
+                taskDropdown.setValue(null);
+                taskXField.clear();
+                taskYField.clear();
+
+            } catch (NumberFormatException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Input Error");
+                alert.setHeaderText("Invalid Coordinates");
+                alert.setContentText("Please enter valid numeric coordinates.");
+                alert.showAndWait();
+            }
+        });
 
 
         addTaskButton.setOnAction(event -> {
@@ -803,7 +832,8 @@ public class App extends Application {
 
 
         // Scena i okno główne rozmiar
-        Scene scene = new Scene(root, 1400, 1030);
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Symulacja - Pole walki");
         primaryStage.show();
