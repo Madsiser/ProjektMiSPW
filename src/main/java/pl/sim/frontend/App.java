@@ -874,7 +874,14 @@ public class App extends Application {
             SimCommander commander = group.commander;
 
             groupLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
-            Label groupLabel2 = new Label("Aktualne:"+commander.getCurrentCommand());
+            Label groupLabel2; // Deklaracja etykiety przed warunkiem
+
+            if (commander.getCurrentCommand() == null) {
+                groupLabel2 = new Label("Aktualne: brak");
+            } else {
+                groupLabel2 = new Label("Aktualne: " + commander.getCurrentCommand().toString());
+
+            }
 
 
 
