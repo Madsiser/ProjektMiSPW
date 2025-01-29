@@ -6,7 +6,7 @@
 
     <groupId>pl.sim</groupId>
     <artifactId>ProjektMiSPW</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,9 +18,9 @@
         <dependency>
             <groupId>pl.sim</groupId>
             <artifactId>SimNG</artifactId>
-            <version>1.3</version>
+            <version>1.4</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/SimNG/SimNG-1.3.jar</systemPath>
+            <systemPath>${project.basedir}/lib/SimNG/SimNG-1.4.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.gluonhq</groupId>
