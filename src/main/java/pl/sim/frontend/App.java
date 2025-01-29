@@ -468,7 +468,18 @@ public class App extends Application {
         forceTypeComboBox.setPromptText("Force Type");
 
         ComboBox<String> battalionTypeComboBox = new ComboBox<>();
-        battalionTypeComboBox.getItems().addAll("Tank Battalion", "Mechanized Battalion", "Infantry Battalion", "Artillery Battalion");
+        battalionTypeComboBox.getItems().addAll(
+                "Abrams Tank Battalion",
+                "Leopard Tank Battalion",
+                "T-90 Tank Battalion",
+                "Mechanized Battalion",
+                "Infantry Battalion",
+                "Artillery Battalion",
+                "Rocket Artillery Battalion",
+                "Mixed Tank Battalion",
+                "Fire Support Battalion",
+                "Heavy Battalion"
+        );
         battalionTypeComboBox.setPromptText("Battalion Type");
 
         TextField unitCountField = new TextField();
@@ -478,16 +489,27 @@ public class App extends Application {
         typeAndUnitContainer.setAlignment(Pos.TOP_CENTER);
         typeAndUnitContainer.getChildren().addAll(forceTypeComboBox, battalionTypeComboBox, unitCountField);
 
-
         Button addButton = new Button("Add Group");
         addButton.setStyle(buttonStyle);
 
         Button startButton = new Button("Start Simulation");
         startButton.setStyle(buttonStyle);
 
+        Button pauseButton = new Button("Pause Simulation");
+        startButton.setStyle(buttonStyle);
+        pauseButton.setDisable(true);
+
+        Button resumeButton = new Button("Resume Simulation");
+        startButton.setStyle(buttonStyle);
+        resumeButton.setDisable(true);
+
         HBox buttonsContainer = new HBox(10);
         buttonsContainer.setAlignment(Pos.TOP_CENTER);
         buttonsContainer.getChildren().addAll(addButton, startButton);
+
+        HBox simulationControlButtons = new HBox(10);
+        simulationControlButtons.setAlignment(Pos.TOP_CENTER);
+        simulationControlButtons.getChildren().addAll(pauseButton, resumeButton);
 
         Label ad = new Label("Add New Group");
         ad.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
@@ -507,7 +529,25 @@ public class App extends Application {
 
         ComboBox<SimGroup> groupDropdown = new ComboBox<>();
         groupDropdown.setPromptText("Select Group");
-        groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
+
+        groupDropdown.setItems(FXCollections.observableArrayList(
+                simulation.getGroups().stream()
+                        .filter(group -> !group.isDestroyed())
+                        .toList()
+        ));
+        AnimationTimer comboBoxUpdater = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                groupDropdown.setItems(FXCollections.observableArrayList(
+                        simulation.getGroups().stream()
+                                .filter(group -> !group.isDestroyed())
+                                .toList()
+                ));
+            }
+        };
+        comboBoxUpdater.start();
+
+        //groupDropdown.setItems(FXCollections.observableArrayList(simulation.getGroups()));
 
         HBox buttonContainer3 = new HBox();
         buttonContainer3.setSpacing(10);
@@ -517,17 +557,34 @@ public class App extends Application {
         );
         buttonContainer3.setAlignment(Pos.TOP_CENTER);
 
-
         TextField taskXField = new TextField();
         taskXField.setPromptText("Target X");
 
         TextField taskYField = new TextField();
         taskYField.setPromptText("Target Y");
 
-
         Button addTaskButton = new Button("Add Task");
         addTaskButton.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 
+        Label speedLabel = new Label("Simulation Speed:");
+        speedLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: black;");
+
+        Slider speedSlider = new Slider(1, 500, simulation.getTimeOfOneStep());
+        speedSlider.setShowTickMarks(true);
+        speedSlider.setShowTickLabels(true);
+        speedSlider.setMajorTickUnit(100);
+        speedSlider.setMinorTickCount(4);
+        speedSlider.setBlockIncrement(10);
+
+        speedSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            int newSpeed = newValue.intValue();
+            simulation.setTimeOfOneStep(newSpeed); // Zmieniamy prędkość symulacji
+            System.out.println("Zmieniono prędkość symulacji na: " + newSpeed + " ms na krok");
+        });
+
+        VBox speedControl = new VBox(5);
+        speedControl.setAlignment(Pos.TOP_CENTER);
+        speedControl.getChildren().addAll(speedLabel, speedSlider);
 
         addButton.setOnAction(event -> {
             try {
@@ -598,7 +655,22 @@ public class App extends Application {
 
                 // Blokujemy przycisk, aby uniemożliwić ponowne uruchomienie
                 startButton.setDisable(true);
+                pauseButton.setDisable(false);
             }
+        });
+
+        pauseButton.setOnAction(event -> {
+            simulation.pauseSimulation();
+            pauseButton.setDisable(true);
+            resumeButton.setDisable(false);
+            System.out.println("Symulacja została wstrzymana.");
+        });
+
+        resumeButton.setOnAction(event -> {
+            simulation.resumeSimulation();
+            resumeButton.setDisable(true);
+            pauseButton.setDisable(false);
+            System.out.println("Symulacja została wznowiona.");
         });
 
 
@@ -679,11 +751,13 @@ public class App extends Application {
                 xField,
                 yField,
                 buttonsContainer,
+                simulationControlButtons,
                 assignTaskLabel,
                 buttonContainer3,
                 taskXField,
                 taskYField,
-                addTaskButton
+                addTaskButton,
+                speedControl
 
         );
 
@@ -714,16 +788,28 @@ public class App extends Application {
 
     private SimGroup createGroup(String name, SimPosition position, SimForceType forceType, String battalionType, int unitCount) {
         switch (battalionType) {
-            case "Tank Battalion":
-                return new BattalionManager.TankBattalion(name, position, forceType, unitCount);
+            case "Abrams Tank Battalion":
+                return new BattalionManager.AbramsTankBattalion(name, position, forceType, unitCount);
+            case "Leopard Tank Battalion":
+                return new BattalionManager.LeopardTankBattalion(name, position, forceType, unitCount);
+            case "T-90 Tank Battalion":
+                return new BattalionManager.T90TankBattalion(name, position, forceType, unitCount);
             case "Mechanized Battalion":
                 return new BattalionManager.MechanizedBattalion(name, position, forceType, unitCount);
             case "Infantry Battalion":
                 return new BattalionManager.InfantryBattalion(name, position, forceType, unitCount);
             case "Artillery Battalion":
                 return new BattalionManager.ArtilleryBattalion(name, position, forceType, unitCount);
+            case "Rocket Artillery Battalion":
+                return new BattalionManager.RocketArtilleryBattalion(name, position, forceType, unitCount);
+            case "Mixed Tank Battalion":
+                return new BattalionManager.MixedTankBattalion(name, position, forceType, unitCount);
+            case "Fire Support Battalion":
+                return new BattalionManager.FireSupportBattalion(name, position, forceType, unitCount);
+            case "Heavy Battalion":
+                return new BattalionManager.HeavyBattalion(name, position, forceType, unitCount);
             default:
-                throw new IllegalArgumentException("Invalid battalion type.");
+                throw new IllegalArgumentException("Invalid battalion type: " + battalionType);
         }
     }
 
